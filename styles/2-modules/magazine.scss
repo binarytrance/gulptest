@@ -1,0 +1,120 @@
+.magazine-heading {
+	@extend .ex-article-body__heading;
+}
+.magazine-aside-img {
+	margin-bottom: 20px;
+	@include breakpoint($sm-max) {
+		width: 100%;
+	}
+	
+	@media (min-width: $sm) {
+		margin-right: 35px;
+		margin-bottom: 5px;
+	}
+	img {
+		@include breakpoint($sm-max) {
+			width: 100%;
+		}
+	}
+	&--ex {
+		border-bottom: solid 3px $exclusive;
+	}
+}
+.magazine-more-bg {
+	background: rgba(161, 137, 180, 0.1);
+}
+.share-wrapper {
+	position: absolute;
+	top: 29px;
+	left: 0;
+	z-index: 1;
+	padding: 15px 20px;
+    box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.15);
+    max-width: 240px;
+    width: 240px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease .3s;
+
+	@media (min-width: $sm) {
+		left: inherit;
+		right: 0;
+	}
+
+	&--left {
+		@media (min-width: $sm) {
+			left: 0;
+		}
+		&:after {
+			@media (min-width: $sm) {
+				left: 1px;
+			}
+		}
+		&-fixed {
+			@media (min-width: $sm) {
+				left: 9px;
+				top: 40px;
+			}
+		}
+	}
+
+    &:after {
+	    position: absolute;
+	    top: -12px;
+	    left: 1px;
+	    content: '';
+	    width: 0;
+	    height: 0;
+	    border-left: 12px solid transparent;
+	    border-right: 12px solid transparent;
+	    border-bottom: 12px solid rgba(0,0,0, 0.03);
+	    z-index: 1;
+	
+		@media (min-width: $sm) {
+			left: inherit;
+			right: 1px;
+		}
+
+    }
+    &:before {
+	    position: absolute;
+	    top: -10px;
+	    left: 4px;
+	    content: '';
+	    width: 0;
+	    height: 0;
+	    border-left: 10px solid transparent;
+	    border-right: 10px solid transparent;
+	    border-bottom: 10px solid white;
+	    z-index: 2;
+	    @media (min-width: $sm) {
+			left: inherit;
+			right: 4px;
+		}
+    }
+    &__title {
+    	@include font(15px, #333);
+    	margin-bottom: 6px;
+    	display: inline-block;
+    }
+    &__media {
+    	margin-bottom: 15px;
+    }
+    &__input {
+    	@include font(12px, #333);
+    	width: 100%;
+	    background: #f6f6f6;
+	    padding: 6px 8px;
+    }
+    &.js-active {
+    	opacity: 1;
+    	visibility: visible;
+    }
+}
+
+.social-magazine li{
+	&:after {
+		width: 0;
+		background: transparent;
+	}
+}

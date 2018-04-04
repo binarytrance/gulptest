@@ -1,0 +1,41 @@
+.video-detail-banner {
+	padding-top: 0;
+}
+.section-highlight-box {
+	margin-bottom: 25px;
+}
+
+.timeline-video-detail span {
+	@include font(15px, #666666);
+}
+.video-detail-about {
+	padding: 20px 0;
+
+	& p {
+		padding-top: 15px;
+		@include font(14px, #333333);
+
+		@include breakpoint($sm) {
+			@include font(17px, null);
+		}
+		&:first-of-type {
+			padding-top: 5px;
+			@include breakpoint($sm) {
+				padding-top: 15px;
+			}
+		}
+	}
+}
+.video-feature-mobile {
+	@media (max-width: 767px) {
+		color: #333333;
+	}
+}
+
+.more-video-lists {
+	& li {
+		@media (max-width: 767px){
+			width: 100%;
+		}
+	}
+}

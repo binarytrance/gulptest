@@ -1,0 +1,140 @@
+mixin section-highlight(section_name, list_number, arr, id_arr, color)
+	.section-full.sticky-wrapper#section-highlighter
+		if section_name == "she"
+			.section-container.section-highlighter-container.js-dropdown-btn
+				.section-highlighter-wrapper(class="section-highlighter-wrapper--"+section_name)
+					h2.sanspro-b.section-highlighter-h.text-white She by DH
+					.arrow-container
+						img(style="width: 20px; height: 20px;" src="img/icons/down-arrow1.svg")
+				ul.sanspro-reg.section-highlighter-ul.js-section-highlighter-ul
+					//- var n = 0;
+					- for(var i = 0; i < list_number; i++)
+						li.text-uppercase.sanspro-semib(class="text-"+color)
+							a.page-anchor(href="#" + id_arr[i])= arr[i]
+
+		if section_name == "features"
+			.section-container.section-highlighter-container.js-dropdown-btn
+				.section-highlighter-wrapper(class="section-highlighter-wrapper--"+section_name)
+					h2.sanspro-b.section-highlighter-h.text-white Special Features
+					.arrow-container
+						img(style="width: 20px; height: 20px;" src="img/icons/down-arrow1.svg")
+				ul.sanspro-reg.section-highlighter-ul.js-section-highlighter-ul
+					//- var n = 0;
+					- for(var i = 0; i < list_number; i++)
+						li.text-uppercase.sanspro-semib(class="text-"+color)
+							a.page-anchor(href="#" + id_arr[i])= arr[i]
+
+		if section_name == "dhvideos"
+			.section-container.section-highlighter-container.js-dropdown-btn.section-highlighter-container--videos
+				.section-highlighter-wrapper(class="section-highlighter-wrapper--"+section_name)
+					h2.sanspro-b.section-highlighter-h.text-black DH Videos
+					.arrow-container
+						img(style="width: 20px; height: 20px;" src="img/icons/down-arrow1.svg")
+				ul.sanspro-reg.section-highlighter-ul.js-section-highlighter-ul
+					//- var n = 0;
+					- for(var i = 0; i < list_number; i++)
+						li.text-uppercase.sanspro-semib(class="video-feature-mobile text-"+color)
+							a.page-anchor(href="#" + id_arr[i])= arr[i]
+		if section_name == "sports"
+			.section-container.section-highlighter-container.js-dropdown-btn
+				.section-highlighter-wrapper(class="section-highlighter-wrapper--"+section_name)
+					h2.sanspro-b.section-highlighter-h.text-white Sports
+					.arrow-container
+						img(style="width: 20px; height: 20px;" src="img/icons/down-arrow1.svg")
+				ul.sanspro-reg.section-highlighter-ul.js-section-highlighter-ul
+					//- var n = 0;
+					- for(var i = 0; i < list_number; i++)
+						li.text-uppercase.sanspro-semib(class="text-"+color)
+							a.page-anchor(href="#" + id_arr[i])= arr[i]
+
+		if section_name == "city"
+			.section-container.section-highlighter-container.js-dropdown-btn
+				.section-highlighter-wrapper(class="section-highlighter-wrapper--"+section_name)
+					h2.sanspro-b.section-highlighter-h.text-white Bengaluru
+					.arrow-container
+						img(style="width: 20px; height: 20px;" src="img/icons/down-arrow1.svg")
+				ul.sanspro-reg.section-highlighter-ul.js-section-highlighter-ul
+					//- var n = 0;
+					- for(var i = 0; i < list_number; i++)
+						li.text-uppercase.sanspro-semib(class="text-"+color)
+							a.page-anchor(href="#" + id_arr[i])= arr[i]
+		if section_name == "politics"
+			.section-container.section-highlighter-container.js-dropdown-btn
+				.section-highlighter-wrapper(class="section-highlighter-wrapper--"+section_name)
+					h2.sanspro-b.section-highlighter-h.text-white Politics
+					.arrow-container
+						img(style="width: 20px; height: 20px;" src="img/icons/down-arrow1.svg")
+				ul.sanspro-reg.section-highlighter-ul.js-section-highlighter-ul
+					//- var n = 0;
+					- for(var i = 0; i < list_number; i++)
+						li.text-uppercase.sanspro-semib(class="text-"+color)
+							a.page-anchor(href="#" + id_arr[i])= arr[i]
+
+		if section_name == "science"
+			.section-container.section-highlighter-container.js-dropdown-btn
+				.section-highlighter-wrapper(class="section-highlighter-wrapper--"+section_name)
+					h2.sanspro-b.section-highlighter-h.text-white Science &amp; Technology
+					.arrow-container
+						img(style="width: 20px; height: 20px;" src="img/icons/down-arrow1.svg")
+				ul.sanspro-reg.section-highlighter-ul.js-section-highlighter-ul
+					//- var n = 0;
+					- for(var i = 0; i < list_number; i++)
+						li.text-uppercase.sanspro-semib(class="text-"+color)
+							a.page-anchor(href="#" + id_arr[i])= arr[i]
+		if section_name == "business"
+			.section-container.section-highlighter-container.js-dropdown-btn
+				.section-highlighter-wrapper(class="section-highlighter-wrapper--"+section_name)
+					h2.sanspro-b.section-highlighter-h.text-white Business
+					.arrow-container
+						img(style="width: 20px; height: 20px;" src="img/icons/down-arrow1.svg")
+				ul.sanspro-reg.section-highlighter-ul.js-section-highlighter-ul
+					//- var n = 0;
+					- for(var i = 0; i < list_number; i++)
+						li.text-uppercase.sanspro-semib(class="text-"+color)
+							a.page-anchor(href="#" + id_arr[i])= arr[i]
+		if section_name == "opinion"
+			.section-container.section-highlighter-container.js-dropdown-btn
+				.section-highlighter-wrapper(class="section-highlighter-wrapper--"+section_name)
+					h2.sanspro-b.section-highlighter-h.text-white Opinion
+					.arrow-container
+						img(style="width: 20px; height: 20px;" src="img/icons/down-arrow1.svg")
+				ul.sanspro-reg.section-highlighter-ul.js-section-highlighter-ul
+					//- var n = 0;
+					- for(var i = 0; i < list_number; i++)
+						li.text-uppercase.sanspro-semib(class="text-"+color)
+							a.page-anchor(href="#" + id_arr[i])= arr[i]
+		if section_name == "top-stories"
+			.section-container.section-highlighter-container.js-dropdown-btn
+				.section-highlighter-wrapper(class="section-highlighter-wrapper--"+section_name)
+					h2.sanspro-b.section-highlighter-h.text-white Top Stories
+					.arrow-container
+						img(style="width: 20px; height: 20px;" src="img/icons/down-arrow1.svg")
+				ul.sanspro-reg.section-highlighter-ul.js-section-highlighter-ul
+					//- var n = 0;
+					- for(var i = 0; i < list_number; i++)
+						li.text-uppercase.sanspro-semib(class="text-"+color)
+							a.page-anchor(href="#" + id_arr[i])= arr[i]
+		if section_name == "photos"
+			.section-container.section-highlighter-container.js-dropdown-btn
+				.section-highlighter-wrapper(class="section-highlighter-wrapper--"+section_name)
+					h2.sanspro-b.section-highlighter-h.text-white Photos
+					.arrow-container
+						img(style="width: 20px; height: 20px;" src="img/icons/down-arrow1.svg")
+				ul.sanspro-reg.section-highlighter-ul.js-section-highlighter-ul
+					//- var n = 0;
+					- for(var i = 0; i < list_number; i++)
+						li.text-uppercase.sanspro-semib(class="text-"+color)
+							a.page-anchor(href="#" + id_arr[i])= arr[i]
+		if section_name == "entertainment"
+			.section-container.section-highlighter-container.js-dropdown-btn
+				.section-highlighter-wrapper(class="section-highlighter-wrapper--"+section_name)
+					h2.sanspro-b.section-highlighter-h.text-white Entertainment
+					.arrow-container
+						img(style="width: 20px; height: 20px;" src="img/icons/down-arrow1.svg")
+				ul.sanspro-reg.section-highlighter-ul.js-section-highlighter-ul
+					//- var n = 0;
+					- for(var i = 0; i < list_number; i++)
+						li.text-uppercase.sanspro-semib(class="text-"+color)
+							a.page-anchor(href="#" + id_arr[i])= arr[i]
+
+

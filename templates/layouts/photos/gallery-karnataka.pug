@@ -1,0 +1,18 @@
+include ../../components/mixins/cards.pug
+section#gallery-karnataka-container
+	.section-container
+		.group.parent-relative.grid-col-full.section-heading-wrapper
+			.group.strip.section-heading.strip--photo-gallery
+				h2.sanspro-b.text-uppercase
+					a(href="#") karnataka
+				.view-link.f-right.sanspro-reg
+					a.text-uppercase(href="#") view all
+		.group
+			.slider-gran
+				ul.slider-parent
+					li.grid-col-3.slide-wrapper
+						+photo-gallery-card("img/home/top-stories-big-card.png", "img", "People watch fireworks exploding over Copaca-bana beach during New Year's celebrations in Rio de Janerio")
+					li.grid-col-3.slide-wrapper
+						+photo-gallery-card("img/home/top-stories-big-card.png", "img", "People watch fireworks exploding over Copaca-bana beach during New Year's celebrations in Rio de Janerio")
+					li.grid-col-3.slide-wrapper
+						+photo-gallery-card("img/home/top-stories-big-card.png", "img", "People watch fireworks exploding over Copaca-bana beach during New Year's celebrations in Rio de Janerio")

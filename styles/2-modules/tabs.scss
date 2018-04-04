@@ -1,0 +1,172 @@
+/*----- Tabs -----*/
+.tabs {
+    // width: 100%;
+    // display: inline-block;
+    position: relative;
+    // overflow: hidden;
+    // &--horoscope {
+    //     display: table;
+    //     width: auto;
+    // }
+}
+
+/*----- Tab Links -----*/
+.tab-links-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    clear: both;
+}
+.tab-links {
+    display: inline-block;
+    // box-shadow: 0px 1px 10px 1px rgba(183, 183, 183, 0.2);
+    &--horoscope {
+        background: #f6f6f6;
+        padding: 10px 10px 6px 10px;
+        & li {
+            padding: 0 15px !important;
+            
+            &:before {
+                width: 0px !important;
+            }
+            & a {
+                position: relative;
+                @include font(15px, #666666);
+                 &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -6px;
+                    width: 0;
+                    height: 2px;
+                    transition: all ease .2s;
+                    background-color: #006fbe;
+                }
+            }
+            &.active {
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 600;
+               & a {
+                color: #333333 !important;
+                &:before {
+                    width: 100%;
+                }
+               }
+            }
+        }
+        & a:hover {
+            color: #333333 !important;
+        }
+    }
+}
+
+.tab-links li {
+    position: relative;
+    &:first-of-type {
+        padding-left: 0;
+    }
+    padding:0px 10px;
+    float:left;
+    list-style:none;
+    &.active a {
+        font-weight: 700;
+        color: $sports-dark;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background-color: $black;
+        right: 0;
+        top: 5px;
+        
+    }
+    &:last-of-type {
+        &:before {
+            width: 0;
+        }
+    }
+}
+
+.video-links-wrapper {
+    li {
+         &.active a {
+            font-weight: 700;
+            color: $video-yellow;
+        }
+    }
+}
+
+.tab-links a {
+    
+    
+    display:inline-block;
+    // background: #f9f9f9;
+    @include font(14px, $black);
+    transition:all linear 0.15s;
+}
+.video-links-wrapper {
+    a {
+        color: #999999;
+    }
+}
+.tab-links a:hover {
+    text-decoration:none;
+    color: $sports-dark;
+}
+.video-links-wrapper a:hover {
+    color: $video-yellow;
+}
+
+li.active a, li.active a:hover {
+    // background:#fff;
+    color:#4c4c4c;
+}
+
+/*----- Content of Tabs -----*/
+.tab-content {
+    position: relative;
+    padding-top: 0;
+    background:#fff;
+    // margin-top: -4px;
+    @include breakpoint($sm) {
+        padding-top: 13px;
+    }
+    &--nopadding {
+        padding: 0;
+    }
+    &--video {
+        background-color: transparent;
+    }
+
+}
+.sports-tabs {
+    &--align {
+        margin-top: -5px;
+        clear: both;
+    }
+}
+.tab-list {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-bottom: dashed 1px rgba(246, 246, 246, 1);
+    &:last-of-type {
+        border-bottom: none;
+        padding-bottom:0;
+    }
+}
+.tab {
+    display:none;
+}
+
+.tab.active {
+    display:block;
+    // display: flex;
+    // flex-wrap: wrap;
+}
+.tabs-section {
+    padding-top: 20px;
+    padding-bottom: 160px;
+}

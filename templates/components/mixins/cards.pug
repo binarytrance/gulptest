@@ -1,0 +1,260 @@
+
+//- Large Horizontal card
+
+mixin large-horizontal(card_img, img_name, card_title, card_time_updated, bg_color)
+	.lg-hr-card.group
+		a(href="#").card-cta
+			.lg-hr-card__img
+				img.image(src=card_img, alt=img_name)
+			div(class="lg-hr-card__content bg-" + bg_color)
+				h1.sanspro-b.lg-hr-card__heading.card-cta__hover= card_title
+				span.sanspro-reg.lg-hr-card__time-info= card_time_updated
+
+
+//- Large vertical card
+
+mixin large-vertical(card_img, img_name, card_title, card_time_updated, bottom_bg_color , section)
+	.lg-vr-card
+		a(href="#").card-cta
+			.lg-vr-card__top
+				img.image(src=card_img, alt=img_name)
+			div(class="lg-vr-card__bottom parent-relative strip strip--" +section+" bg-"+ bottom_bg_color)
+				h1.sanspro-semib.lg-vr-card__heading.card-cta__hover= card_title
+				span.sanspro-reg.lg-vr-card__time-info= card_time_updated
+
+//- Large vertical card
+
+mixin small-vertical(card_img, img_name, card_title, card_time_updated, bottom_bg_color , section)
+	.lg-vr-card.lg-vr-slides
+		a(href="#").card-cta
+			.lg-vr-slides__top
+				img.image(src=card_img, alt=img_name)
+			div(class="lg-vr-slides__bottom parent-relative strip strip--" +section+" bg-"+ bottom_bg_color)
+				h1.serifpro-reg.lg-vr-card__heading.card-cta__hover= card_title
+				span.sanspro-reg.lg-vr-card__time-info= card_time_updated
+
+
+//- Small vertical card
+
+//- mixin small-vertical(card_img, img_name, card_title, card_time_updated)
+//- 	.sm-vr-card
+//- 		.sm-vr-card__img
+//- 			img.image(src=card_img, alt=img_name)
+//- 		div(class="sm-vr-card__content parent-relative separator sm-vr-card__content--"+card_color)
+//- 			h1.serifpro-reg.sm-vr-card__heading= card_title
+//- 			span.sanspro-reg.sm-vr-card__time-info= card_time_updated
+
+
+//- Advertise rectangle card
+
+mixin ad-card-250(ad_title)
+	div.card-cta.adver-wrapper--250.bg-adver.parent-relative
+		.ad-v-center
+			//- Remove the image and add ads here
+			img(src="http://via.placeholder.com/300x250", alt="") 
+
+//- Advertise square card
+
+mixin ad-card-275(ad_title)
+	div.card-cta.adver-wrapper--274.bg-adver.parent-relative
+		.ad-v-center
+			//- Remove the image and add ads here
+			img(src="http://via.placeholder.com/300x250", alt="")
+
+mixin ad-card-lng(ad_card, m_bottom)
+	div.card-cta
+		if(m_bottom == "m-bottom" )
+			.adver-wrapper--lng.parent-relative(class="adver-outside--"+ m_bottom)
+				//- p.ad-card-square__title.sanspro-reg= ad_title
+				img(src=ad_card)
+		else
+			.adver-wrapper--lng.parent-relative
+				img(src=ad_card)
+
+//- Advertise mobile card 300 * 250
+
+mixin mobile-ad(ad_title)
+	div.card-cta.mobile-adver.parent-relative
+		//- p.mobile-adver__title.sanspro-reg= ad_title
+		//- Remove the image and add ads here
+		img(src="http://via.placeholder.com/320x50", alt="")
+		
+
+//- Small Horizontal card
+
+mixin small-horizontal(card_img, img_name, card_title, card_time_updated, bg_color)
+	.sm-hr-card.sm-hr-card--m-top
+		a(href="#").card-cta
+			.sm-hr-card__img
+				img.image(src=card_img, alt=img_name)
+			div(class="sm-hr-card__content bg-" + bg_color)
+				h1.sanspro-semib.sm-hr-card__heading.card-cta__hover= card_title
+				span.sanspro-reg.sm-hr-card__time-info= card_time_updated
+
+
+//- Snippet Lists
+
+mixin snippet-lists(card_img, img_name, card_title, txt_color)
+	.snippet-list-block
+		a(href="#").card-cta
+			.snippet-list-block__img.snippet-list-block--t-img-width
+				img.image(src=card_img, alt=img_name)
+			.snippet-list-block__content
+				h1.sanspro-semib.snippet-list-block__heading.card-cta__hover(class=txt_color)= card_title
+
+//- sniippet list big
+mixin snippet-lists-big(card_img, img_name, card_title, card_time_updated)
+	.snippet-list-block-big
+		a(href="#").card-cta
+			.snippet-list-block-big__img.snippet-list-block--t-img-width
+				img.image(src=card_img, alt=img_name)
+			.snippet-list-block-big__content
+				h1.sanspro-semib.snippet-list-block-big__heading.card-cta__hover= card_title
+				span.sanspro-reg.snippet-list-block-big__time-info= card_time_updated
+
+//- sniippet list big for speak out cards
+mixin snippet-lists-speak-out(card_img, img_name, card_title, card_time_updated)
+	.snippet-list-block-big
+		a(href="#").card-cta
+			.snippet-list-block-big__img.snippet-list-block--t-img-width.snippet-list-block--speak-img-border
+				img.image(src=card_img, alt=img_name)
+			.snippet-list-block-big__content
+				h1.sanspro-semib.snippet-list-block-big__heading.card-cta__hover= card_title
+				span.sanspro-reg.snippet-list-block-big__time-info= card_time_updated
+
+//- highlights
+mixin highlights(card_title, txt_color)
+	.group.snippet-list-block
+		a(href="#").card-cta
+			.group.snippet-list-block__content.highlights-content
+				h1.sanspro-semib.snippet-list-block__heading.card-cta__hover(class=txt_color)= card_title
+
+//- Larger vertical Text
+
+mixin nopic-card(card_title, card_time_updated, bg_color, fnt_title_color, fnt_info_color)
+	a(href="#").card-cta.f-left 
+		div(class="nopic-card bg-"+bg_color)
+			h1.serifpro-reg.nopic-card__heading.card-cta__hover(class="fnt-nopic--"+fnt_title_color)= card_title
+			span.sanspro-reg.nopic-card__time-info(class="fnt-nopic--"+fnt_info_color)= card_time_updated
+
+
+
+
+//- Small vertical sponsored card
+
+mixin small-vertical-sponsored(card_img, img_name, card_info, card_title)
+	.sm-vrs-card
+		a(href="#").card-cta
+			.sm-vrs-card__img.parent-relative
+				img.image(src=card_img, alt=img_name)
+			.sm-vrs-card__content.sm-vrs-card__content--bright-red.very-light-gray.parent-relative.strip
+				span.sanspro-reg.sm-vrs-card__info= card_info
+				h1.serifpro-reg.sm-vrs-card__heading.card-cta__hover= card_title
+
+//- Square image card with title
+
+mixin square-img-card(card_img, img_name, card_title, card_info)
+	.sq-img-card
+		a(href="#").card-cta
+			.sq-img-card__img.parent-relative.full-height
+				img.image(src=card_img, alt=img_name)
+				.sq-img-card__content
+					h1.sanspro-semib.sq-img-card__heading.card-cta__hover= card_title
+					span.sanspro-reg.sq-img-card__info.text-uppercase= card_info
+
+
+//- Square image card with description
+
+mixin photo-gallery-card(card_img, img_name, card_info)
+	.photo-gallery
+		a(href="#").card-cta
+			.photo-gallery__img.parent-relative.full-height
+				img.image(src=card_img, alt=img_name)
+				.photo-gallery__content
+					p.sanspro-semib.photo-gallery__info.card-cta__hover= card_info
+
+
+//- Square image card with bg
+
+mixin square-img-only(card_img, img_name)
+	.sq-img-only
+		a(href="#").card-cta
+			.sq-img-only__img.parent-relative.full-height
+				img.image(src=card_img, alt=img_name)
+
+
+//- Square image card without bg
+
+mixin square-img-nobg(card_img, img_name)
+	.sq-img-nobg
+		a(href="#").card-cta
+			.sq-img-nobg__img.parent-relative.full-height
+				img.image(src=card_img, alt=img_name)
+
+
+//- Square image card without bg
+
+mixin square-img-speak-out(card_img, img_name)
+	.sq-img-speak-out
+		a(href="#").card-cta
+			.sq-img-speak-out__img.parent-relative
+				img.image(src=card_img, alt=img_name)
+
+
+//- horoscope card with bg
+mixin bg-horoscope-card(img_path, card_title, card_btn, title_color, btn_bg)
+	.sq-horoscope-bg(style="background: url("+img_path+") no-repeat right bottom")
+		a(href="#").card-cta
+			.sq-horoscope-bg__img.parent-relative.full-height
+				h3.serifpro-reg.sq-horoscope-bg__title(class="sq-horoscope-bg__title--"+title_color)=card_title
+				a.sanspro-semib(href="#" class="sq-horoscope-bg__button--"+btn_bg).sq-horoscope-bg__button=card_btn
+
+//- article widget card with bg
+mixin bg-widget-card(img_path, card_title, card_btn)
+	.sq-widget-bg(style="background: url("+img_path+") no-repeat right bottom")
+		a(href="#").card-cta
+			.sq-widget-bg__img.parent-relative.full-height
+				h3.serifpro-reg.sq-widget-bg__title=card_title
+				a.sanspro-semib(href="#").sq-widget-bg__button.js-popup=card_btn
+
+
+//- subscribe card with bg
+mixin bg-subscribe-card(card_title, card_btn, title_color, btn_bg)
+	.sq-subscribe-bg
+		.sq-subscribe-bg__img.parent-relative.full-height
+			h3.serifpro-reg.sq-subscribe-bg__title(class="sq-subscribe-bg__title--"+title_color)=card_title
+			a.sanspro-semib(href="#" class="sq-subscribe-bg__button--"+btn_bg).sq-subscribe-bg__button=card_btn
+
+
+mixin bg-subscribe-card-250(card_title, card_btn, title_color, btn_bg)
+	.sq-subscribe-bg.sq-subscribe-bg--250
+		.sq-subscribe-bg__img.parent-relative.full-height
+			h3.serifpro-reg.sq-subscribe-bg__title(class="sq-subscribe-bg__title--"+title_color)=card_title
+			a.sanspro-semib(href="#" class="sq-subscribe-bg__button--"+btn_bg).sq-subscribe-bg__button=card_btn
+
+//- outbrains
+
+mixin outbrain(card_img, img_name, card_title, card_info)
+	.outbrain-card
+		a(href="#").card-cta
+			.outbrain-card__top
+				img.image(src=card_img, alt=img_name)
+			div(class="outbrain-card__bottom parent-relative")
+				h1.serifpro-b.outbrain-card__heading.card-cta__hover= card_title
+				span.sanspro-reg.outbrain-card__time-info= card_info
+
+//- video card
+
+mixin video-vertical(card_img, img_name, card_title, bottom_bg_color, section)
+	.lg-vr-card.lg-vr-slides
+		a(href="#").card-cta
+			.lg-vr-video__top.parent-relative
+				img.image(src=card_img, alt=img_name)
+			div(class="lg-vr-video__bottom parent-relative strip strip--" +section+" bg-"+ bottom_bg_color)
+				if(bottom_bg_color == "transparent")
+					h1.sanspro-semib.lg-vr-card__heading.card-cta__hover.lg-vr-card--text-white= card_title
+					span.sanspro-reg.lg-vr-card__time-info.text-white.lg-vr-card--text-white= card_time_updated
+
+				else
+					h1.sanspro-semib.lg-vr-card__heading.card-cta__hover= card_title
+					span.sanspro-reg.lg-vr-card__time-info= card_time_updated

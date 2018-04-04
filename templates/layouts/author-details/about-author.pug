@@ -1,0 +1,33 @@
+section.nobottom-padding
+	.section-container
+		.grid-col-lg.author-detail__left-wrapper
+			.group
+				.text-center
+					img(src="img/author/editor-1.png", alt="Editor Name")
+					h4.author-detail__name.sanspro-b.text-uppercase Rasheed kappan
+					span.author-detail__designation.sanspro-semib Editor, City
+				.author-info
+					p.sanspro-reg Handling the Sunday special package 'Pointblank', Rasheed Kappan covers big picture stories on urban infrastructure and civic utilities, policy and mobility concerns with a sustainability focus. He also writes on aviation, technology and startups, arts, architecture and culture besides collaborating with designers to create info-graphic content.
+				.author-social-media
+					h5.sanspro-semib Follow Rasheed
+					ul.social-media-icons.social-media-icons--relative
+						li
+							a(href="#")
+								img(src="img/icons/fb-black.svg", alt="" style="width: 16px; height: 16px")
+
+						li
+							a(href="#")
+								img(src="img/icons/twit-black.svg", alt="" style="width: 16px; height: 16px")
+
+						li
+							a(href="#")
+								img(src="img/icons/insta-black.svg", alt="" style="width: 16px; height: 16px")
+
+		.grid-col-sm.f-right.mtop-m-20.mtop-t-20
+			.group.grid-col-full
+				include ../../components/mixins/cards.pug
+				+ad-card-250("Advert/Widget")
+			
+			.group.grid-col-full.mtop-m-20.mtop-d-20
+				include ../../components/mixins/cards.pug
+				+ad-card-250("Advert")

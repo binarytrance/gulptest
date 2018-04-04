@@ -1,0 +1,28 @@
+section#author-stories1.very-light-gray.overlapped-container
+	.section-container
+		ul.group.author-stories
+			li.grid-col-3
+				ul.sm-hr-card-list
+					li.sm-hr-card-list__items
+						include ../../components/mixins/cards.pug
+						+small-horizontal("img/home/science-dna.png", "img", "Scientists to study structure of alien hypothetical dna", "5 hours ago", "white")
+					li.sm-hr-card-list__items.mtop-m-20.mtop-t-20.mtop-d-20
+						include ../../components/mixins/cards.pug
+						+small-horizontal("img/home/science-alien.png", "img", "Something interstellar but not so alien is coming", "4 hours ago", "white")
+
+			li.grid-col-3.mtop-m-20
+				ul.notab-snippets.notab-snippets--business
+					li
+						include ../../components/mixins/cards.pug
+						+snippet-lists("img/home/science-molten.png", "img", "What is the message earth is trying to send us")
+					li
+						include ../../components/mixins/cards.pug
+						+snippet-lists("img/home/sports-list-saina.png", "img", "Players have to level up")
+					li
+						include ../../components/mixins/cards.pug
+						+snippet-lists("img/home/business-mrp.png", "img", "Online retails dont have it easy")
+
+			li.grid-col-3.mtop-m-20.mtop-t-20.mtop-t-20
+				.group.notab-snippets-mtop
+					include ../../components/mixins/cards.pug
+					+bg-subscribe-card("More stories like this in your inbox", "Contribute", "author-story", "author-story")

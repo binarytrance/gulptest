@@ -1,0 +1,43 @@
+section#special-features-container.overlapping-container.nobottom-padding
+	.box-container
+		.section-container
+			.grid-col-lg
+				.group.section-heading-wrapper.parent-relative
+					.strip.section-heading.strip--special-features.f-left.sticky-parent
+						h2.sanspro-b.text-uppercase 
+							a(href="#") special features
+					.view-link.f-right.sanspro-reg
+						a.text-uppercase(href="#") view all
+				.group
+					include ../../components/mixins/cards.pug
+					//- - var card_color= "Bossanova"
+					+large-horizontal("img/home/summer.png", "Summer", "It's hot outside! Let her wear those shorts...", "2 hours ago", "special-features")
+				.group
+					.grid-col-half.mtop-m-20.mtop-t-20.mtop-d-20
+						include ../../components/mixins/cards.pug
+						+nopic-card("When the quiet designer decided to get loud", "1 hour ago", "nopic-special-features")
+					.grid-col-half.mtop-m-20.mtop-t-20.mtop-d-20
+						include ../../components/mixins/cards.pug
+						+large-vertical("img/home/designer-home.png", "img", "For a pocket-friendly designer home that is on your wishlist", "7 hours ago", "gray", "special-features")
+			.grid-col-sm.mtop-m-20.mtop-t-20
+				.group.section-heading-wrapper.parent-relative.grid-col-full
+					.group.strip.section-heading.strip--photo-gallery
+						h2.sanspro-b.text-uppercase
+							a(href="#") photo gallery
+				.group.grid-col-full
+					ul.lg-vr-card-slider
+						li.lg-vr-card-slider__items
+							include ../../components/mixins/cards.pug
+							+photo-gallery-card("img/home/crackers.png", "Crackers", "People watch fireworks exploding over Copaca-bana beach during New Year's celebrations in Rio de Janerio")
+						li.lg-vr-card-slider__items
+							include ../../components/mixins/cards.pug
+							+photo-gallery-card("img/home/crackers.png", "Crackers", "Copaca-bana beach during New Year's celebrations in Rio de Janerio")
+				.group.grid-col-full.mtop-m-20.mtop-d-20
+					include ../../components/mixins/cards.pug
+					+ad-card-275("Advert")
+
+					+mobile-ad("mobile Advert")
+
+div.section-container
+	include ../../components/mixins/cards.pug
+	+ad-card-lng("http://via.placeholder.com/468x60", "m-bottom")

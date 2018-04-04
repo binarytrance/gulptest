@@ -1,0 +1,111 @@
+.side-nav {
+	display: block;
+	position: absolute;
+	left: 0;
+	background: #0062b5;
+	height: 100vh;
+	width: 300px;
+    top: 0;
+    z-index: 100;
+    transform: translateX(-320px);
+    overflow: hidden;
+    padding: 60px 0;
+   transition: all cubic-bezier(0.39, 0.47, 0.29, 0.81) 0.4s;
+
+    &.js-active {
+    	transform: translateX(0px);
+    }
+	
+	&__close {
+		position: absolute;
+		left: 36px;
+		top: 30px;
+
+		& img {
+			width: 16px;
+			cursor: pointer;
+			display: inline-block;
+		}
+	}
+ 
+}
+
+.side-nav-list {
+	transition: -ms-transform 0.5s,transform 0.5s !important;
+    // /* overflow-x: hidden; */
+    overflow-y: auto;
+    height: 92vh;
+    white-space: nowrap;
+    /* font-size: 0; */
+    overflow-scrolling: touch;
+    margin-right: -25px;
+    // padding-right: 20px;
+	&__items {
+		border-bottom: 1px solid rgba(246, 246, 246, 0.1);
+		& a {
+			color: #fff;
+		}
+		&--accordion-cta {
+			cursor: pointer;
+			float: right;
+			height: 21px;
+			position: relative;
+			width: 21px;
+			// & img {
+			// 	width: 12px;
+			// }
+			&:before, &:after {
+				background: #fff;
+			    content: '';
+			    height: 3px;
+			    left: 0;
+			    position: absolute;
+			    top: 0;
+			    width: 15px;
+			    transition: transform 500ms ease;
+			}
+			&:after {
+				transform-origin: center;
+			}
+			&.collapsed {
+				&:after {
+					transform: rotate(90deg);
+				}
+				&:before {
+			      transform: rotate(180deg);
+			    }
+			}
+		}
+		&--sidemenu {
+		    padding: 20px 50px 20px 35px;
+		}
+	}
+}
+.accordion-list {
+	display: none;
+	background-color: #005296;
+	box-shadow: 2px 3px 8px 1px rgba(54, 54, 54, 0.06);
+	padding: 15px 35px;
+	&__items {
+		padding: 10px 0;
+	}
+}
+.side-nav-overlay {
+	display: block;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+	opacity: 0;
+	z-index: 99;
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+	background: rgba(51, 51, 51, 0.6);
+	transition: all ease .3s;
+	&.js-overlay-active {
+		opacity: 1;
+		visibility: visible;
+	}
+}

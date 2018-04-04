@@ -1,0 +1,123 @@
+.section-container--ex {
+	@include breakpoint($lg) {
+		@include center($max-width: 720px, $pad: 0px);
+	}	
+}
+.first-letter-lg {
+	p.article-body-text:first-child::first-letter {
+		float: left;
+		// line-height: 0.5;
+		margin-right: 7px;
+		margin-top: 30px;
+		font-weight: 700;
+		font-size: 94px;
+		vertical-align: top;
+	}
+}
+.with-quotes {
+	position: relative;
+	@include font(22px, $black);
+	margin-bottom: 40px;
+	padding-left: 0;
+	padding-top: 30px;
+
+	@media (min-width: $sm) {
+		padding-top: 0px;
+		padding-left: 55px;
+	}
+	@include breakpoint($lg) {
+		margin-bottom: 30px;
+		padding-left: 120px;
+		font-size: 30px;
+		color: #333;
+		line-height: 38px;
+	}
+	
+	&:before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: -14px;
+		transform: translateX(-50%);
+		background: url("../img/icons/quotes.svg") no-repeat center center;
+		background-size: contain;
+		width: 54px;
+		height: 42px;
+		@include breakpoint($sm) {
+			left: 0;
+			top: inherit;
+			bottom: 0;
+			transform: translateX(0);
+		}
+		@include breakpoint($lg) {
+			width: 82px;
+			height: 64px;
+		}
+	}
+	&--magazine {
+		&:before {
+			background: url("../img/icons/magazine-quotes.svg") no-repeat center center;
+			background-size: contain;
+		}
+	}
+}
+.ex-imgslider-wrapper {
+	// width: 100%;
+	// height: 580px;
+	// background: url(../img/exclusive/nix.png) center center;
+	// background-size: cover;
+	margin-bottom: 40px;
+	margin-top: 10px;
+}
+.without-quotes {
+	background-color: rgba(255, 204, 0, 0.1);
+	margin-bottom: 40px;
+	border-left: solid 3px $exclusive;
+	padding: 25px;
+	@include font(15px, $black);
+	line-height: 25px;
+	&--special-features {
+		background-color: rgba(199, 184, 210, 0.1);
+		border-left: solid 2px #c7b8d2;
+	}
+}
+
+.beamer {
+	position: relative;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	cursor: pointer;
+}
+.beam-me-up-scotty {
+	margin-left: auto;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	background: #e6e6e6;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include breakpoint($lg) {
+		width: 56px;
+		height: 56px;
+	}
+	img {
+		width: 22px;
+		height: 35px;
+		@include breakpoint($lg) {
+			width: 42px;
+		}
+	}	
+	@include breakpoint($lg) {
+		position: absolute;
+		right: 0;
+	}
+	&--relative {
+		position: relative;
+		@media (min-width: 992px) {
+			right: 30px;
+		}
+	}
+}

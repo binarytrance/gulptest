@@ -1,0 +1,37 @@
+section#automobile-container.overlapped-container
+	.section-container
+		.grid-col-lg
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.strip.section-heading.strip--special-features
+						h2.sanspro-b.text-uppercase
+							a(href="#") automobiles
+			.grid-col-half
+				ul.sm-hr-card-list
+					li.sm-hr-card-list__items
+						include ../../components/mixins/cards.pug
+						+small-horizontal("img/home/science-dna.png", "img", "When in doubt, pedal it out", "5 hours ago", "white")
+					li.sm-hr-card-list__items.mtop-m-20.mtop-t-20.mtop-d-20
+						include ../../components/mixins/cards.pug
+						+small-horizontal("img/home/science-alien.png", "img", "Indian scout bobber is here", "4 hours ago", "white")
+			.grid-col-half.notab-snippets-mtop.mtop-m-20
+				ul.notab-snippets.notab-snippets--business
+					li
+						include ../../components/mixins/cards.pug
+						+snippet-lists("img/home/science-molten.png", "img", "What is the message earth is trying to send us")
+					li
+						include ../../components/mixins/cards.pug
+						+snippet-lists("img/home/sports-list-saina.png", "img", "Players have to level up")
+					li
+						include ../../components/mixins/cards.pug
+						+snippet-lists("img/home/business-mrp.png", "img", "Online retails dont have it easy")
+		.grid-col-sm
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+				.group.strip.section-heading.strip--photo-gallery.mtop-m-20.mtop-t-20
+					h2.sanspro-b.text-uppercase
+						a(href="#") photogallery
+			.group.grid-col-full
+				ul.lg-vr-card-slider
+					li.lg-vr-card-slider__items
+						+photo-gallery-card("img/home/crackers.png", "Crackers", "People watch fireworks exploding over Copaca-bana beach during New Year's celebrations in Rio de Janerio")
+					li.lg-vr-card-slider__items
+						+photo-gallery-card("img/home/crackers.png", "Crackers", "Copaca-bana beach during New Year's celebrations in Rio de Janerio")

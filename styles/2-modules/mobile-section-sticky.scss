@@ -1,0 +1,45 @@
+.sticky-parent {
+  @media (max-width: 767px) {
+    // background: #e64a19;
+    // padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+    // color: #fff;
+    transition: all ease .3s;
+  }
+  
+}
+
+.sticky-parent.fixed {
+  @media (max-width: 767px) {
+    position: fixed;
+    top: 38px;
+    left: 0;
+    width: 100%;
+    // box-sizing: border-box;/
+    z-index: 2;
+    // padding-left: 7px;
+    // padding-top: 15px;
+    // transition: all ease .3s;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px 1px rgba(183, 183, 183, 0.2);
+    &:before {
+      top: 8px;
+      left: 10px; 
+    }
+  }
+  & h2 {
+    @media (max-width: 767px) {
+      margin-left: 10px;
+      padding-top: 5px;
+    }
+  }
+  
+}
+
+.sticky-parent.fixed.absolute {
+  @media (max-width: 767px) {
+    position: static;
+  z-index: 0;
+  }
+}

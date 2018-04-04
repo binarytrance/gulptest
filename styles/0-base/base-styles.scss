@@ -1,0 +1,758 @@
+/*----------- Apply box sizing to border box -----------*/
+@import "../1-plugins/_jeet";
+@import "../1-plugins/_breakpoint";
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+					// height: 100%;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	overflow-x: hidden;		
+	height: 100%;
+}
+body * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: geometricPrecision;
+	// font-family: $sanspro;	
+}
+
+main {
+	display: block;
+	min-height: 100vh;
+}
+
+*{
+	outline: none;
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+ol, ul {
+	list-style: none;
+}
+header {
+	position: fixed;
+	width: 100%;
+	z-index: 99999;
+	background: #fff;
+	top: 0;
+	left: 0;
+}
+// img {
+// 	max-width: 100%;
+// 	width: 100%;
+// 	height: auto;
+// }
+/* For Firefox */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+.clear {
+	clear: both;
+}
+
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+.padding-main {
+	padding-top: 45px;
+	@include breakpoint($sm) {
+		padding-top: 50px;
+	}
+	@include breakpoint($lg) {
+		padding-top: 259px;
+	}
+}
+.section-area {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	min-height: 500px;
+	@media(min-width: $sm){
+		min-height: 600px;
+		height: 100vh;
+	}
+}
+.nav-container {
+	// position: relative;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	@include center($max-width: null, $pad: 10px);
+	@media(min-width: $sm){
+		@include center($max-width: 720px, $pad: 0px);
+	}
+	@media(min-width: $md){
+		@include center($max-width: 970px, $pad: 0px);
+	}
+	@media(min-width: $lg) {
+		@include center($max-width: 1180px, $pad: 0px);
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	// @media(min-width: $xl) {
+	// 	@include center($max-width: 100%, $pad: 200px);
+	// }
+	@include breakpoint($lg-max) {
+		height: 39px;
+	}
+}
+
+.section-container {
+	@include center($max-width: null, $pad: 10px);
+	@media(min-width: $sm){
+		@include center($max-width: 720px, $pad: 0px);
+	}
+	@media(min-width: $md){
+		@include center($max-width: 780px, $pad: 0px);
+	}
+	@media(min-width: $lg) {
+		@include center($max-width: 1180px, $pad: 0px);
+	}
+	// @media(min-width: $xxl) {
+	// 	@include center($max-width: null, $pad: 220px);
+	// }
+}
+.box-container {
+	.section-container {
+		padding: 0;
+	}
+	padding:30px 7px;
+	margin: 0 5px;
+	@include breakpoint($sm) {
+		margin: 0 24px;
+		padding: 30px 0;
+		@include center($max-width: 98%, $pad: 0px);
+	}
+	@media (min-width: 1250px) {
+		// margin: 0 70px;
+		padding: 30px;
+		@include center($max-width: 1250px, $pad: 0px);
+	}
+	@include breakpoint($xl) {
+		// margin: 0 158px;
+	}
+	
+	box-shadow: -1px 3px 8px 1px rgba(54, 54, 54, 0.06);
+	background-color: #ffffff;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+.text-capitalize {
+	text-transform: capitalize;
+}
+.text-center {
+	text-align: center;
+}
+/*============================ clearfix ========================================*/
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*======= use as a parent to center inline/inline-block elements ======== */
+.centering-container {
+	display: block;
+	text-align: center;
+	@include breakpoint($sm) {
+		// display: inline-block;
+	}
+	&--footer {
+		padding-left: 40px;
+		@include breakpoint($sm-max) {
+			padding-left: 0px;
+		}
+	}
+}
+.zero-opacity {
+	@include breakpoint($lg) {
+		opacity: 0;
+	}
+}
+
+.container-shadow {
+	box-shadow: 0px 1px 10px 1px rgba(183, 183, 183, 0.2);
+	background: #fff;
+}
+
+.image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-width: 100%;
+	height: 100% !important;
+	object-position: top;
+
+	// @media (min-width: 992px) {
+
+	// }
+}
+// .d-invisible-imp {
+// 	display: none !important;
+// }
+// .block {
+// 	display: block;
+// }
+// .block-imp {
+// 	display: block !important;
+// }
+// .inline-block {
+// 	display: inline-block;
+// }
+
+.right-float {
+	float: right;
+}
+.no-list-style {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.btn-shadow {
+	box-shadow: 2px 7px 7px 0px rgba(222, 242, 146, 0.25)
+}
+.full-height {
+	height: 100%;
+}
+
+img[src*=" "] {
+		display: none;
+}
+button {
+	border-width: 0;
+}
+
+
+
+// flex alignment
+.flex-align{
+	&--horizontal{
+		display: flex;
+		align-items: center;
+		margin-top: -16px;
+		flex-direction: row;
+	}
+}
+
+.h-list li{
+	float: left;
+}
+
+.abs-center {
+	left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+.section-full {
+	&--border {
+		
+	}
+	&--grey {
+		background: $light-gray;
+	}
+}
+
+.two-column-grid {
+	&__large {
+		@include column(8/12);
+	}
+	&__small {
+		@include column(4/12);
+	}
+}
+.grid-col-3 {
+	// &__small {
+		// margin-top: 20px;
+		@include column(4/12, $gutter:2.5, $cycle: 3);
+	// }
+}
+
+//outbrains
+.col-grid-4 {
+	// margin-top: 20px;
+	@include column(12/12, $gutter: 0, $cycle: 1);
+	@media (min-width: $sm) {
+		@include column(6/12, $gutter: 2.5, $cycle: 2);
+	}
+	@media (min-width: $md) {
+		@include column(4/12, $gutter: 2.5, $cycle: 3);
+	}
+	@media (min-width: $lg) {
+		@include column(3/12, $gutter: 2.5, $cycle: 4);
+	}
+}
+// cards on the slider sections on the rhs (when top stories has 3 rows)
+.grid-col-4-tab {
+	&:nth-child(3) {
+		@media (min-width: $sm) and (max-width: $lg) {
+			margin-right: 0;
+		}
+	}
+	&:nth-child(4) {
+		@media (min-width: $sm) and (max-width: $lg) {
+			margin-top: 20px;
+		}
+	}
+}
+ 
+
+// inner cards on the right hand panel
+.grid-col-full {
+	@include column(1);
+	@include breakpoint($sm) {
+		@include column(6/12, $gutter:2.5);
+	}
+	@include breakpoint($lg) {
+		@include column(1);
+	}
+}
+
+
+
+// left hand side outer parent container
+.grid-col-lg {
+	position: relative;
+	@include column(1);
+	@include breakpoint($lg) {
+		@include column(8/12);
+	}
+	&--video {
+		@include column(1);
+		@include breakpoint($lg) {
+			@include column(7/12);
+		}
+		
+	}
+}
+// right hand side outer parent container
+.grid-col-sm {
+	@include column(1);
+	// margin-top: 30px;
+	@include breakpoint($sm) {
+		// @include column(6/12);
+		// margin-top: 45px;
+	}
+	@include breakpoint($lg) {
+		// margin-top:0;
+		@include column(4/12);
+	}
+}
+// when there are two cards inside left hand panel
+.grid-col-half {
+	@include column(1);
+	// margin-top: 4.5%;
+	@include breakpoint($sm) {
+		@include column(6/12, $gutter: 2.5);
+	}
+}
+
+.grid-col-100 {
+	@include column(1);
+}
+
+// rectangle ad block
+
+.ad-card-lng {
+	
+	height: 90px;
+	&__title {
+		@include font(16px, #333333);
+		@include align(both);
+	}
+}
+
+
+// containers for ads
+.adver-outside {
+	&--m-bottom {
+		margin-bottom: 20px;
+		@include breakpoint($sm) {
+			margin-bottom: 35px;
+		}
+	}
+}
+.adver-wrapper {
+	// &--m-bottom {
+	// 	margin-bottom: 20px;
+	// 	@include breakpoint($sm) {
+	// 		margin-bottom: 40px;
+	// 	}
+	// }
+
+	&--250 {
+		// padding: 20px;
+		// height: 250px;
+		// @media (max-width: 767px) {
+		// 	display: none;
+		// }
+		display: none;
+		@include breakpoint($sm) {
+			height: 274px;
+			// padding: 20px;
+			display: block;
+			text-align: center;
+		}
+		@include breakpoint($lg) {
+			height: 250px;
+		}
+		& img {
+			@media (min-width: $sm) {
+				display: block;
+			}
+		}
+		// &__title {
+		// 	@include font(16px, #333333);
+		// 	@include align(both);
+		// }
+	}
+	&--274 {
+		// padding: 20px;
+		// height: 274px;
+		display: none;
+		@media (min-width: $sm) {
+			display: block;
+			// padding: 20px;
+			height: 274px;
+			text-align: center;
+		}
+		& img {
+			@media (min-width: $sm) {
+				display: block;
+			}
+		}
+		// &__title {
+		// 	@include font(16px, #333333);
+		// 	@include align(both);
+		// }
+	}
+	&--lng {
+		// padding: 20px;
+		// height: 120px;
+		// width: 100%;
+		// float: left;
+		// margin-top: 20px;
+		display: none;
+		@media (min-width:1024px) {
+			// padding: 20px;
+			// height: 120px;
+			// overflow: hidden;
+			width: 100%;
+			float: left;
+			text-align: center;
+			margin-top: 35px;
+			display: block;
+		}
+		// &__title {
+		// 	@media (min-width: $sm) {
+		// 		@include font(16px, #333333);
+		// 		@include align(both);
+		// 	}
+		// }
+		&--inside_box {
+			margin-top: 20px;
+			@include breakpoint($sm) {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+.ad-v-center {
+	@media (min-width: $sm){
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+.mobile-adver {
+	display: block;
+	// width: 300px !important;
+	// height: 250px;
+	// margin: 0 auto;
+	text-align: center;
+	@media (min-width: $sm) {
+		display: none;
+	}
+	// &__title {
+	// 		@include font(16px, #333333);
+	// 		@include align(both);
+	// 	}
+}
+section {
+	padding: 30px 0;
+	@include breakpoint($sm) {
+		padding: 30px 0;		
+	}
+}
+.nobottom-padding {
+	padding-bottom: 0 !important;
+}
+.m-no-display {
+	@include breakpoint($sm-max) {
+		display: none;
+	}
+}
+.no-visible {
+	visibility: hidden;
+}
+.f-left {
+	float: left;
+}
+.f-right {
+	float: right;
+}
+.card-cta {
+	transition: all ease .3s;
+	width: 100%;
+//	display: inline-block;
+ //    height: 100%;
+	// &:hover {
+	// 	transform: translateY(-5px);
+	// }
+	&:hover .card-cta__hover {
+		text-decoration: underline;
+	}
+	&__hover {
+		word-break: break-word;
+	}
+}
+
+// give margin top in desktop
+ .mtop-t-nostrip {
+	@media (min-width: $sm) and (max-width: 1199px) {
+		margin-top: 6px;
+	}
+}
+.mtop-m-nostrip {
+	@include breakpoint($sm-max) {
+		margin-top: 6px;	
+	}
+}
+
+.mtop-d-20 {
+	@include breakpoint($lg) {
+		margin-top: 20px;
+	}
+}
+
+.mtop-t-20 {
+	@media (min-width: $sm) and (max-width: 1199px) {
+		margin-top: 20px;
+	}
+}
+// .mtop-tl-20 {
+// 	@media (min-width: $md) and (max-width: $lg) {
+// 		margin-top: 20px;
+// 	}
+// }
+.mtop-m-20 {
+	@include breakpoint($sm-max) {
+		margin-top: 20px;
+	}
+}
+.mtop-t-30 {
+	@media (min-width: $sm) and (max-width: 1199px) {
+		margin-top: 30px;
+	}
+}
+// give 0 margin top in tabs
+.mtop-t-0 {
+	@include breakpoint($sm) {
+		margin-top: 0px;
+	}
+}
+.dashed-border {
+	border-bottom: dashed 1px $border-gray;
+	padding-bottom: 30px !important;
+	margin-bottom: 30px;
+	// @include breakpoint($sm) {
+	// 	padding-bottom: 50px;
+	// }
+}
+a {
+	// display: inline-block;
+}
+.text-white {
+	color: #ffffff;
+}
+.text-black {
+	color: #333333;
+}
+.full-width {
+	width: 100%;
+}
+
+// grid classes
+.grid-m-quarter {
+	@include breakpoint($sm-max) {
+		@include column(4/12);
+	}
+}
+.grid-m-half {
+	@include breakpoint($sm-max) {
+		@include column(6/12);	
+	}
+}
+.grid-m-full {
+	@include breakpoint($sm-max) {
+		@include column(1);
+	}
+}
+
+.grid-t-quarter {
+	@media (min-width: $sm) and (max-width: $lg) {
+		@include column(4/12);
+	}
+}
+.grid-t-half {
+	@media (min-width: $sm) and (max-width: $lg) {
+		@include column(6/12);
+	}
+}
+.grid-t-full {
+	@media (min-width: $sm) and (max-width: $lg) {
+		@include column(1);
+	}
+}
+
+.grid-d-quarter {
+	@include breakpoint($lg) {
+		@include column(4/12, $gutter: 1.75);
+		// margin-right: 20px;
+	}
+}
+.grid-d-half {
+	@include breakpoint($lg) {
+		@include column(6/12);
+	}
+}
+.grid-d-full {
+	@include breakpoint($lg) {
+		@include column(1);
+	}
+}
+
+// Article pages title
+.politics-heading {
+	color: #999933;
+}
+.top-stories-heading {
+	color: $top-stories-dark;
+}
+.trending-heading {
+	color: $trending;
+}
+.city-heading {
+	color: $city-dark;
+}
+.sports-heading {
+	color: $sports-dark;
+}
+.science-heading {
+	color: $science-dark;
+}
+.journalism-heading {
+	color: $journo;
+}
+.business-heading {
+	color: $business-dark;
+}
+.opinion-heading {
+	color: $opinion-dark;
+}
+.entertainment-heading {
+	color: $entertainment-dark;
+}
+.special-features-heading {
+	color: $special-f-dark;
+}
+.grid-m-12 {
+	@include breakpoint($sm-max) {
+		@include column(1);
+	}
+}
+.grid-t-12 {
+	@media (min-width: $sm) and (max-width: $lg) {
+		@include column(1);
+	}
+}
+
+.grid-t-7 {
+	@media (min-width: $sm) and (max-width: $lg) {
+		@include column(1);
+	}
+}
+
+.grid-d-7 {
+	@include breakpoint($lg) {
+		@include column(7/12);
+	}
+}
+.grid-m-4 {
+	@include breakpoint($sm-max) {
+		@include column(4/12);
+	}
+}
+.grid-t-4 { 
+	@media (min-width: $sm) and (max-width: $lg) {
+		@include column(4/12);
+	}
+}
+.grid-d-4 {
+	@include breakpoint($lg) {
+		@include column(4/12);
+	}
+}
+.grid-d-3 {
+	@include breakpoint($lg) {
+		@include column(3/12);
+	}
+}
+
+.grid-t-3 { 
+	@media (min-width: $sm) and (max-width: $lg) {
+		@include column(3/12);
+	}
+}
+.grid-m-3 {
+	@include breakpoint($lg) {
+		@include column(3/12);
+	}
+}
+.side-nav {
+    transform: translateX(-320px);
+	
+}
+.side-nav, .side-nav-overlay, .search-result--navbar {
+	display: none;
+}
+//css for backend
+.block {
+	width: 100%;
+} 
+.data {
+	width: 78%;
+}

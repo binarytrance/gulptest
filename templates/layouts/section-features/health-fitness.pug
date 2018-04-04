@@ -1,0 +1,25 @@
+section.overlapping-container
+	.box-container
+		.section-container.dashed-border#health-container
+			.group
+				.group.parent-relative.grid-col-full.section-heading-wrapper
+						.group.strip.section-heading.strip--special-features
+							h2.sanspro-b.text-uppercase
+								a(href="#") health &amp; fitness
+			.grid-col-lg
+				.grid-col-half
+					include ../../components/mixins/cards.pug
+					+nopic-card("When the quiet designer decided to get loud", "1 hour ago", "nopic-special-features")
+				.grid-col-half
+					ul.sm-hr-card-list
+						li.sm-hr-card-list__items.mtop-m-20
+							include ../../components/mixins/cards.pug
+							+small-horizontal("img/home/politics-trump.png", "img", "I have a nuclear button on my table says Trump", "4 hours ago", "gray")
+						li.sm-hr-card-list__items.mtop-m-20.mtop-t-20.mtop-d-20
+							include ../../components/mixins/cards.pug
+							+small-horizontal("img/home/politics-kim.png", "img", "The nuclear tweet wars are about to begin", "5 hours ago", "gray")
+			.grid-col-sm.mtop-m-20.mtop-t-20
+				include ../../components/mixins/cards.pug
+				+ad-card-275("Advert")
+
+		include home.pug

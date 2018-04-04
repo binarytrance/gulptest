@@ -1,0 +1,37 @@
+include ../../components/mixins/cards.pug
+section#badminton-container.overlapped-container
+	.section-container
+		.group
+			.grid-col-lg
+				.group.parent-relative.grid-col-full.section-heading-wrapper
+						.group.section-heading.strip.strip--sports
+							h2.sanspro-b.text-uppercase
+								a(href="#") badminton
+							.view-link.f-right.sanspro-reg
+								a.text-uppercase(href="#") view all
+				.grid-col-half
+					ul.sm-hr-card-list
+						li.sm-hr-card-list__items
+							include ../../components/mixins/cards.pug
+							+small-horizontal("img/home/science-dna.png", "img", "When in doubt, pedal it out", "5 hours ago", "gray")
+						li.sm-hr-card-list__items.mtop-m-20.mtop-t-20.mtop-d-20
+							include ../../components/mixins/cards.pug
+							+small-horizontal("img/home/science-alien.png", "img", "Indian scout bobber is here", "4 hours ago", "gray")
+				.grid-col-half
+					ul.notab-snippets.notab-snippets--graybg.mtop-m-20
+						li
+							+snippet-lists("img/home/science-solistic.png", "img", "You might not be here without the solistices and seasons")
+						li
+							+snippet-lists("img/home/science-molten.png", "img", "Earth's molten heart may not be sending messages")
+						li
+							+snippet-lists("img/home/science-molecule.png", "img", "Molecular movement generates patterns")
+			.grid-col-sm
+				.group.parent-relative.grid-col-full.section-heading-wrapper.section-heading-wrapper--tweet-block
+					.group.section-heading
+						h2.sanspro-b.text-uppercase
+							a(href="#").twitter-feed-cta
+								img.twitter-feed-cta__img(src="img/icons/twitter.png", alt="Twitter")
+								|social feed
+				.tweet-card
+
+

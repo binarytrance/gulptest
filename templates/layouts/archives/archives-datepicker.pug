@@ -1,0 +1,28 @@
+section
+	.section-container
+		.grid-col-lg.grid-col-lg--video
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.strip.section-heading.strip--special-features
+						h2.sanspro-b.text-uppercase
+							a(href="#") archives
+
+			.group
+				.dashed-border
+					p.archives-info.sanspro-reg To view Archives, select a date below. All the links on the archived pages point to sections on that day.
+					.datepicker-block.parent-relative
+						form
+							.form-group
+								.flatpickr.wrap-date
+									input.input-button(type="text" class="archives-date sanspro-semib flatpickr-input" id="datepicker" data-input)
+									a(data-toggle)
+										img(src="img/icons/calendar.png", alt="Calendar")
+							a(href="index.html").sanspro-semib.datepicker-submit.sq-horoscope-bg__button--black-bg.sq-horoscope-bg__button Submit
+
+				.notify-date
+					p.sanspro-b Please enter year from 2009 to till Date
+				
+
+		.grid-col-sm.f-right
+			.group.grid-col-full
+				include ../../components/mixins/cards.pug
+				+ad-card-250("Advert")

@@ -1,0 +1,143 @@
+.author-banner {
+	height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    & h1 {
+    	@include column(8/12, $offset: 2/12);
+    	@include font(28px, null);
+    	text-align: center;
+
+    	@media (min-width: 768px) {
+    		@include column(6.5/12, $offset: 5.5/12);
+    		margin-top: 50px;
+    		@include font(40px, null);
+    		text-align: inherit;
+    	}
+    }
+}
+.top-bar:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 40px;
+    height: 2px;
+    background: #fff;
+    @include breakpoint($sm-max) {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.editor-ul--grid {
+    & li {
+        @media (max-width: 767px) {
+            @include column(6/12, $cycle: 2);
+            text-align: center !important;
+        }
+        & img {
+            @media (max-width: 767px) {
+                width: 145px;
+                height: 145px;
+            }
+        }
+    }
+    
+    & li:nth-child(n+4) {
+        margin-top: 20px;
+        @media (min-width: 768px) {
+            margin-top: 35px;
+        }
+    }
+}
+.editor-ul--team {
+    clear: both;
+    & li {
+       // @include column(6/12, $cycle: 2);
+
+       @media (min-width: 768px) {
+         // @include column(4/12, $cycle: 3);
+       }
+       @media (min-width: 1024px) {
+         @include column(2/12, $cycle: 6);
+       }
+       text-align: center !important;
+        & img {
+            width: 125px;
+            height: 125px;
+            @include breakpoint($sm) {
+                width: 157px;
+                height: 157px;
+            }
+            
+        }
+    }
+}
+.editor-lists {
+	text-align: center;
+	&__name {
+		@include font(15px, #333);
+		margin: 15px 0 5px 0;
+	}
+	&__designation {
+		@include font(12px, #333);
+	}
+}
+
+
+// author details scss
+.author-detail {
+    &__name {
+        @include font(17px, #333);
+        margin: 30px 0 8px 0;
+    }
+    &__designation {
+        @include font(15px, #666);
+    }
+}
+.author-info {
+    margin-top: 20px;
+    @media (min-width: $sm) {
+        margin-top: 40px;
+    }
+}
+.author-info p {
+    font-size: 17px;
+    color: #333;
+    line-height: 24px;
+}
+.social-media-icons--relative {
+    position: relative;
+}
+.author-social-media {
+    margin: 20px 0 0 0;
+    @media (min-width: $sm) {
+        margin: 25px 0 10px 0;
+    }
+    & h5 {
+        @include font(15px, #666);
+        margin-bottom: 15px;
+    }
+}
+.author-stories>li {
+    &:last-child {
+        @media (max-width: 1199px) {
+            @include column(1);
+        }
+    }
+    &:first-child, &:nth-child(2) {
+        @media (min-width: 768px) and (max-width: 1199px) {
+            @include column(1/2, $cycle: 2);
+        }
+        @media (max-width: 767px) {
+            @include column(1);
+        }
+    }
+}
+.author-detail__left-wrapper {
+    border-bottom: 1px dashed #eaeaea;
+    padding-bottom: 20px;
+    @media (min-width: $sm) {
+        padding-bottom: 30px;
+    }
+}

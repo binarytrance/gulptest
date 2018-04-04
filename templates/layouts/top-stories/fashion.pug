@@ -1,0 +1,28 @@
+section#top-stories-container-2
+	.section-full
+		.section-container
+			.grid-col-lg
+				.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.strip.section-heading.strip--top-stories
+						h2.sanspro-b.text-uppercase
+							a(href="#") fashion
+					.view-link.f-right.sanspro-reg
+						a.text-uppercase(href="stories-list.html") view all
+				.grid-col-half
+					include ../../components/mixins/cards.pug
+					+large-vertical("img/home/in-your-city-cholera.png", "img", "DH Metrolife Fashion Show begins on a grand note", "7 hours ago", "white", "top-stories")
+				.grid-col-half.mtop-m-20
+					include ../../components/mixins/cards.pug
+					+large-vertical("img/home/in-your-city-cholera.png", "img", "The king of American fashion", "7 hours ago", "white", "top-stories")
+
+			.grid-col-sm
+				.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.strip.section-heading.strip--top-stories.mtop-m-20.mtop-t-20
+						h2.sanspro-b.text-uppercase
+							a(href="#") horoscope
+				.group.f-left(style="width: 100%;")
+					include ../../components/mixins/cards.pug
+					+bg-horoscope-card("./img/home/horoscope.png", "What does your star sign say ? ", "Explore", "black", "black-bg")
+	div.section-container
+		include ../../components/mixins/cards.pug
+		+ad-card-lng("Advert")

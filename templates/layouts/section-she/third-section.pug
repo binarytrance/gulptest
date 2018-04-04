@@ -1,0 +1,31 @@
+include ../../components/mixins/cards.pug
+section#she-third-container
+	.section-full
+		.section-container
+			.group
+				.group.section-heading-wrapper.parent-relative
+					.section-heading.f-left.strip.strip--she
+						h2.sanspro-b.text-uppercase 
+							a(href="#") top stories
+					.view-link.f-right.sanspro-reg
+						a.text-uppercase(href="stories-list.html") view all
+				.grid-col-lg
+					.grid-col-half
+						include ../../components/mixins/cards.pug
+						+nopic-card("TRAI issues interconnectivity rules, fixes past 30 day deadline", "1 hour ago", "she", "white", "white")
+					.grid-col-half
+						ul.sm-hr-card-list
+							li.sm-hr-card-list__items.mtop-m-20
+								include ../../components/mixins/cards.pug
+								+small-horizontal("img/home/politics-trump.png", "img", "I have a nuclear button on my table says Trump", "4 hours ago", "gray")
+							li.sm-hr-card-list__items.mtop-m-20.mtop-t-20.mtop-d-20
+								include ../../components/mixins/cards.pug
+								+small-horizontal("img/home/politics-kim.png", "img", "The nuclear tweet wars are about to begin", "5 hours ago", "gray")
+				.grid-col-sm.mtop-m-20.mtop-t-20
+					ul.notab-snippets.notab-snippets--graybg
+						li
+							+snippet-lists("img/home/science-solistic.png", "img", "You might not be here without the solistices and seasons")
+						li
+							+snippet-lists("img/home/science-molten.png", "img", "Earth's molten heart may not be sending messages")
+						li
+							+snippet-lists("img/home/science-molecule.png", "img", "Molecular movement generates patterns")

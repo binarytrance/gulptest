@@ -1,0 +1,27 @@
+section#urban-container
+	.section-full
+		.section-container
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.strip.section-heading.strip--city
+						h2.sanspro-b.text-uppercase
+							a(href="#") urban development
+			.grid-col-lg
+				.grid-col-half
+					include ../../components/mixins/cards.pug
+					+nopic-card("As deadline ends, rooftop bars claim fire safety changes done", "6 hours ago", "white", "urbandev-title", "urbandev-info")
+				.grid-col-half
+					ul.sm-hr-card-list
+						li.sm-hr-card-list__items.mtop-m-20
+							include ../../components/mixins/cards.pug
+							+small-horizontal("img/home/business-sector.png", "img", "Indiranagar peace, lost forever", "3 hours ago", "white")
+						li.sm-hr-card-list__items.mtop-m-20.mtop-t-20.mtop-d-20
+							include ../../components/mixins/cards.pug
+							+small-horizontal("img/home/business-mrp.png", "img", "'Make state textbooks on par with NCERT'", "4 hours ago", "white")
+			.grid-col-sm.mtop-t-20.mtop-m-20
+				.group.f-left(style="width: 100%;")
+					include ../../components/mixins/cards.pug
+					+square-img-only("img/home/jana.png", "img")
+
+	div.section-container
+		include ../../components/mixins/cards.pug
+		+ad-card-lng("Advert")

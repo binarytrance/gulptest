@@ -1,0 +1,73 @@
+doctype html
+
+html(lang= "en")
+	- var pageName = "home"
+	head
+		include templates/base/header.pug
+		+header(pageName)
+	body
+		//- include templates/components/loader.pug
+		//- include templates/base/logo-only-top-nav.pug
+
+		main.padding-main
+			//- START: Nav Bar =====================================================================
+			include templates/base/nav.pug
+			//- END: Nav Bar =======================================================================
+			//- START: Nav Bar =====================================================================
+			//- include templates/base/just-in.pug
+			//- END: Nav Bar =======================================================================
+
+			//- START: Election=====================================================================
+			include templates/template1/nav.pug
+			//- END: Election =======================================================================
+
+			//- START: Election=====================================================================
+			//- include templates/layouts/home/election.pug
+			//- END: Election =======================================================================
+
+			
+			//- START: Top Stories =====================================================================
+			//- include templates/layouts/home/top-stories.pug
+			//- END: Top Stories =======================================================================
+			
+			//- START: in your city =====================================================================
+			//- include templates/layouts/home/city.pug
+			//- END: in your city =======================================================================
+			
+			//- START: politics =====================================================================
+			//- include templates/layouts/home/politics.pug
+			//- END: politics =======================================================================
+			
+			//- START: politics =====================================================================
+			//- include templates/layouts/home/sports.pug
+			//- END: politics =======================================================================
+			
+			//- START: politics =====================================================================
+			//- include templates/layouts/home/science.pug
+			//- END: politics =======================================================================
+
+			//- START: politics =====================================================================
+			//- include templates/layouts/home/business.pug
+			//- END: politics =======================================================================
+
+
+			//- START: entertainment =====================================================================
+			//- include templates/layouts/home/entertainment.pug
+			//- END: entertainment =======================================================================
+			
+			//- START: special features =======================================================================
+			//- include templates/layouts/home/video.pug
+			//- END: special features =======================================================================
+
+			//- START: special features =======================================================================
+			include templates/layouts/home/features-gallery.pug
+			//- END: special features =======================================================================
+
+			
+			
+			include templates/base/footer.pug
+		//- footer#footer
+			//- include templates/layouts/footer.pug
+
+		include templates/base/scripts.pug
+

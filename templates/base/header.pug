@@ -1,0 +1,131 @@
+//- mixin header(pageName)
+//- 	meta(charset="UTF-8")
+//- 	meta(name= "viewport", content= "user-scalable=no, width=device-width, initial-scale=1.0", initial-scale=1)
+//- 	link(rel= "shortcut icon", href="img/favicon/DH-favicon.png" type="image/x-icon")
+//- 	link(rel= "stylesheet", href= "css/common.css")
+//- 	title Deccan Herald
+//- 	//- if(pageName === "archives")
+//- 	//- 	title Deccan Herald
+//- 	//- 	link(rel= "stylesheet", href= "css/common.css")
+//- 	//- 	link(rel= "stylesheet", href= "css/home.css")
+//- 	//- 	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.3.2/flatpickr.min.css")
+//- 	//- link(rel= "stylesheet", href= "css/common.css")
+//- 	link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet" media="none" onload="this.media='all';")
+//- 	link(href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700" rel="stylesheet" media="none" onload="this.media='all';")
+//- 	// replace this with the commented html/js while pushing
+//- 	//- link(href="css/non-critical.css" rel="stylesheet" media="none" onload="this.media='all';")
+//- 	//- link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="preload" media="none" onload="this.media='all';")
+//- 	//- link(href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700" rel="preload" media="none" onload="this.media='all';")
+//- 	//- link(rel= "preload" href= "css/non-critical.css" as="style" media="none" onload="this.onload=null;this.rel='stylesheet';")
+//- 	//- noscript
+//- 	//- 	link(rel="stylesheet" href="css/non-critical.css")
+	
+//- 	//- if(pageName === "home")
+//- 	//- 		title Deccan Herald
+			
+//- 	//- 		//- link(rel= "stylesheet", href= "css/home.css")
+			
+//- 	//- 		//- link(rel= "stylesheet", href= "https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css")
+//- 	//- if(pageName === "She")
+//- 	//- 		title She By DH
+//- 	//- 		link(rel= "stylesheet", href= "css/common.css")
+//- 	//- 		//- link(rel= "stylesheet", href= "css/home.css")
+//- 	//- if(pageName === "Sports")
+//- 	//- 		title Sports
+//- 	//- 		link(rel= "stylesheet", href= "css/common.css")
+//- 	//- 		//- link(rel= "stylesheet", href= "css/home.css")
+//- 	//- if(pageName === "Features")
+//- 	//- 		title Features
+//- 	//- 		link(rel= "stylesheet", href= "css/common.css")
+//- 	//- 		//- link(rel= "stylesheet", href= "css/home.css")
+//- 	//- if(pageName === "Sports")
+//- 	//- 		title Sports
+//- 	//- 		link(rel= "stylesheet", href= "css/common.css")
+//- 	//- 		//- link(rel= "stylesheet", href= "css/home.css")
+//- 	//- 		//- link(rel= "stylesheet", href= "https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css")
+//- 	//- if(pageName === "City")
+//- 	//- 		title City
+//- 	//- 		link(rel= "stylesheet", href= "css/common.css")
+//- 	//- 		//- link(rel= "stylesheet", href= "css/home.css")
+//- 	//- if(pageName === "Article")
+//- 	//- 		title Article
+//- 	//- 		link(rel= "stylesheet", href= "css/common.css")
+//- 	//- 		//- link(rel= "stylesheet", href= "css/home.css")
+//- 	//- else if(pageName === "cards")
+//- 	//- 		title Deccan Herald
+//- 	//- 		link(rel= "stylesheet", href= "css/common.css")
+//- 	//- 		//- link(rel= "stylesheet", href= "css/home.css")
+//- 	//- else if(pageName === "exclusive")
+//- 	//- 		title Deccan Herald
+//- 	//- 		link(rel= "stylesheet", href= "css/common.css")
+//- 	//- 		//- link(rel= "stylesheet", href= "css/home.css")
+//- 	//- 		link(rel= "stylesheet", href= "css/non-critical.css" media="none" onload="this.media='all';")
+//- 	//- else if(pageName === "terms")
+//- 	//- 	title terms and conditions
+//- 	//- 	link(rel= "stylesheet", href= "css/main-owner.css")
+//- 	//- else if(pageName === "magazine")
+//- 	//- 	title Deccan Herald
+//- 	//- 	link(rel= "stylesheet", href= "css/common.css")
+//- 	//- 	//- link(rel= "stylesheet", href= "css/home.css"))
+//- 	//- script
+//- 	//- 	if($(window).width() >= 1200) {
+//- 	//- 		console.log('works');
+//- 	//- 		if (scrollTop >= 110) {
+//- 	//- 			$('#just-in-container').appendTo('.trending-wrapper');
+//- 	//- 			$('.subnav-wrapper, .banner-adver-wrapper, .js-normal-image, .js-onscroll-image, .js-desktop-logo-wrapper, .js-desktop-logo-wrapper img, #just-in-container, .js-header-nav-container, .dec-header, .trending-wrapper, .just-in-ul, .just-in-wrapper, .just-in-h, .just-in-ul li').addClass('js-active');
+//- 	//- 		} 
+//- 	//- 		else if (scrollTop < 110) {
+//- 	//- 			$('.subnav-wrapper, .banner-adver-wrapper, .js-normal-image, .js-onscroll-image, .js-desktop-logo-wrapper, .js-desktop-logo-wrapper img, #just-in-container, .js-header-nav-container, .dec-header, .trending-wrapper, .just-in-ul, .just-in-wrapper, .just-in-h, .just-in-ul li').removeClass('js-active');
+//- 	//- 			$("#just-in-container").appendTo('header');
+//- 	//- 		} 
+//- 	//- 	}
+	
+//- 	//- if(pageName === "home")
+//- 	//- 	title Deccan Herald
+//- 	//- else if(pageName === "She")
+//- 	//- 	title She By DH
+//- 	//- else if(pageName === "Sports")
+//- 	//- 	title Sports
+//- 	//- else if(pageName === "Features")
+//- 	//- 	title Features
+//- 	//- else if(pageName === "Sports")
+//- 	//- 	title Sports
+//- 	//- else if(pageName === "City")
+//- 	//- 	title City
+//- 	//- else if(pageName === "Article")
+//- 	//- 	title Article
+//- 	//- else if(pageName === "cards")
+//- 	//- 	title Deccan Herald
+//- 	//- else if(pageName === "exclusive")
+//- 	//- 	title Deccan Herald
+//- 	//- else if(pageName === "magazine")
+//- 	//- 	title Deccan Herald
+//- 	//- else if(pageName === "exclusive")
+//- 	//- 	title Deccan Herald
+//- 	//- else if(pageName === "horoscope")
+//- 	//- 	title Horoscope
+//- 	//- else if(pageName === "horoscope-detail")
+//- 	//- 	title Horoscope Detail
+//- 	//- else if(pageName === "search-results")
+//- 	//- 	title Search Results
+//- 	//- else if(pageName === "politics")
+//- 	//- 	title Politics
+//- 	//- else if(pageName === "science")
+//- 	//- 	title Science and Technology
+//- 	//- else if(pageName === "business")
+//- 	//- 	title Business
+//- 	//- else if(pageName === "opinion")
+//- 	//- 	title Opinion
+//- 	//- else if(pageName === "top-stories")
+//- 	//- 	title Top Stories
+//- 	//- else if(pageName === "gallery albums")
+//- 	//- 	title Albums
+//- 	//- else if(pageName === "speak-out-listing")
+//- 	//- 	title Speak Out
+		
+//- 	meta(name= "description", content= "")
+//- 	meta(name= "keywords", content= "")
+//- 	//- link(rel="stylesheet", href='css/loader.css')
+//- 	//- link(rel= "stylesheet", href= "css/main.css")
+//- 	//- non blocking css
+//- 	//- link(rel= "stylesheet", href= "css/main.css " media="none" onload="this.media='all';")

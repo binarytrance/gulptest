@@ -1,0 +1,88 @@
+section#video-section.overlapped-container
+	.section-full
+		.section-container
+			.grid-col-lg.grid-col-lg--video
+				.group.parent-relative.grid-col-full.section-heading-wrapper
+						.group.strip.section-heading.strip--politics.sticky-parent.sticky-parent--video
+							h2.sanspro-b.text-uppercase.video-heading
+								a(href="#") dh video section
+				.group.video-wrapper.f-left
+					img.image(src="img/home/kylo.png")
+				.group.video-info
+					p.sanspro-b.video-info.f-left New 'End of the World' trilogy to feature Trump in the starring role
+			.grid-col-sm.f-right
+				.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.section-heading.mtop-m-nostrip.mtop-t-nostrip
+						h2.sanspro-b.text-uppercase.video-heading
+							a(href="#") updates
+						//- .view-link.f-right.sanspro-reg
+						//- 	a.text-uppercase(href="#") view all
+				.group.tabs.sports-tabs.sports-tabs--align
+					.tab-links-container
+						ul.tab-links.group.sanspro-reg.video-links-wrapper
+							li.active
+								a.text-uppercase(href="#latest") latest
+							li
+								a.text-uppercase(href="#trending") trending
+							li
+								a.text-uppercase(href="#highest-rated") highest rated
+							li
+								a.text-uppercase(href="#all") all
+					.tab-content.tab-content--video.group
+						.active.tab#latest
+							ul
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-1.png", "img", "Gianni Versace Scholarship announced at Versus SS18 show", "watchlist-txt")
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-2.png", "img", "Alia, Ranveer share their experience of walking the ramp for Manish Malhotra", "watchlist-txt")
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-3.png", "img", "New Yorkers get up close look at Michelangelo's masterpieces", "watchlist-txt")
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-4.png", "img", "The first Parisian restrospective devoted to Madame Grès, que", "watchlist-txt")
+						.tab#trending
+							ul
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-3.png", "img", "Alia, Ranveer share their experience of walking the ramp for Manish Malhotra", "watchlist-txt")
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-1.png", "img", "Gianni Versace Scholarship announced at Versus SS18 show", "watchlist-txt")
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-4.png", "img", "The first Parisian restrospective devoted to Madame Grès, que", "watchlist-txt")
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-2.png", "img", "New Yorkers get up close look at Michelangelo's masterpieces", "watchlist-txt")
+						.tab#highest-rated
+							ul
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-4.png", "img", "The first Parisian restrospective devoted to Madame Grès, que", "watchlist-txt")
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-3.png", "img", "New Yorkers get up close look at Michelangelo's masterpieces", "watchlist-txt")
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-2.png", "img", "Gianni Versace Scholarship announced at Versus SS18 show", "watchlist-txt")
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-1.png", "img", "Alia, Ranveer share their experience of walking the ramp for Manish Malhotra", "watchlist-txt")
+						.tab#all
+							ul
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-3.png", "img", "New Yorkers get up close look at Michelangelo's masterpieces", "watchlist-txt")
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-1.png", "img", "The first Parisian restrospective devoted to Madame Grès, que", "watchlist-txt")
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-4.png", "img", "Alia, Ranveer share their experience of walking the ramp for Manish Malhotra", "watchlist-txt")
+								li.tab-list
+									include ../../components/mixins/cards.pug
+									+snippet-lists("img/home/video/watchlist-2.png", "img", "Gianni Versace Scholarship announced at Versus SS18 show", "watchlist-txt")
+

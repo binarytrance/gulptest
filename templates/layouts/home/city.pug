@@ -1,0 +1,39 @@
+section#city-container.overlapped-container
+	.section-full
+		.section-container
+			.group.section-heading-wrapper.parent-relative
+					.strip.section-heading.strip--city.f-left.sticky-parent
+						h2.sanspro-b.text-uppercase 
+							a(href="#") in your city
+					.view-link.f-right.sanspro-reg
+						a.text-uppercase(href="#") view all
+			.grid-col-lg
+				.group
+					include ../../components/mixins/cards.pug
+					//- - var card_color= "Bossanova"
+					+large-horizontal("img/home/in-your-city-bus.png", "Summer", "Bengaluru among 11 cities chosen to promote electric vehicles", "2 hours ago", "city")
+				.group
+					.slider-gran
+						ul.slider-parent
+							li.grid-col-3.slide-wrapper.mtop-m-20.mtop-t-20.mtop-d-20
+								include ../../components/mixins/cards.pug
+								+small-vertical("img/home/in-your-city-celeb.png", "img", "Celebration on new year eve amidst tight security", "5 hours ago", "white", "city")
+							li.grid-col-3.slide-wrapper.mtop-m-20.mtop-t-20.mtop-d-20
+								include ../../components/mixins/cards.pug
+								+small-vertical("img/home/in-your-city-gold.png", "img", "Cops arrest gold smuggling group at airport", "5 hours ago", "white", "city")
+							li.grid-col-3.slide-wrapper.mtop-m-20.mtop-t-20.mtop-d-20
+								include ../../components/mixins/cards.pug
+								+small-vertical("img/home/in-your-city-bbmp.png", "img", "BBMP to construct its own waste to energy plant", "5 hours ago", "white", "city")
+			.grid-col-sm.grid-col-sm-3row
+				.group.grid-col-full.mtop-m-20.mtop-t-20
+					include ../../components/mixins/cards.pug
+					+large-vertical("img/home/in-your-city-cholera.png", "img", "Cholera cases in the city on a rise. Municipality to investigate cause", "2 hours ago", "white", "city")
+				.group.grid-col-full.mtop-m-20.mtop-t-20.mtop-d-20
+					include ../../components/mixins/cards.pug
+					+ad-card-250("Advert")
+
+					+mobile-ad("mobile Advert")
+				//- .group.grid-col-full
+				//- 	include ../../components/mixins/cards.pug
+				//- 	+ad-card-250("Advert")
+

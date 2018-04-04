@@ -1,0 +1,25 @@
+section.very-light-gray
+	.section-full
+		.section-container
+			.group.section-heading-wrapper.parent-relative
+					.strip.section-heading.strip--exclusives.f-left
+						h2.sanspro-b.text-uppercase 
+							a(href="#") More from this section
+			.grid-col-lg
+				.group
+					.slider-gran
+						ul.slider-parent
+							li.grid-col-3.slide-wrapper
+								include ../../components/mixins/cards.pug
+								+small-vertical("img/home/in-your-city-celeb.png", "img", "Celebration on new year eve amidst tight security", "5 hours ago", "white", "exclusives")
+							li.grid-col-3.slide-wrapper
+								include ../../components/mixins/cards.pug
+								+small-vertical("img/home/in-your-city-gold.png", "img", "Cops arrest gold smuggling group at airport", "5 hours ago", "white", "exclusives")
+							li.grid-col-3.slide-wrapper
+								include ../../components/mixins/cards.pug
+								+small-vertical("img/home/in-your-city-bbmp.png", "img", "BBMP to construct its own waste to energy plant", "5 hours ago", "white", "exclusives")
+			.grid-col-sm.grid-col-sm-3row.mtop-m-20.mtop-t-20
+				.group.notab-snippets-mtop
+					include ../../components/mixins/cards.pug
+					+bg-subscribe-card-250("More stories like this in your inbox", "Subscribe", "exclusives", "exclusives")
+

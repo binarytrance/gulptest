@@ -1,0 +1,39 @@
+section#top-stories-container-4
+	.section-container
+		.grid-col-lg
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+				.group.strip.section-heading.strip--top-stories
+					h2.sanspro-b.text-uppercase
+						a(href="#") lifestyle
+				.view-link.f-right.sanspro-reg
+					a.text-uppercase(href="stories-list.html") view all
+			.grid-col-half
+				ul.sm-hr-card-list
+					li.sm-hr-card-list__items
+						include ../../components/mixins/cards.pug
+						+small-horizontal("img/home/science-dna.png", "img", "Scientists to study structure of alien hypothetical dna", "5 hours ago", "gray")
+					li.sm-hr-card-list__items.mtop-m-20.mtop-t-20.mtop-d-20
+						include ../../components/mixins/cards.pug
+						+small-horizontal("img/home/science-alien.png", "img", "Something interstellar but not so alien is coming", "4 hours ago", "gray")
+			.grid-col-half.mtop-m-20
+				ul.notab-snippets.notab-snippets--graybg
+					li
+						include ../../components/mixins/cards.pug
+						+snippet-lists("img/home/science-solistic.png", "img", "You might not be here without the solistices and seasons")
+					li
+						include ../../components/mixins/cards.pug
+						+snippet-lists("img/home/science-molten.png", "img", "Earth's molten heart may not be sending messages")
+					li
+						include ../../components/mixins/cards.pug
+						+snippet-lists("img/home/science-molecule.png", "img", "Molecular movement generates patterns")
+		.grid-col-sm
+			.group.parent-relative.grid-col-full.section-heading-wrapper.section-heading-wrapper--tweet-block
+				.group.strip.section-heading.mtop-m-20.mtop-t-20
+					h2.sanspro-b.text-uppercase
+						a(href="#").twitter-feed-cta
+							img.twitter-feed-cta__img(src="img/icons/twitter.png", alt="Twitter")
+							|social feed
+			.tweet-card
+			//- .group
+			//- 	include ../../components/mixins/cards.pug
+			//- 	+square-img-card("img/home/journalist-madhuri.png", "img", "Madhuri Rao", "Senior Correspondant")

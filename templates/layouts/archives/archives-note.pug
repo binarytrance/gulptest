@@ -1,0 +1,24 @@
+include ../../components/mixins/cards.pug
+.section-container
+	.grid-col-lg.grid-col-lg--video
+		.group.parent-relative.grid-col-full.section-heading-wrapper
+				.group.strip.section-heading
+					h2.sanspro-b.text-uppercase
+						a(href="#") note
+
+		.group
+			ul.group.notab-snippets.notab-snippets--graybg.f-left.full-width.notab-snippets--archive-note
+				li.group.sanspro-reg.archives-note
+					| To view Archives before April 2009, go to  
+					a(href="").previous-archives previous site archives
+				li.group.sanspro-reg.archives-note
+					| All the links on the archived pages point to sections on that day.
+				li.group.sanspro-reg.archives-note
+					| To return to Today's edition, click on Today's Edition link of the archived page.
+				li.group.sanspro-reg.archives-note
+					| For general use the Search utility available.
+
+	.grid-col-sm.f-right
+		.group.grid-col-full.mtop-m-20.mtop-t-20
+			include ../../components/mixins/cards.pug
+			+ad-card-250("Advert")

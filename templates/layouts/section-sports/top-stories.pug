@@ -1,0 +1,81 @@
+section#top-stoires-sports
+	.section-container
+		.grid-col-lg
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.strip.section-heading.strip--sports
+						h2.sanspro-b.text-uppercase
+							a(href="#") sports
+			.grid-col-half
+				include ../../components/mixins/cards.pug
+				+nopic-card("Bowling with Kookaburra would be a challenge: Bhuvi", "1 hour ago", "sports")
+			.grid-col-half
+				ul.sm-hr-card-list
+					li.sm-hr-card-list__items.mtop-m-20
+						include ../../components/mixins/cards.pug
+						+small-horizontal("img/home/sports-liverpool.png", "img", "Klavan spurs Liverpool", "5 hours ago", "gray")
+					li.sm-hr-card-list__items.mtop-m-20.mtop-t-20.mtop-d-20
+						include ../../components/mixins/cards.pug
+						+small-horizontal("img/home/sports-palace.png", "img", "Palace to end city win", "5 hours ago", "gray")
+		.grid-col-sm
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+				.group.section-heading.mtop-m-nostrip.mtop-t-nostrip
+					h2.sanspro-b.text-uppercase
+						a(href="#") updates
+					.view-link.f-right.sanspro-reg
+						a.text-uppercase(href="#") view all
+			.group.tabs.sports-tabs.sports-tabs--align
+				.tab-links-container
+					ul.tab-links.group.sanspro-reg
+						li.active
+							a.text-uppercase(href="#cricket") cricket
+						li
+							a.text-uppercase(href="#football") football
+						li
+							a.text-uppercase(href="#tennis") tennis
+						li
+							a.text-uppercase(href="#all") all
+				.tab-content.group
+					.active.tab#cricket
+						ul
+							li.tab-list
+								include ../../components/mixins/cards.pug
+								+snippet-lists("img/home/sports-list-ram.png", "img", "Ramkumar gets pushed into battle", "sports-updates-txt")
+							li.tab-list
+								include ../../components/mixins/cards.pug
+								+snippet-lists("img/home/sports-list-saina.png", "img", "I ll have to train harder this year says Saina", "sports-updates-txt")
+							li.tab-list
+								include ../../components/mixins/cards.pug
+								+snippet-lists("img/home/sports-list-sindhu.png", "img", "Sindhu smashes opponent in Hyd tournament", "sports-updates-txt")
+					.tab#football
+						ul
+							li.tab-list
+								include ../../components/mixins/cards.pug
+								+snippet-lists("img/home/top-stories-big-card.png", "img", "card_title", "sports-updates-txt")
+							li.tab-list
+								include ../../components/mixins/cards.pug
+								+snippet-lists("img/home/top-stories-big-card.png", "img", "card_title", "sports-updates-txt")
+							li.tab-list
+								include ../../components/mixins/cards.pug
+								+snippet-lists("img/home/top-stories-big-card.png", "img", "card_title", "sports-updates-txt")
+					.tab#tennis
+						ul
+							li.tab-list
+								include ../../components/mixins/cards.pug
+								+snippet-lists("img/home/top-stories-big-card.png", "img", "card_title", "sports-updates-txt")
+							li.tab-list
+								include ../../components/mixins/cards.pug
+								+snippet-lists("img/home/top-stories-big-card.png", "img", "card_title", "sports-updates-txt")
+							li.tab-list
+								include ../../components/mixins/cards.pug
+								+snippet-lists("img/home/top-stories-big-card.png", "img", "card_title", "sports-updates-txt")
+					.tab#all
+						ul
+							li.tab-list
+								include ../../components/mixins/cards.pug
+								+snippet-lists("img/home/top-stories-big-card.png", "img", "card_title", "sports-updates-txt")
+							li.tab-list
+								include ../../components/mixins/cards.pug
+								+snippet-lists("img/home/top-stories-big-card.png", "img", "card_title", "sports-updates-txt")
+							li.tab-list
+								include ../../components/mixins/cards.pug
+								+snippet-lists("img/home/top-stories-big-card.png", "img", "card_title", "sports-updates-txt")

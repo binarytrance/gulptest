@@ -1,0 +1,46 @@
+section
+	.section-container.dashed-border#videopolitics-container
+		div
+			.group.section-heading-wrapper.parent-relative
+				.strip.section-heading.strip--politics.f-left
+					h2.sanspro-b.text-uppercase 
+						a(href="#") politics
+				.view-link.f-right.sanspro-reg
+					a.text-uppercase(href="#") view all
+
+			.group
+				.slider-gran
+					ul.slider-parent
+						li.grid-col-3.slide-wrapper
+							include ../../components/mixins/cards.pug
+							+video-vertical("img/video/army.png", "img", "India open against New Zealand in second leg of hockey tournament", "gray", "politics")
+						li.grid-col-3.slide-wrapper
+							include ../../components/mixins/cards.pug
+							+video-vertical("img/video/army.png", "img", "Back to drawing board for Djokovic", "gray", "politics")
+						li.grid-col-3.slide-wrapper
+							include ../../components/mixins/cards.pug
+							+video-vertical("img/video/army.png", "img", "Back to drawing board for Djokovic", "gray", "politics")
+
+	.section-container#videocity-container
+		div
+			.group.section-heading-wrapper.parent-relative
+				.strip.section-heading.strip--city.f-left
+					h2.sanspro-b.text-uppercase 
+						a(href="#") in your city
+				.view-link.f-right.sanspro-reg
+					a.text-uppercase(href="#") view all
+
+			.group
+				.slider-gran
+					ul.slider-parent
+						li.grid-col-3.slide-wrapper
+							include ../../components/mixins/cards.pug
+							+video-vertical("img/video/army.png", "img", "India open against New Zealand in second leg of hockey tournament", "gray", "city")
+						li.grid-col-3.slide-wrapper
+							include ../../components/mixins/cards.pug
+							+video-vertical("img/video/army.png", "img", "Back to drawing board for Djokovic", "gray", "city")
+						li.grid-col-3.slide-wrapper
+							include ../../components/mixins/cards.pug
+							+video-vertical("img/video/army.png", "img", "Back to drawing board for Djokovic", "gray", "city")
+			include ../../components/mixins/cards.pug
+			+ad-card-lng("Advert")

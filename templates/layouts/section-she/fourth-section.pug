@@ -1,0 +1,17 @@
+include ../../components/mixins/cards.pug
+section#she-fourth-container.overlapped-container
+	.section-container
+		.group.section-heading-wrapper.parent-relative
+			.grid-col-lg
+				.section-heading.f-left.strip.strip--she
+					h2.sanspro-b.text-uppercase 
+						a(href="#") top stories
+				.view-link.f-right.sanspro-reg
+					a.text-uppercase(href="stories-list.html") view all
+		.grid-col-lg
+			.group
+				//- - var card_color= "Bossanova"
+				+large-horizontal("img/home/top-stories-trumpmodi.png", "Summer", "India a leading global power, says new US security policy", "2 hours ago", "she")
+		.grid-col-sm.mtop-m-20.mtop-t-20
+			+bg-subscribe-card("More stories like this in your inbox.", "Subscribe", "she", "she")
+

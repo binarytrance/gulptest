@@ -1,0 +1,202 @@
+.article-title {
+	clear: both;
+	display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+
+    @media (min-width: $sm) {
+		align-items: flex-end;
+		flex-direction: row;
+    }
+
+	& h2 {
+		@include font(26px, null);
+		width: 100%;
+		margin: 10px 0;
+
+		@media (min-width: $sm) {
+			@include font(30px, null);
+			width: 80%;
+		}
+		@media (min-width: $md) {
+			@include font(36px, null);
+			width: 80%;
+		}
+	}
+}
+.article-author {
+	padding: 15px 0;
+	clear: both;
+	display: flex;
+	align-items: center;
+	&--foot {
+		border-top: dashed 1px $border-gray;
+		border-bottom: dashed 1px $border-gray;
+	}
+	// &__time {
+		
+	// }
+	&__name {
+		@include font(15px, #0070be);
+	}
+	&__service {
+		@include font(15px, #666666);
+	}
+	&__connect {
+		padding-top: 15px;
+	}
+	&__social-connect {
+		& img {
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+	}
+	&__email {
+		margin-top: 15px;
+		margin-right: 60px;
+		display: inline-block;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+.article-author-wrapper {
+	margin-right: 15px;
+}
+.bookmark-items {
+	& a:active, & a:focus {
+		& svg.bookmarks {
+			fill: #00c59f;
+		}
+	}
+}
+.tag-lists {
+	& li {
+		display: inline-block;
+		margin-right: 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+		@media (max-width: 767px) {
+			margin-bottom: 10px;
+		}
+	}
+	& span {
+		background: $light-gray;
+		display: inline-block;
+		color: $gray666;
+		padding: 10px 20px;
+		border-radius: 3px;
+	}
+}
+
+/////////////////////////////////////////////////////////////////
+// Article widget popup
+/////////////////////////////////////////////////////////////////
+
+.email-popup {
+	width: 300px;
+	height: 530px;
+	background-color: #fff;
+	overflow: auto;
+	padding: 30px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -52%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all ease 0.4s;
+	@media (min-width: 500px) {
+		width: 500px;
+	}
+	&.js-active {
+		opacity: 1;
+		visibility: visible;
+		z-index: 999999;
+		transform: translate(-50%, -50%);
+	}
+	&__title {
+		@include font(23px, $black);
+		padding-bottom: 10px;
+		border-bottom: 1px solid $border-gray;
+		@media (min-width: 500px) {
+			@include font(30px, null);
+		}
+	}
+	& label {
+		display: block;
+		@include font(15px, $black);
+		margin-bottom: 5px;
+	}
+	& .form-group {
+		padding-top: 15px;
+	}
+	& input, & textarea {
+		background: $light-gray;
+		padding: 10px 10px;
+		width: 100%;
+		border-radius: 4px;
+		&:focus:hover {
+			border-bottom: 0;
+		}
+	}
+	& .parsley-custom-error-message {
+		font-family: $sanspro;
+		font-weight: 400;
+		margin-top: 4px;
+		font-size: 13px;
+	}
+}
+.popup-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(95, 95, 95, 0.63);
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all ease .3s;
+	&.js-active {
+		opacity: 1;
+		visibility: visible;
+		z-index: 99999;
+	}
+}
+.form-btn {
+	margin: 25px 0;
+    text-align: center;
+
+	& button{
+		padding: 12px 22px;
+		background: $cta-color;
+		@include font(15px, #fff);
+		cursor: pointer;
+	}
+}
+.form-close {
+	text-align: center;
+	color: $cta-color;
+}
+.crud-items {
+	display: inline-block;
+	&__lists {
+		display: inline-block;
+		@include font(12px, #333);
+		position: relative;
+		&:last-child:before {
+			content: "|";
+			position: absolute;
+			left: -8px;
+		}
+		&:last-child {
+			margin-left: 10px;
+		}
+	}
+}

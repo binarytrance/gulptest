@@ -1,0 +1,230 @@
+include ../../components/mixins/cards.pug
+
+.section-container
+	.grid-col-full
+		ul.group.breadcrumb-list
+			li.f-left
+				a(href="#").sanspro-reg Home
+
+			li.f-left
+				a(href="#").sanspro-reg Politics
+
+			li.active.f-left
+				a(href="#").sanspro-reg Kamal Haasan on Dravidian identity
+	//- .group
+	//- 	+ad-card-lng("Advert", "m-bottom")
+
+.section-container.js-scrolltop
+	// should we put it in header tag???
+	.group.parent-relative.article-title
+		div.strap-heading-wrapper
+			h2.f-left.sanspro-b.politics-heading Dravidian identity should be expanded to all South Indian states: Kamal Haasan
+			h3.sanspro-reg.strap-heading Dravidian identity should be expanded to all South Indian states: Kamal Haasan
+		ul.social-media-icons.social-media-icons--tarticle.f-right
+			li
+				a(href="#")
+					img(src="img/icons/fb-black.svg", alt="" style="width: 16px; height: 16px")
+
+			li
+				a(href="#")
+					img(src="img/icons/twit-black.svg", alt="" style="width: 16px; height: 16px")
+
+			li.bookmark-items
+				a(href="javascript:void(0)")
+					//- img(src="img/icons/bookmark.svg", alt="" style="width: 16px; height: 16px")
+					svg.bookmarks(width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.06 43.66")
+						polygon(points="29.06 42.49 14.53 27.96 0 42.49 0 0 29.06 0 29.06 42.49")
+
+			li.parent-relative
+				a(href="#").media-share
+					img(src="img/icons/share.svg", alt="" style="width: 16px; height: 16px")
+				.share-wrapper.white
+					.share-wrapper__media
+						span.share-wrapper__title.sanspro-reg Share via
+						ul.social-magazine
+							li
+								a(href="#")
+									img(src="img/icons/google-plus.png", alt="Google Plus")
+							li
+								a(href="#")
+									img(src="img/icons/gmail.png", alt="Gmail")
+							li
+								a(href="#")
+									img(src="img/icons/pinterest.png", alt="Pinterest")
+							li
+								a(href="#")
+									img(src="img/icons/linkedin.png", alt="Linkedin")
+
+					.share-wrapper__link
+						span.share-wrapper__title.sanspro-reg Share permalink
+						input.share-wrapper__input.sanspro-reg(type="text" value="http://www.deccanherald.com/content")
+
+	.group.article-author.parent-relative
+		.article-author-wrapper
+			img(src="img/articles/rasheed.png", alt="Author")
+		.article-author__time
+			a(href="#").sanspro-reg.article-author__name Rasheed Kappan, 
+			span.sanspro-reg.article-author__service DH News service
+			ul.crud-items
+				li.sanspro-semib.text-uppercase.crud-items__lists Created: 23 Dec 2017 10:46am ist
+				li.sanspro-semib.text-uppercase.crud-items__lists updated: 10:46am ist
+
+	.group.article-details-container
+		article.group.main-article-wrapper
+			figure.article-banner-wrapper.article-banner-wrapper--politics
+				picture
+					img(src="img/articles/kamal.png" alt="kamal hassan listening to sayari")
+				figcaption.sanspro-reg.article-banner-caption Kamal Hassan appreciating Shruti's foray into sayari.
+			.group.article-details-wrapper.f-left.mtop-m-20.mtop-t-20.mtop-d-20
+				aside.article-highlights.article-highlights--politics
+					.group.section-heading-wrapper.parent-relative
+						.strip.section-heading.f-left.section-heading--nostrip
+							h2.sanspro-b.text-uppercase highlights
+					ul.group.notab-snippets.notab-snippets--graybg.f-left
+						li.group
+							+highlights("You might not be here without the solistices and seasons")
+						li.group
+							+highlights("Earth's molten heart may not be sending messages")
+				p.article-body-text.sanspro-reg India's first private commercial moon mission, scheduled for launch by a Bengaluru-based space tech startup, TeamIndus, has reportedly run into rough weather. The mission itself is now said to have been called off due to a paucity of funds.
+				p.article-body-text.sanspro-reg In pursuit of the $30 million Google Lunar XPRIZE (GLXP), TeamIndus had signed a contract with Antrix Corporation, the commercial arm of the Indian Space Research Organisation (ISRO), in December 2016. Reports indicate this contract has been cancelled, although there is no official confirmation.
+				p.article-body-text.sanspro-reg Of the five finalists in the competition for the prize, TeamIndus was the only Indian team. The deadline to complete the lunar mission was fixed on March 31, 2018. Business website the-ken.com reported that the contract was for a chartered launch on ISRO's rocket, Polar Satellite Launch Vehicle (PSLV).
+				p.article-body-text.sanspro-reg The portal's report also stated that it would be virtually impossible for TeamIndus to secure another contract on any other rocket to complete the launch process before the scheduled deadlines.
+
+				//- // START: in article ad
+				//- .article-ad-wrapper
+				//- 	+ad-card-lng("Advert", "m-bottom")
+				//- // END: in article ad
+
+				p.article-body-text.sanspro-reg Of the five finalists in the competition for the prize, TeamIndus was the only Indian team. The deadline to complete the lunar mission was fixed on March 31, 2018. Business website the-ken.com reported that the contract was for a chartered launch on ISRO's rocket, Polar Satellite Launch Vehicle (PSLV).
+				p.article-body-text.sanspro-reg The portal's report also stated that it would be virtually impossible for TeamIndus to secure another contract on any other rocket to complete the launch process before the scheduled deadlines.
+
+				// START: embedded tweet
+				blockquote.tweet-embed(style= "background: url('img/articles/tweet.png') center center; background-size: 100% 100%;")
+				// END: embedded tweet
+
+				p.article-body-text.sanspro-reg Of the five finalists in the competition for the prize, TeamIndus was the only Indian team. The deadline to complete the lunar mission was fixed on March 31, 2018. Business website the-ken.com reported that the contract was for a chartered launch on ISRO's rocket, Polar Satellite Launch Vehicle (PSLV).
+				p.article-body-text.sanspro-reg The portal's report also stated that it would be virtually impossible for TeamIndus to secure another contract on any other rocket to complete the launch process before the scheduled deadlines.
+
+				.group
+					ul.tag-lists
+						li
+							span.sanspro-reg ISRO
+
+						li
+							span.sanspro-reg Moon Express
+
+						li
+							span.sanspro-reg GLXP Challenge
+
+				.group.beamer.section-container.js-beamer
+					.beam-me-up-scotty.beam-me-up-scotty--relative
+						img(src="img/icons/Up_arrow_black.svg")
+
+			ul.social-media-icons.social-media-icons--foot.f-left
+				li
+					a(href="#")
+						img(src="img/icons/fb-black.svg", alt="" style="width: 16px; height: 16px")
+
+				li
+					a(href="#")
+						img(src="img/icons/twit-black.svg", alt="" style="width: 16px; height: 16px")
+
+				li.bookmark-items
+					a(href="javascript:void(0)")
+						//- img(src="img/icons/bookmark.svg", alt="" style="width: 16px; height: 16px")
+						svg.bookmarks(width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.06 43.66")
+							polygon(points="29.06 42.49 14.53 27.96 0 42.49 0 0 29.06 0 29.06 42.49")
+
+				li.parent-relative
+					a(href="#").media-share
+						img(src="img/icons/share.svg", alt="" style="width: 16px; height: 16px")
+					.share-wrapper.white.share-wrapper--left
+						.share-wrapper__media
+							span.share-wrapper__title.sanspro-reg Share via
+							ul.social-magazine
+								li
+									a(href="#")
+										img(src="img/icons/google-plus.png", alt="Google Plus")
+								li
+									a(href="#")
+										img(src="img/icons/gmail.png", alt="Gmail")
+								li
+									a(href="#")
+										img(src="img/icons/pinterest.png", alt="Pinterest")
+								li
+									a(href="#")
+										img(src="img/icons/linkedin.png", alt="Linkedin")
+
+						.share-wrapper__link
+							span.share-wrapper__title.sanspro-reg Share permalink
+							input.share-wrapper__input.sanspro-reg(type="text" value="http://www.deccanherald.com/content")
+
+			.group.article-author.article-author--foot.parent-relative
+				.article-author-wrapper
+					img(src="img/articles/rasheed.png", alt="Author")
+				.article-author__time
+					a(href="#").sanspro-reg.article-author__name Rasheed Kappan, 
+					span.sanspro-reg.article-author__service DH News service
+					ul.crud-items
+						li.sanspro-semib.text-uppercase.crud-items__lists Created: 23 Dec 2017 10:46am ist
+						li.sanspro-semib.text-uppercase.crud-items__lists updated: 10:46am ist
+						
+			.group.article-author__connect
+				h3.sanspro-semib Contact us on this story
+				ul
+					li.article-author__email
+						a.article-author__social-connect(href="mailto:rasheedk@gmail.com")
+							img(src="img/icons/sent-mail.svg", alt="Email" style="width: 16px; height:16px;")
+							span.sanspro-reg Rasheedk@gmail.com
+
+					li.article-author__email
+						a.article-author__social-connect(href="javascript:void(0)")
+							img(src="img/icons/twit-brand.svg", alt="Twitter" style="width: 16px; height:16px;")
+							span.sanspro-reg @rasheedk
+
+
+
+		.group.related-article-wrapper
+			.group
+				.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.strip.section-heading.strip--politics
+						h2.sanspro-b.text-uppercase
+							a(href="#") More from the author
+
+				.group.f-left(style="width: 100%;")
+					ul.notab-snippets.notab-snippets--business
+						li
+							include ../../components/mixins/cards.pug
+							+snippet-lists("img/home/science-molten.png", "img", "What is the message earth is trying to send us")
+						li
+							include ../../components/mixins/cards.pug
+							+snippet-lists("img/home/sports-list-saina.png", "img", "Players have to level up")
+						li
+							include ../../components/mixins/cards.pug
+							+snippet-lists("img/home/business-mrp.png", "img", "Online retails dont have it easy")
+
+			.group.grid-col-full.mtop-d-20.mtop-m-20.mtop-t-20.article-adver
+				include ../../components/mixins/cards.pug
+				+ad-card-250("Advert")
+
+			.group.grid-col-full.mtop-d-20.mtop-m-20.mtop-t-20.article-adver
+				include ../../components/mixins/cards.pug
+				+ad-card-250("Advert")
+
+			.group.parent-relative.grid-col-full.section-heading-wrapper.section-heading-wrapper--tweet-block
+				.group.section-heading.mtop-m-nostrip.mtop-t-nostrip.mtop-m-nostrip.mtop-t-nostrip.mtop-d-nostrip
+					h2.sanspro-b.text-uppercase
+						a(href="#").twitter-feed-cta
+							img.twitter-feed-cta__img(src="img/icons/twitter.png", alt="Twitter")
+							|social feed
+				.tweet-card
+
+			.group.grid-col-full.mtop-d-20.mtop-m-20.mtop-t-20.article-adver
+				include ../../components/mixins/cards.pug
+				+bg-widget-card("./img/icons/pen.svg", "Would you like to contribute to this story ?", "Mail in")
+
+			.group.grid-col-full.mtop-d-20.mtop-m-20.mtop-t-20.article-adver
+				include ../../components/mixins/cards.pug
+				+ad-card-250("Advert")
+
+

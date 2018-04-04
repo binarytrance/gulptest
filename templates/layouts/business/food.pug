@@ -1,0 +1,22 @@
+include ../../components/mixins/cards.pug
+section#food-container.nobottom-padding
+	.section-container
+		.group.section-heading-wrapper.parent-relative
+			.strip.section-heading.f-left.strip--business
+				h2.sanspro-b.text-uppercase 
+					a(href="#") food
+			.view-link.f-right.sanspro-reg
+				a.text-uppercase(href="stories-list.html") view all
+		.group
+			.grid-col-lg
+				+large-horizontal("img/home/top-stories-trumpmodi.png", "Summer", "Traversing the food map", "2 hours ago", "business")
+
+			.grid-col-sm.grid-col-sm-3row.mtop-m-20.mtop-t-20
+				.group.notab-snippets-mtop
+					ul.notab-snippets.notab-snippets--graybg
+						li
+							+snippet-lists("img/home/science-solistic.png", "img", "You might not be here without the solistices and seasons")
+						li
+							+snippet-lists("img/home/science-molten.png", "img", "Earth's molten heart may not be sending messages")
+						li
+							+snippet-lists("img/home/science-molecule.png", "img", "Molecular movement generates patterns")

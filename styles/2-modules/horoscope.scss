@@ -1,0 +1,80 @@
+.horoscope-banner {
+	height: 450px;
+	background-color: #f99294;
+	@media (min-width: 768px) {
+		height: 400px;
+	}
+}
+.horos-left, .horos-right {
+	@include column(12/12);
+	@media (min-width: $sm) {
+		@include column(6/12);
+	}
+}
+.horos-left {
+	& img {
+		@media (max-width: 767px) {
+			padding-top: 135px;
+		}
+	}
+}
+.horos-right {
+	& h1 {
+		@include font(28px, null);
+		@media (min-width: 768px) {
+    		@include font(40px, null);
+    	}
+    	@media (max-width: 767px) {
+    		top: 13%;
+    		text-align: center;
+    	}
+	}
+}
+.star-list {
+	&__items {
+		& img {
+			padding-top: 20px;
+		    display: block;
+		    margin: 0 auto;
+		    width: 160px;
+		}
+	}
+	&__img {
+		background: #f6f6f6;
+	}
+	&__title {
+		@include font(15px, #333);
+		display: block;
+		margin: 15px 0 5px 0;
+	}
+	&__month {
+		@include font(12px, #333);
+		display: block;
+	}
+}
+.horoscope-desc {
+	font-size: 15px;
+	line-height: 25px;
+	color: #333333;
+	margin-top: 20px;
+	@media (min-width: $sm) {
+		font-size: 17px;
+		line-height: 27px;
+	}
+}
+.horoscope-bottom {
+	border-bottom: 1px dashed #eaeaea;
+	padding-bottom: 15px;
+	margin-bottom: 25px !important;
+}
+.lucky-lists {
+
+	& li {
+		display: inline-block;
+		margin-right: 30px;
+		margin-bottom: 35px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

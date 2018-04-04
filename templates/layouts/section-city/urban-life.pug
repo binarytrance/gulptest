@@ -1,0 +1,31 @@
+section.nobottom-padding#urbanlife-container
+	.section-full
+		.section-container
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.strip.section-heading.strip--city
+						h2.sanspro-b.text-uppercase
+							a(href="#") urban life
+			.grid-col-lg
+				.grid-col-half
+					include ../../components/mixins/cards.pug
+					+nopic-card("15 flights cancelled, 63 delayed after fog hits KIA", "1 hour ago", "green", "urbanlife-title", "urbanlife-info")
+				.grid-col-half
+					ul.sm-hr-card-list
+						li.sm-hr-card-list__items.mtop-m-20
+							include ../../components/mixins/cards.pug
+							+small-horizontal("img/home/business-sector.png", "img", "Eight sectors grow 6.8% in November", "3 hours ago", "gray")
+						li.sm-hr-card-list__items.mtop-m-20.mtop-t-20.mtop-d-20
+							include ../../components/mixins/cards.pug
+							+small-horizontal("img/home/business-mrp.png", "img", "All online retail outlets should mention mrp", "4 hours ago", "gray")
+			.grid-col-sm.mtop-m-20.mtop-t-20
+				.group.f-left(style="width: 100%;")
+					ul.notab-snippets.notab-snippets--graybg
+						li
+							include ../../components/mixins/cards.pug
+							+snippet-lists("img/home/science-solistic.png", "img", "You might not be here without the solistices and seasons")
+						li
+							include ../../components/mixins/cards.pug
+							+snippet-lists("img/home/science-molten.png", "img", "Earth's molten heart may not be sending messages")
+						li
+							include ../../components/mixins/cards.pug
+							+snippet-lists("img/home/science-molecule.png", "img", "Molecular movement generates patterns")

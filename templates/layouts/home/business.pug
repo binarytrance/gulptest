@@ -1,0 +1,39 @@
+section#business-container.overlapped-container
+	.section-full
+		.section-container
+			.grid-col-lg
+				.group.parent-relative.grid-col-full.section-heading-wrapper
+						.group.strip.section-heading.strip--business.sticky-parent
+							h2.sanspro-b.text-uppercase
+								a(href="#") business
+							.view-link.f-right.sanspro-reg
+								a.text-uppercase(href="#") view all
+				.grid-col-half
+					include ../../components/mixins/cards.pug
+					+nopic-card("TRAI issues interconnectivity rules, fixes past 30 day deadline", "1 hour ago", "white", "business-title", "business-info")
+				.grid-col-half
+					ul.sm-hr-card-list
+						li.sm-hr-card-list__items.mtop-m-20
+							include ../../components/mixins/cards.pug
+							+small-horizontal("img/home/business-sector.png", "img", "Eight sectors grow 6.8% in November", "3 hours ago", "white")
+						li.sm-hr-card-list__items.mtop-m-20.mtop-t-20.mtop-d-20
+							include ../../components/mixins/cards.pug
+							+small-horizontal("img/home/business-mrp.png", "img", "All online retail outlets should mention mrp", "4 hours ago", "white")
+			.grid-col-sm.mtop-m-20.mtop-t-20
+				.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.strip.section-heading.strip--opinion
+						h2.sanspro-b.text-uppercase
+							a(href="#") opinion
+						.view-link.f-right.sanspro-reg
+							a.text-uppercase(href="#") view all
+				.group.f-left(style="width: 100%;")
+					ul.notab-snippets.notab-snippets--business
+						li
+							include ../../components/mixins/cards.pug
+							+snippet-lists("img/home/science-molten.png", "img", "What is the message earth is trying to send us")
+						li
+							include ../../components/mixins/cards.pug
+							+snippet-lists("img/home/sports-list-saina.png", "img", "Players have to level up")
+						li
+							include ../../components/mixins/cards.pug
+							+snippet-lists("img/home/business-mrp.png", "img", "Online retails dont have it easy")

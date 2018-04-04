@@ -1,0 +1,45 @@
+section#entertainment-container.overlapping-container.nobottom-padding
+	.box-container
+		.section-container
+			.group.section-heading-wrapper.parent-relative
+				.strip.section-heading.strip--entertainment.f-left.sticky-parent
+					h2.sanspro-b.text-uppercase 
+						a(href="#") Entertainment
+				.view-link.f-right.sanspro-reg
+						a.text-uppercase(href="#") view all
+			.grid-col-lg
+					
+					.group
+						include ../../components/mixins/cards.pug
+						//- - var card_color= "Bossanova"
+						+large-horizontal("img/home/actress.png", "Actress", "Over 300 women in Hollywood launch campaign to fight sex abuse", "1 hour ago", "entertainment")
+					.group
+						.slider-gran
+							ul.slider-parent
+								li.grid-col-3.slide-wrapper.mtop-m-20.mtop-t-20.mtop-d-20
+									include ../../components/mixins/cards.pug
+									+small-vertical("img/home/vidya.png", "Vidya", "Vidya Balan's birthday to be a personal affair", "7 hours ago", "gray", "entertainment")
+								li.grid-col-3.slide-wrapper.mtop-m-20.mtop-t-20.mtop-d-20
+									include ../../components/mixins/cards.pug
+									+small-vertical("img/home/jumanji.png", "Jumanji", "Plug-in for a visual treat, fun ride with Jumanji", "7 hours ago", "gray", "entertainment")
+								li.grid-col-3.slide-wrapper.mtop-m-20.mtop-t-20.mtop-d-20
+									include ../../components/mixins/cards.pug
+									+small-vertical-sponsored("img/home/sponser.png", "Sponser", "Sponsored content", "Bollywood goes digital as celebs explore web")
+			.grid-col-sm.grid-col-sm-3row
+				//- .group.parent-relative.grid-col-full.section-heading-wrapper.m-no-display
+				//- 	.group.strip.section-heading
+				//- 		h2.sanspro-b.text-uppercase.no-visible
+				//- 			a(href="#") entertainment
+						
+				.group.grid-col-full.mtop-m-20.mtop-t-20
+					include ../../components/mixins/cards.pug
+					+nopic-card("Quality TV has improved Hollywood movies, says Hugh Jackman", "1 hour ago", "light-gray", "entertain-title", "entertain-info")
+				.group.grid-col-full.mtop-d-20.mtop-m-20.mtop-t-20
+					include ../../components/mixins/cards.pug
+					+ad-card-250("Advert")
+
+					+mobile-ad("Mobile Advert")
+
+div.section-container
+	include ../../components/mixins/cards.pug
+	+ad-card-lng("http://via.placeholder.com/728x90", "m-bottom")

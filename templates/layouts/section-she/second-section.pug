@@ -1,0 +1,39 @@
+include ../../components/mixins/cards.pug
+section#she-second-container
+	.section-full
+		.section-container
+			.group
+				.group.section-heading-wrapper.parent-relative
+					.grid-col-lg
+						.section-heading.f-left.strip.strip--she
+							h2.sanspro-b.text-uppercase 
+								a(href="#") top stories
+						.view-link.f-right.sanspro-reg
+							a.text-uppercase(href="stories-list.html") view all
+				.grid-col-lg
+					//- .group.parent-relative.grid-col-full.section-heading-wrapper
+					//- 		.group.strip.section-heading.strip--politics
+					//- 			h2.sanspro-b.text-uppercase
+					//- 				a(href="#") politics
+					//- 			.view-link.f-right.sanspro-reg
+					//- 				a.text-uppercase(href="#") view all
+					.grid-col-half
+						+nopic-card("TRAI issues interconnectivity rules, fixes past 30 day deadline", "1 hour ago", "white", "she", "she")
+					.grid-col-half
+						ul.sm-hr-card-list
+							li.sm-hr-card-list__items.mtop-m-20
+								+small-horizontal("img/home/politics-trump.png", "img", "I have a nuclear button on my table says Trump", "4 hours ago", "white")
+							li.sm-hr-card-list__items.mtop-m-20.mtop-t-20.mtop-d-20
+								+small-horizontal("img/home/politics-kim.png", "img", "The nuclear tweet wars are about to begin", "5 hours ago", "white")
+				.grid-col-sm.mtop-m-20.mtop-t-20
+					//- .group.parent-relative.grid-col-full.section-heading-wrapper.section-heading-wrapper--tweet-block
+					//- 	.group.strip.section-heading
+					//- 		h2.sanspro-b.text-uppercase
+					//- 			a(href="#").twitter-feed-cta
+					//- 				img.twitter-feed-cta__img(src="img/icons/twitter.png", alt="Twitter")
+					//- 				|social feed
+					+bg-horoscope-card("img/home/horoscope.png", "What does your star sign say?", "Explore", "black", "black-bg")
+
+
+			include ../../components/mixins/cards.pug
+			+ad-card-lng("Advert")

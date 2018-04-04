@@ -1,0 +1,29 @@
+.breadcrumb-list{
+	padding: 20px 0 0 0;
+	& li {
+		position: relative;
+		 margin-right: 15px;
+
+		 &:last-child {
+		 	margin-right: 0;
+		 }
+		&:after {
+			content: "/";
+			position: absolute;
+			right: -8px;
+    		top: 1px;
+			color: #666666;
+		}
+		&:last-child:after {
+			content: "";
+		}
+		&.active a {
+			@include font(12px, #666666);
+			cursor: text;
+		}
+	}
+	& a {
+		@include font(12px, #006fbe);
+	}
+	
+}

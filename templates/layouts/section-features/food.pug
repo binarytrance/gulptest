@@ -1,0 +1,51 @@
+include ../../components/mixins/cards.pug
+section#food-container
+	.section-container.dashed-border
+		.group.section-heading-wrapper.parent-relative
+			.strip.section-heading.f-left.strip--special-features
+				h2.sanspro-b.text-uppercase 
+					a(href="#") food
+		.group
+			.grid-col-lg
+				+large-horizontal("img/home/top-stories-trumpmodi.png", "Summer", "Traversing the food map", "2 hours ago", "special-features")
+
+			.grid-col-sm.grid-col-sm-3row.mtop-m-20.mtop-t-20
+				.group.notab-snippets-mtop
+					ul.notab-snippets.notab-snippets--graybg
+						li
+							+snippet-lists("img/home/science-solistic.png", "img", "You might not be here without the solistices and seasons")
+						li
+							+snippet-lists("img/home/science-molten.png", "img", "Earth's molten heart may not be sending messages")
+						li
+							+snippet-lists("img/home/science-molecule.png", "img", "Molecular movement generates patterns")
+	.section-container#lifestyle-container
+		.grid-col-lg
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.strip.section-heading.strip--special-features
+						h2.sanspro-b.text-uppercase
+							a(href="#") lifestyle
+			.grid-col-half
+				ul.sm-hr-card-list
+					li.sm-hr-card-list__items
+						+small-horizontal("img/home/science-dna.png", "img", "Scientists to study structure of alien hypothetical dna", "5 hours ago", "gray")
+					li.sm-hr-card-list__items.mtop-m-20.mtop-t-20.mtop-d-20
+						+small-horizontal("img/home/science-alien.png", "img", "Something interstellar but not so alien is coming", "4 hours ago", "gray")
+			.grid-col-half.mtop-m-20
+				ul.notab-snippets.notab-snippets--graybg
+					li
+						+snippet-lists("img/home/science-solistic.png", "img", "You might not be here without the solistices and seasons")
+					li
+						+snippet-lists("img/home/science-molten.png", "img", "Earth's molten heart may not be sending messages")
+					li
+						+snippet-lists("img/home/science-molecule.png", "img", "Molecular movement generates patterns")
+		.grid-col-sm
+			.group.parent-relative.grid-col-full.section-heading-wrapper.section-heading-wrapper--tweet-block
+				.group.strip.section-heading
+					h2.sanspro-b.text-uppercase
+						a(href="#").twitter-feed-cta
+							img.twitter-feed-cta__img(src="img/icons/twitter.png", alt="Twitter")
+							|social feed
+			.tweet-card
+			//- .group
+			//- 	include ../../components/mixins/cards.pug
+			//- 	+square-img-card("img/home/journalist-madhuri.png", "img", "Madhuri Rao", "Senior Correspondant")

@@ -1,0 +1,140 @@
+.slider-parent {
+	width: 100%;
+	@include breakpoint($md-max) {
+		transition: -ms-transform 0.5s,-webkit-transform 0.5s,transform 0.5s !important;
+		overflow-x: auto;
+		overflow-y: hidden;
+		white-space: nowrap;
+		font-size: 0;
+		-webkit-overflow-scrolling: touch;
+	}
+	
+	&::-webkit-scrollbar {
+		@include breakpoint($md-max) {
+			-webkit-appearance: none;
+			display: none;
+		}
+	}
+	@include breakpoint($md) {
+		overflow: visible;
+	}
+	.slide-wrapper {
+		
+		@include breakpoint($md-max) {
+			float: none;
+			position: relative;
+			width: 40%;
+			white-space: normal;
+			display: inline-block;
+			vertical-align: top;
+			// margin-right: 2.5%;
+			padding-left: 0;
+			padding-right: 2.5%;
+			margin-right: 0%;
+		}
+		@include breakpoint($sm-max) {
+			width: 65%;
+			padding-right: 4.5%;
+		}
+	}
+}
+.slider-gran {
+	// width: 100%;
+	@include breakpoint($md-max) {
+		margin-left: 0;
+	    margin-right: -5.25%;
+	}
+	@include breakpoint($md) {
+		// overflow: hidden;
+	}
+}
+
+.slide-wrapper--author {
+	@media (max-width: 991px) {
+		width: auto !important;
+		padding-right: 20px !important;
+	}
+	
+	& img {
+		@media (max-width: 767px) {
+			width: 125px;
+			height: 125px;
+		}
+	}
+}
+
+// slick slider
+.lg-vr-card-slider {
+	position: relative;
+	&__items {
+		float: left;
+	}
+	&:hover .slick-arrow {
+		opacity: 0.7;
+		visibility: visible;
+
+	}
+	& .slick-arrow {
+		position: absolute;
+		top: 35%;
+		cursor: pointer;
+		z-index: 9999;
+		opacity: 0;
+		visibility: hidden;
+		transition: all ease .3s;
+		padding: 10px 5px 10px 5px;
+		& img {
+			width: 22px;
+    		
+		}
+	}
+	& .slick-prev {
+		left: 0;
+		& img {
+			transform: rotate(-180deg);
+		}
+	}
+	& .slick-next {
+		right: 0;
+	}
+}
+
+.exlusive-img-slider {
+	& .slick-next img, & .slick-prev img{
+		width: 23px;
+	}
+	& li img {
+		border-bottom: 3px solid #ffcc00;
+		margin-bottom: 5px;
+	}
+}
+
+.exlusive-img-slider {
+	& .slick-prev img{
+		transform: rotate(180deg);
+	}
+}
+.exlusive-img-slider {
+	& .slick-next, & .slick-prev{
+		position: absolute;
+	    top: 50%;
+	    z-index: 1;
+	    transform: translateY(-50%);
+	    cursor: pointer;
+	    background-color: #ffcc00;
+	    padding: 15px 5px;
+	    @include breakpoint($lg) {
+	    	padding: 22px 10px;
+	    }
+	}
+}
+.exlusive-img-slider {
+	& .slick-prev{
+		left: 0;
+	}
+}
+.exlusive-img-slider {
+	& .slick-next{
+		right: 0;
+	}
+}

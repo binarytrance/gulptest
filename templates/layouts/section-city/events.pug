@@ -1,0 +1,18 @@
+section#events-container
+	.section-container
+		.group.section-heading-wrapper.parent-relative
+			.strip.section-heading.f-left.strip--city
+				h2.sanspro-b.text-uppercase 
+					a(href="#") events
+				.view-link.f-right.sanspro-reg
+					a.text-uppercase(href="#") view all
+		.grid-col-lg
+			.group
+				include ../../components/mixins/cards.pug
+				//- - var card_color= "Bossanova"
+				+large-horizontal("img/home/top-stories-trumpmodi.png", "Summer", "‘Moog masala’ debuts in the city this weekend", "2 hours ago", "city")
+
+		.grid-col-sm.grid-col-sm-3row.mtop-m-20.mtop-t-20
+			.group.grid-col-full.notab-snippets-mtop
+				include ../../components/mixins/cards.pug
+				+bg-subscribe-card("More stories like this in your inbox", "Subscribe", "city", "city")

@@ -1,0 +1,31 @@
+section#top-features-container
+	.section-container
+		.grid-col-lg
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.strip.strip--entertainment.section-heading.section-heading--entertainment
+						h2.sanspro-b.text-uppercase
+							a(href="#") top stories
+						.view-link.f-right.sanspro-reg
+							a.text-uppercase(href="#") view all
+			.group
+				include ../../components/mixins/cards.pug
+				//- - var card_color= "Bossanova"
+				+large-horizontal("img/home/summer.png", "Summer", "It's hot outside! Let her wear those shorts...", "2 hours ago", "entertainment")
+			.group
+				.grid-col-half.mtop-m-20.mtop-t-20.mtop-d-20
+					include ../../components/mixins/cards.pug
+					+nopic-card("When the quiet designer decided to get loud", "1 hour ago", "nopic-entertainment")
+				.grid-col-half.mtop-m-20.mtop-t-20.mtop-d-20
+					include ../../components/mixins/cards.pug
+					+large-vertical("img/home/designer-home.png", "img", "For a pocket-friendly designer home that is on your wishlist", "7 hours ago", "gray", "entertainment")
+		.grid-col-sm
+			.group.section-heading-wrapper.parent-relative.grid-col-full.mtop-m-20.mtop-t-20
+				.group.strip.section-heading.strip--entertainment
+					h2.sanspro-b.text-uppercase
+						a(href="#") cartoon of the day
+			.group.grid-col-full
+				include ../../components/mixins/cards.pug
+				+square-img-nobg("img/section-feature/cartoon.png", "Cartoon")
+			.group.grid-col-full.mtop-m-20.mtop-d-20
+				include ../../components/mixins/cards.pug
+				+ad-card-275("Advert")

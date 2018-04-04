@@ -1,0 +1,45 @@
+section#top-stories-container
+	.section-container
+		.grid-col-lg
+				.group.section-heading-wrapper.parent-relative
+					.strip.section-heading.strip--she.f-left
+						h2.sanspro-b.text-uppercase 
+							a(href="#") top stories
+					.view-link.f-right.sanspro-reg
+						a.text-uppercase(href="stories-list.html") view all
+				.group
+					include ../../components/mixins/cards.pug
+					//- - var card_color= "Bossanova"
+					+large-horizontal("img/home/top-stories-trumpmodi.png", "Summer", "India a leading global power, says new US security policy", "2 hours ago", "she")
+				.group
+					.slider-gran
+						ul.slider-parent
+							li.grid-col-3.slide-wrapper.mtop-m-20.mtop-t-20.mtop-d-20
+								include ../../components/mixins/cards.pug
+								+small-vertical("img/home/top-stories-kamal.png", "img", "Kamal Haasan to enter Tamilnadu politics this year", "5 hours ago", "gray", "she")
+							li.grid-col-3.slide-wrapper.mtop-m-20.mtop-t-20.mtop-d-20
+								include ../../components/mixins/cards.pug
+								+small-vertical("img/home/top-stories-kamal.png", "img", "Ivanka thanks KCR for hospitality during Hyd trip", "5 hours ago", "gray", "she")
+							li.grid-col-3.slide-wrapper.mtop-m-20.mtop-t-20.mtop-d-20
+								include ../../components/mixins/cards.pug
+								+small-vertical("img/home/top-stories-modispeech.png", "img", "Gujarat elections are a sign of victory", "5 hours ago", "gray", "she")
+		.grid-col-sm.grid-col-sm-3row.mtop-m-20.mtop-t-20
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+				.group.strip.section-heading.strip--trending
+					h2.sanspro-b.text-uppercase
+						a(href="#") trending stories
+			.group.grid-col-full
+				ul.lg-vr-card-slider
+					li.lg-vr-card-slider__items
+						include ../../components/mixins/cards.pug
+						+large-vertical("img/home/summer.png", "img", "At least three dead as clowns shake hands", "2 hours ago", "gray", "trending")
+
+					li.lg-vr-card-slider__items
+						include ../../components/mixins/cards.pug
+						+large-vertical("img/home/top-stories-big-card.png", "img", "At least three dead as clowns shake hands", "2 hours ago", "gray", "trending")
+
+			.group.grid-col-full.mtop-m-20.mtop-d-20
+				include ../../components/mixins/cards.pug
+				+ad-card-250("Advert")
+
+

@@ -1,0 +1,15 @@
+include ../../components/mixins/cards.pug
+
+.section-container
+	.grid-col-full
+		ul.group.breadcrumb-list
+			li.f-left
+				a(href="#").sanspro-reg Home
+
+			li.f-left
+				a(href="#").sanspro-reg Video
+
+			li.active.f-left
+				a(href="#").sanspro-reg Politics
+	.group
+		+ad-card-lng("Advert")

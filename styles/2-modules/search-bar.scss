@@ -1,0 +1,162 @@
+// search bar 
+.search-wrapper {
+	position: relative;
+	&--ex {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 25px;
+    	height: 19px;
+    	& + .search-result--navbar {
+			top: 25px;
+			right: 0;
+			padding: 0 5px;
+			@media (min-width: $sm) {
+				right: -55px;
+			}
+	    	@media (min-width: $lg) {
+	    		top: 58px;
+	    		right: -83px;
+	    	}
+	    	& .search-result--main:after {
+	    		right: 17px;
+	    		@media (min-width: $sm) {
+					right: 69px;
+	    		}
+	    		@media (min-width: $lg) {
+	    			right: 85px;
+	    		}
+	    	}
+		}
+	}
+	@include breakpoint($lg-max) {
+		float:right;
+		height: 25px;
+		width: 25px;
+		margin-left: 15px;
+		position: static;
+		transform: translateY(0);
+	}
+}
+input[type="text"].full-search {
+	height: 25px;
+	font-size: 15px;
+	display:inline-block;
+	outline: none;
+	position: absolute;
+	width: 0;
+	border: none;
+	top: 0;
+	right: 0;
+	background: transparent;
+	transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+	cursor: text;
+	padding-right: 30px;
+	z-index: 3;
+	// border-bottom: $black;
+	
+	@include font(13px, $black);
+	&:focus {
+		width: 200px;
+		z-index: 1;
+		border: $black;
+		cursor: text;
+		background-color: $light-gray;
+		padding:3px;
+		padding-right: 25px;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
+// input[type="text"]:focus:hover {
+//   border-bottom: 1px solid #BBB;
+// }
+#nav-search-submit {
+	position: absolute;
+	top: 3px;
+	right: 0;
+	z-index: 2;
+	opacity: 0.8;
+	transition: opacity .4s ease;
+	text-indent: -10000px;
+	height: 25px;
+	width: 25px;
+	float: right;
+	cursor: pointer;
+	background-color: $light-gray;
+	background: url("../img/icons/search.svg") center top no-repeat;
+	border-bottom: $black;
+	background-size: 75% 75%;
+	@media (min-width:$lg) {
+		top: 0;
+	}
+}
+.search-result {
+	
+	&--navbar {
+		display: block;
+		position: absolute;
+		top: 14px;
+		right: -60px;
+		z-index: 1;
+		opacity: 0;
+		visibility: hidden;
+		transition: all ease .3s;
+		margin-top: 15px;
+		@media (max-width: 767px) {
+			width: 300px;
+			right: 0;
+		}
+		&.js-active {
+			opacity: 1;
+			visibility: visible;
+			margin-top: 21px;
+		}
+		&.js-top-active {
+			top: 24px;
+		}
+	}
+	
+    &--main {
+    	position: relative;
+
+	  	&:after {
+	  		content: "";
+		    position: absolute;
+		    right: 70px;
+		    top: -8px;
+		    background: #f6f6f6;
+		    border-right: 2px solid #0162b4;
+		    border-bottom: 2px solid #0162b4;
+		    width: 16px;
+		    height: 17px;
+		    transform: rotate(-134deg);
+		    @media (max-width: 767px) {
+		    	right: 9px;
+		    	width: 12px;
+		    	height: 12px;
+		    	top: -5px;
+		    	transform: rotate(-135deg);
+		    }
+	  	}
+	    &-search {
+	    	border: 2px solid #0162b4;
+	    	@media (max-width: 767px) {
+    			height: 40px !important;
+    		}
+	    }
+	    &-submit {
+	    	text-indent: 0px !important;
+	    	background: none !important;
+	    	width: auto !important;
+	    	height: auto !important;
+	    	margin-top: 0 !important;
+	    	color: #0162b4;
+	    	@media (min-width: 768px) and (max-width: 1199px) {
+	    		right: 75px !important;
+	    	}
+	    }
+    }
+}

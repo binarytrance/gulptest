@@ -1,0 +1,22 @@
+.section-container#home-container
+	.grid-col-lg
+		.group.parent-relative.grid-col-full.section-heading-wrapper
+				.group.strip.section-heading.strip--opinion
+					h2.sanspro-b.text-uppercase
+						a(href="#") home
+				.view-link.f-right.sanspro-reg
+						a.text-uppercase(href="stories-list.html") view all
+		.grid-col-half
+			include ../../components/mixins/cards.pug
+			+large-vertical("img/home/designer-home.png", "img", "For a pocket-friendly designer home that is on your wishlist", "7 hours ago", "gray", "opinion")
+		.grid-col-half.mtop-m-20
+			include ../../components/mixins/cards.pug
+			+large-vertical("img/home/designer-home.png", "img", "Trends for doors and windows", "7 hours ago", "gray", "opinion")
+	.grid-col-sm.mtop-m-20.mtop-t-20
+		.group.parent-relative.grid-col-full.section-heading-wrapper
+			.group.strip.section-heading.strip--journo
+				h2.sanspro-b.text-uppercase
+					a(href="#") journalist of the day
+		.group
+			include ../../components/mixins/cards.pug
+			+square-img-card("img/home/journalist-madhuri.png", "img", "Madhuri Rao", "Senior Correspondant")

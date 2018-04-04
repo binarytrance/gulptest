@@ -1,0 +1,117 @@
+section#election-container
+	.section-container
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.strip.section-heading.strip--election.sticky-parent
+						h2.sanspro-b.text-uppercase
+							a(href="#") Election 2017
+			.grid-col-sm
+				.group.election-left
+					.election-left__cards
+						include ../../components/mixins/cards.pug
+						+large-vertical("img/home/election-queue.png", "img", "BJP Starts Preparations For Gujarat Local Bodies Polls", "5 hours ago", "gray", "election")
+					
+					.election-left__cards.mtop-m-20
+						include ../../components/mixins/cards.pug
+						+large-vertical("img/home/election-queue.png", "img", "On Caste and Identity Politics in Gujarat Elections", "5 hours ago", "gray", "election")
+
+					.election-left__cards.mtop-m-20.mtop-t-20
+						include ../../components/mixins/cards.pug
+						+nopic-card("Yes, Modi won - But Gujarat shows 2019 is wide open", "1 hour ago", "white", "election-title", "election-info")
+					
+			.grid-col-lg
+				.group
+					.grid-col-half.mtop-m-20.mtop-t-20
+						include ../../components/mixins/cards.pug
+						+square-img-only("img/home/total.png", "img")
+
+					.grid-col-half.mtop-m-20.mtop-t-20
+						include ../../components/mixins/cards.pug
+						+square-img-only("img/home/electoral.png", "img")
+
+				.group.live-updates-comment
+					.group.parent-relative.grid-col-full.section-heading-wrapper
+						.group.section-heading.section-heading--nostrip.mtop-m-20.mtop-t-20.mtop-d-20
+							h2.sanspro-b.text-uppercase
+								span.news-live.news-live__mright
+									.news-live-animate
+								a(href="#") live updates
+
+					//- .grid-col-full.live-updates-comment__election
+					//- 	.updates-wrapper.parent-relative
+					//- 		ul.updates-wrapper-list
+					//- 			li.updates-wrapper-list__items
+					//- 				span.sanspro-b 5:31pm
+					//- 				p.sanspro-semib The BJP and its allies have secured two-thirds majority in 403-member UP assembly. The BJP has won 262 seats, its allies Apna Dal (S) eight and Suheldev Bharatiya Samaj Party, four.
+
+					//- 			li.updates-wrapper-list__items
+					//- 				span.sanspro-b 5:37pm
+					//- 				p.sanspro-semib Uttarakhand chief minister Harish Rawat, who lost both the assembly seats he contested, has submitted his resignation to Governor K.K. Paul, while attributing the party’s “poor” show in the assembly elections to “flaws in his own leadership”.
+
+					//- 			li.updates-wrapper-list__items
+					//- 				span.sanspro-b 5:48pm
+					//- 				p.sanspro-semib Prime Minister thanks Rahul Gandhi on Twitter after the latter congratulated him on the UP election victory.
+
+					//- 			li.updates-wrapper-list__items
+					//- 				span.sanspro-b 6:00pm
+					//- 				p.sanspro-semib The victory margin between Congress and BJP this time is massive as they were neck and neck in the last assembly polls with BJP winning only one seat less than Congress which formed government with the help of six-member PDF.
+
+					//- 			li.updates-wrapper-list__items
+					//- 				span.sanspro-b 6:20pm
+					//- 				p.sanspro-semib BJP. Bahuguna's son Saurav had been fielded by the saffron party from his father's Sitarganj constituency which he won. 
+
+					//- 			li.updates-wrapper-list__items
+					//- 				span.sanspro-b 5:48pm
+					//- 				p.sanspro-semib People were sick of the rule of corruption, fear and loot and voted for Narendra Modi's and  Amit Shah's all-inclusive development agenda said Bhatt.
+
+					.grid-col-full.live-updates-comment__election
+						.updates-wrapper
+							ul.updates-wrapper-list
+								li.updates-wrapper-list__items
+									span.sanspro-b 18:25
+									.data
+										h3.sanspro-semib Test the Feed
+										.description
+											p.sanspro-semib Jnanabutti, free coaching centre, relaunched with new shelter after two years
+											p.sanspro-semib The JD(S), which is looking at intensifying its campaigning activities, has hired an external agency to train and provide its candidates for the upcoming Assembly polls with innovative concepts to push forward it's 'Kumaraswamy for CM' campaign.
+								li.updates-wrapper-list__items
+									span.sanspro-b 16:17
+									.data
+										.description
+											p.sanspro-semib
+												| Facebook - The team will also be renting out LED vans to each candidate, who will be asked to deploy it across his/her constituency. The vans with LED screens will showcase the candidate, and also display videos on Kumaraswamy's achievements, contribution
+											iframe.image(src='https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2Fvideos%2F10153231379946729%2F&width=500&show_text=false&height=280&appId', width='500', height='280', style='border:none;overflow:hidden', scrolling='no', frameborder='0', allowtransparency='true', allowfullscreen='true')
+								li.updates-wrapper-list__items
+									span.sanspro-b 13:36
+									.data
+										p.sanspro-semib
+											| Twitter - Candidates, including the sitting MLAs and MLCs were present during the presentation. The agency, which will be setting up an office in Bengaluru, is said to have devised similar campaigning strategies in other states too.
+										.description
+											blockquote.twitter-tweet(data-lang='en')
+												p(lang='en', dir='ltr')
+													| Tributes to 
+													a(href='https://twitter.com/hashtag/ChandraShekharAzad?src=hash&ref_src=twsrc%5Etfw') #ChandraShekharAzad
+													|  ji whose sacrifice for Indian Freedom Struggle remains an inspiration. 
+													a(href='https://t.co/mWd9cFEtlt') pic.twitter.com/mWd9cFEtlt
+												| — Virender Sehwag (@virendersehwag) 
+												a(href='https://twitter.com/virendersehwag/status/968421384622718977?ref_src=twsrc%5Etfw') February 27, 2018
+											script(async='', src='https://platform.twitter.com/widgets.js', charset='utf-8')
+								li.updates-wrapper-list__items
+									span.sanspro-b 13:35
+									.data
+										p.sanspro-semib
+											| The bench, which also comprised Justices A K Sikri, A M Khanwilkar, D Y Chandrachud and Ashok Bhushan
+										.blogdata
+											img.image(src='//www.deccanheraldonline.in/sites/dh/files/liveblog/BABRI%20CAROUSEL%20IMAGE.png')
+										.description
+											p.sanspro-semib Prime Minister Narendra Modi today met Swiss President Alain Berset here and discussed ways to deepen bilateral ties on the sidelines of the World Economic Forum (WEF) annual summit.
+								li.updates-wrapper-list__items
+									span.sanspro-b 13:34
+									.data
+										p.sanspro-semib A five-judge Constitution Bench headed by Chief Justice Dipak Misra
+										.description
+											p.sanspro-semib A five-judge Constitution Bench headed by Chief Justice Dipak Misra, in an interim order, also modified its earlier order with regard to linking of Aadhaar with mobile services and said the deadline of February 6 next year for this purpose also stood extended till March 31.
+
+
+
+
+

@@ -1,0 +1,66 @@
+/*screen variables while using min-width media queries*/
+$sm: 768px;
+$xs: 430px;
+$md: 992px;
+$md-l: 1024px;
+$lg: 1200px;
+$lg-l: 1400px;
+$xl: 1600px;
+$xxl: 1900px;
+
+// $4k: 2200px;
+/*END: screen variables*/
+
+/*screen variables while using max-width media queries*/
+$sm-max: max-width 767px;
+$md-max: max-width $md - 1;
+$lg-max: max-width $lg - 1;
+$xl-max: max-width $xl - 1;
+$xxl-max: max-width $xxl - 1;
+/*END: screen variables*/
+
+
+/*screen variables while using min-width media queries*/
+
+$black: #333;
+$blue: #0162b4;
+$light-gray: #f6f6f6;
+$gray666: #666;
+$green: #68a923;
+$border-gray: #eaeaea;
+$special-f-dark: #432957;
+$special-f-light: #A189B4;
+$entertainment-dark: #EE4146;
+$entertainment-light: #FA9295;
+$opinion-dark: #90665E;
+$opinion-light:  #AA8E89;
+$business-dark: #128296;
+$business-light: #8ABEC7;
+$journo: #9F7FBB;
+$science-dark: #EE9E18;
+$science-light: #F8C879;
+$politics-dark: #ABA12B;
+$politics-light: #D0CA80;
+$city-dark: #68A923;
+$city-light: #B7EC7F;
+$trending: #E90808;
+$top-stories-dark: #006FBE;
+$top-stories-light: #76BAEB;
+$photo-gallery: #1293cf;
+$sports-dark: #7DBF85;
+$sports-light: #98D39F;
+$video-yellow: #ffde00;
+$video-playlist-txt: #d7d7d7;
+$she: #ff6666;
+$speak-out: #88898e;
+$exclusive: #eebe00;
+$magazine: #432957;
+
+//background colors
+$gray-bg: #F6F6F6;
+$video-bg: #07081D;
+$city-bg: #F0F6E9;
+
+$cta-color: #035998;
+
+

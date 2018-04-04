@@ -1,0 +1,23 @@
+section.very-light-gray#videosports-container.overlapped-container
+	.section-container
+		div
+			.group.section-heading-wrapper.parent-relative
+				.strip.section-heading.strip--city.f-left
+					h2.sanspro-b.text-uppercase 
+						a(href="#") sports
+				.view-link.f-right.sanspro-reg
+					a.text-uppercase(href="#") view all
+
+			.group
+				.slider-gran
+					ul.slider-parent
+						li.grid-col-3.slide-wrapper
+							include ../../components/mixins/cards.pug
+							+video-vertical("img/video/army.png", "img", "India open against New Zealand in second leg of hockey tournament", "white", "city")
+						li.grid-col-3.slide-wrapper
+							include ../../components/mixins/cards.pug
+							+video-vertical("img/video/army.png", "img", "Back to drawing board for Djokovic", "white", "city")
+						li.grid-col-3.slide-wrapper
+							include ../../components/mixins/cards.pug
+							+video-vertical("img/video/army.png", "img", "Back to drawing board for Djokovic", "white", "city")
+			

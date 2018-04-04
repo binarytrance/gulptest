@@ -1,0 +1,29 @@
+section#other-sports-container.overlapped-container
+	.section-container
+		.grid-col-lg
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+					.group.section-heading.strip.strip--sports
+						h2.sanspro-b.text-uppercase
+							a(href="#") others
+			.grid-col-half
+				include ../../components/mixins/cards.pug
+				+large-vertical("img/home/election-queue.png", "img", "BJP Starts Preparations For Gujarat Local Bodies Polls", "5 hours ago", "white", "sports")
+			.grid-col-half.notab-snippets-mtop.mtop-m-20
+				ul.notab-snippets.notab-snippets--business
+					li
+						include ../../components/mixins/cards.pug
+						+snippet-lists("img/home/science-molten.png", "img", "What is the message earth is trying to send us")
+					li
+						include ../../components/mixins/cards.pug
+						+snippet-lists("img/home/sports-list-saina.png", "img", "Players have to level up")
+					li
+						include ../../components/mixins/cards.pug
+						+snippet-lists("img/home/business-mrp.png", "img", "Online retails dont have it easy")
+		.grid-col-sm
+			.group.parent-relative.grid-col-full.section-heading-wrapper
+				.group.strip.section-heading.strip--photo-gallery.mtop-m-20.mtop-t-20
+					h2.sanspro-b.text-uppercase
+						a(href="#") photogallery
+			.group.grid-col-full
+				include ../../components/mixins/cards.pug
+				+photo-gallery-card("img/home/crackers.png", "Crackers", "People watch fireworks exploding over Copaca-bana beach during New Year's celebrations in Rio de Janerio")

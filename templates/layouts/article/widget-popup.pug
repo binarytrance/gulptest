@@ -1,0 +1,21 @@
+.group.email-popup
+	h2.serifpro-reg.email-popup__title Contribute to this story
+	form(data-parsley-validate="")
+		.form-group
+			label(for="name").sanspro-semib Name
+			input.sanspro-reg(type="text" name="name" data-error="Enter name" data-parsley-error-message="* Please enter your First Name" required="required")
+
+		.form-group
+			label(for="email").sanspro-semib Email
+			input.sanspro-reg(type="email" name="email" data-parlsey-pattern="/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/g" data-parsley-error-message="* Please enter your valid Email" data-parsley-type="email" required="required")
+
+		.form-group
+			label(for="message").sanspro-semib Message
+			textarea.sanspro-reg(rows="4" cols="10" data-parsley-error-message="* Please enter the message" required="required")
+
+		div.form-btn
+			button.sanspro-semib(type="submit") Submit
+
+		div.form-close
+			a(href="javascript:void(0)").sanspro-semib Cancel
+.popup-overlay

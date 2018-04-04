@@ -1,0 +1,227 @@
+.main-article-wrapper {
+	padding-bottom: 30px;
+	@include column(1);
+	@include breakpoint($sm) {
+		@include column(1)
+	}
+	@include breakpoint($md) {
+		@include column(8/12)
+	}
+	@include breakpoint($lg) {
+		@include column(7.5/12)
+	}
+	
+}
+.related-article-wrapper {
+	@include column(1);
+	margin-bottom: 30px;
+	@include breakpoint($sm) {
+		@include column(1)
+	}
+	@include breakpoint($md) {
+		@include column(4/12)
+	}
+	@include breakpoint($lg) {
+		@include column(4/12, $offset: 0.5/12);
+	}
+}
+.related-article-wrapper {
+	margin-bottom: 30px;
+	@include breakpoint($lg) {
+		
+	}
+}
+.article-banner-wrapper {
+	// height: 550px;
+	img {
+		width: 100%;
+		max-width: 100%;
+		object-fit: cover;
+		height: 100%;
+	}
+	&--politics {
+		
+		img {
+			border-bottom: solid 3px $politics-dark;
+		}
+	}
+	&--special-features {
+		
+		img {
+			border-bottom: solid 3px $special-f-dark;
+		}
+	}
+	&--entertainment {
+		img {
+			border-bottom: 3px solid $entertainment-dark;
+		}
+	}
+	&--opinion {
+		img {
+			border-bottom: 3px solid $opinion-dark;
+		}
+	}
+	&--business {
+		img {
+			border-bottom: 3px solid $business-dark;
+		}
+	}
+	&--science {
+		img {
+			border-bottom: 3px solid $science-dark;
+		}
+	}
+	&--city {
+		img {
+			border-bottom: 3px solid $city-dark;
+		}
+	}
+	&--top-stories {
+		img {
+			border-bottom: 3px solid $top-stories-dark;
+		}
+	}
+	&--trending {
+		img {
+			border-bottom: 3px solid $trending;
+		}
+	}
+	&--sports {
+		img {
+			border-bottom: 3px solid $sports-dark
+		}
+	}
+	&--journo {
+		img {
+			border-bottom: 3px solid $journo
+		}
+	}
+	&--election {
+		img {
+			border-bottom: 3px solid #ef6241;
+		}
+	}
+	&--she {
+		img {
+			border-bottom: 3px solid $she;
+		}
+	}
+	&--video {
+		img {
+			border-bottom: 3px solid $video-bg;
+		}
+	}
+	&--exclusives {
+		img {
+			border-bottom: 3px solid $exclusive;
+		}
+	}
+	&--top-stories {
+		img {
+			border-bottom: 3px solid $top-stories-dark;
+		}
+	}
+}
+.article-banner-caption {
+	@include font(12px, $black);
+}
+.article-details-wrapper {
+	clear: both;
+	width: 100%;
+	// padding-bottom: 30px;
+}
+.article-highlights {
+	@include breakpoint($sm-max) {
+		width: 100%;
+	}
+	h2 {
+		@include font(17px, $black);
+	}
+	@include column(5.5/12);
+	.notab-snippets {
+		width: 100%;
+	}
+	.snippet-list-block {
+		height: auto;
+	}
+	.snippet-list-block__content {
+		height: auto;
+		width: auto;
+		padding-bottom: 0;
+	}
+	&--politics {
+	}
+}
+
+.article-body-text {
+	margin-bottom: 20px;
+	@include font(17px, $black);
+	line-height: 27px;
+	&:last-child {
+		margin-bottom: 50px;
+	}
+	@include breakpoint($lg) {
+		margin-bottom: 28px;
+	}
+}
+.tweet-embed {
+	cursor: pointer;
+	width: 100%;
+	// float: none;
+	// margin-left: auto;
+	// margin-right: auto !important;
+	height: 220px;
+	@extend .bg-adver;
+	margin-bottom: 20px;
+	@include breakpoint($sm) {
+		@include column(8/12);
+		float: none;
+		margin-left: auto;
+		margin-right: auto !important;
+	}
+}
+
+.related-article-wrapper {
+	.notab-snippets {
+		padding: 0;
+	}
+}
+.article-ad-wrapper {
+	.adver-wrapper--lng {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+	&--250 {
+		width: 360px;
+		margin-left:auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+		@include breakpoint($lg) {
+			margin-bottom: 28px;
+		}
+	}
+	&--ex {
+		margin-bottom: 10px;
+	}
+}
+.article-adver {
+	@media (min-width: 768px) and (max-width: 1199px) {
+		width: 100%;
+	}
+}
+
+.article-banner-wrapper {
+	margin-bottom: 30px;
+}
+.strap-heading {
+	@include font(14px, $black);
+	float: left;
+	@include breakpoint($sm-max) {
+		margin-bottom: 10px;
+	}
+	@media (min-width: 768px) and (max-width: 1199px) {
+		width: 80%;
+	}
+}
+
+

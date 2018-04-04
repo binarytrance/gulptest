@@ -1,0 +1,14 @@
+include ../../components/mixins/cards.pug
+section#hockey-container
+	.section-container
+		.group.parent-relative.grid-col-full.section-heading-wrapper
+			.group.section-heading.strip.strip--sports
+				h2.sanspro-b.text-uppercase
+					a(href="#") hockey
+		.grid-col-lg
+			.group
+				//- - var card_color= "Bossanova"
+				+large-horizontal("img/home/top-stories-trumpmodi.png", "Summer", "India a leading global power, says new US security policy", "2 hours ago", "sports")
+		.grid-col-sm.mtop-m-20.mtop-t-20
+			+bg-subscribe-card("More stories like this in your inbox.", "Subscribe", "sports", "sports")
+
