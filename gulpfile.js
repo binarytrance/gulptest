@@ -42,12 +42,11 @@ gulp.task('styles', function() {
         'merge-default-rules': false
       },
       files: {ignore: ''},
-      rules: {
-        'no-ids': 1,
-        'no-mergeable-selectors': 0,
-        'max-depth': 1
-      },
-      configFile: 'config/other/.sass-lint.yml'
+      // rules: {
+      //   'no-ids': 2,
+      //   'no-mergeable-selectors': 0,
+      // },
+      configFile: '.sass-lint.yml'
     }))
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError())
