@@ -36,20 +36,20 @@ var onError            = function(err) { // Custom error msg with beep sound and
 gulp.task('styles', function() {
 	gulp.src('styles/*.scss')
 	.pipe(plumber({ errorHandler: onError }))
-	.pipe(sassLint({
-      options: {
-        formatter: 'stylish',
-        'merge-default-rules': false
-      },
-      files: {ignore: ''},
-      // rules: {
-      //   'no-ids': 2,
-      //   'no-mergeable-selectors': 0,
-      // },
-      configFile: '.sass-lint.yml'
-    }))
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
+	// .pipe(sassLint({
+ //      options: {
+ //        formatter: 'stylish',
+ //        'merge-default-rules': false
+ //      },
+ //      files: {ignore: ''},
+ //      rules: {
+ //        'no-ids': 2,
+ //        'no-mergeable-selectors': 0,
+ //      },
+ //      configFile: '.sass-lint.yml'
+ //    }))
+    // .pipe(sassLint.format())
+    // .pipe(sassLint.failOnError())
 	.pipe(sourcemaps.init())
 	.pipe(sass({indentedSyntax: true}))
 	.pipe(autoprefixer({
@@ -61,6 +61,15 @@ gulp.task('styles', function() {
 	.pipe(sourcemaps.write())
 	.pipe(rename({ suffix: '.min'}))
 	.pipe(gulp.dest('build/css'));
+});
+
+gulp.task('sass-lint', function () {
+    return gulp.src([
+        'styles/**/*.scss',
+    ])
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
 });
 
 gulp.task('templates', function() {
@@ -84,6 +93,13 @@ gulp.task('scripts', function() {
 	.pipe(gulp.dest('build/js'));
 });
 
+// Task: JSHint
+gulp.task('js-lint', function() {
+  gulp.src('js/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});
+
 gulp.task('images', function() {
 	gulp.src('img/**/*')
 	.pipe(cache(imagemin({
@@ -97,9 +113,11 @@ gulp.task('images', function() {
 
 gulp.task('watch', function() {
 	gulp.watch('styles/**/*.scss',                        ['styles']);
-	gulp.watch(['templates/**/*.pug', './*.pug'],        ['templates']);
-	gulp.watch('js/**/*.js',                            ['scripts']);
-	gulp.watch('img/**/*',                           ['images']);
+	gulp.watch('styles/**/*.scss',                        ['sass-lint'])
+	gulp.watch(['templates/**/*.pug', './*.pug'],         ['templates']);
+	gulp.watch('js/**/*.js',                              ['scripts']);
+	gulp.watch('js/**/*.js',                              ['js-lint']);
+	gulp.watch('img/**/*',                                ['images']);
 
 // init server
 	browserSync.init({
@@ -117,3 +135,7 @@ gulp.task('watch', function() {
 // https://www.npmjs.com/package/gulp-jshint
 // https://www.npmjs.com/package/gulp-sass-lint
 // https://github.com/sasstools/sass-lint/blob/master/docs/sass-lint.yml
+// https://www.evoketechnologies.com/blog/code-review-checklist-perform-effective-code-reviews/
+// code review dev.to
+// https://frontendchecklist.io/
+//css lint??

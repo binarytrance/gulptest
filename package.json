@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "<a><img src=\"http://res.cloudinary.com/dt4qeehms/image/upload/v1494509335/logo_njvnrz.png\" height=\"300\" align=\"right\"></a>",
   "main": "gulpfile.js",
+  "sasslintConfig": ".sass-lint.yml",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
