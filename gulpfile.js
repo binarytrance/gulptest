@@ -138,4 +138,5 @@ gulp.task('watch', function() {
 // https://www.evoketechnologies.com/blog/code-review-checklist-perform-effective-code-reviews/
 // code review dev.to
 // https://frontendchecklist.io/
-//css lint??
+// css lint?? 
+// https://css-tricks.com/prettier-stylelint-writing-clean-css-keeping-clean-code-two-tool-game/
