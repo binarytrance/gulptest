@@ -32,6 +32,7 @@
     "gulp-jshint": "^2.1.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
     "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.2.1",
@@ -40,5 +41,11 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "jshint": "^2.9.5"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uncss": "^1.0.6",
+    "postcss": "^6.0.21",
+    "postcss-uncss": "^0.16.1"
   }
 }

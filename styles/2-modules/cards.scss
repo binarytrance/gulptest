@@ -1,1671 +1,1671 @@
-// Different background colors
-.strong-blue {
-	background: #0062b4;
-}
-.drak-green {
-	background: #68a923;
-}
-.bright-red {
-	background: #ee4146;
-}
-.very-light-gray, #events-container, #fashion-container, #travel-container, #automobile-container, #opinion-container-2, #business-container-2, #science-container-2, #politics-container-2, #top-stories-container-2, , #opinion-container-5, #business-container-5, #science-container-5, #politics-container-5, #top-stories-container-5, , #opinion-container-8, #business-container-8, #science-container-8, #politics-container-8, #top-stories-container-8 {
-	background: #f6f6f6;
-}
-.dark-yellow {
-	background: #aba12b;
-}
-.white {
-	background: #ffffff;
-}
-.light-green {
-	background: #7dbf85;
-}
-.dark-video {
-	background: #07081d;
-}
-// top progress
-
-.parent-relative {
-	position: relative;
-}
-.strip {
-	&:before {
-		content: "";
-		position: absolute;
-		top: 0;
-		width: 100%;
-		left: 0;
-		height: 3px;
-		// @include breakpoint($sm-max) {
-		// 	display: none;
-		// }
-	}
-	&--photo-gallery {
-		&:before {
-			background-color: $photo-gallery;
-		}
-	}
-	&--special-features {
-		&:before {
-			background-color: $special-f-dark;
-		}
-	}
-	&--entertainment {
-		&:before {
-			background-color: $entertainment-dark;
-		}
-	}
-	&--opinion {
-		&:before {
-			background-color: $opinion-dark;
-		}
-	}
-	&--business {
-		&:before {
-			background-color: $business-dark;
-		}
-	}
-	&--science {
-		&:before {
-			background-color: $science-dark;
-		}
-	}
-	&--politics {
-		&:before {
-			background-color: $politics-dark;
-		}
-	}
-	&--city {
-		&:before {
-			background-color: $city-dark;
-		}
-	}
-	&--top-stories {
-		&:before {
-			background-color: $top-stories-dark;
-		}
-	}
-	&--trending {
-		&:before {
-			background-color: $trending;
-		}
-	}
-	&--sports {
-		&:before {
-			background-color: $sports-dark
-		}
-	}
-	&--journo {
-		&:before {
-			background-color: $journo
-		}
-	}
-	&--election {
-		&:before {
-			background-color: #ef6241;
-		}
-	}
-	&--she {
-		&:before {
-			background-color: $she;
-		}
-	}
-	&--video {
-		&:before {
-			background-color: $video-bg;
-		}
-	}
-	&--exclusives {
-		&:before {
-			background-color: $exclusive;
-		}
-	}
-	&--top-stories {
-		&:before {
-			background: $top-stories-dark;
-		}
-	}
-	&--speak-out {
-		&:before {
-			background: $speak-out
-		}
-	}
-	&--magaine {
-		&:before {
-			background: $magazine
-		}
-	}
-}
-// mobile sticky background
-.sticky-parent {
-	&--video {
-		&.fixed {
-			background-color: $video-bg !important;
-		}
-	}
-}
-
-
-// Large Horizonatal card
-
-.lg-hr-card {
-	height: auto;
-	float: left;
-	width: 100%;
-	
-
-	@media (min-width: $sm) {
-		height: 274px;
-	}
-
-	&__img {
-		@include span(12/12);
-		height: 185px;
-		// background: url('../img/placeholder/lg-hr.png') no-repeat;
-		// background-position: center center;
-	 //    background-size: auto auto;
-	 //    overflow: hidden;
-
-		@media (min-width: $xs) and (max-width: 767px){
-			height: auto;
-		}
-
-		@media (min-width: $sm) {
-			@include span(7/12);
-			height: 274px;
-		}
-	}
-
-	&__content {
-		@include span(12/12);
-		padding: 15px;
-
-		@media (min-width: $sm) {
-			@include span(5/12);
-			padding: 40px 25px 40px 40px;
-			height: 100%;
-		}
-	}
-	&__heading {
-		@include font(20px, #ffffff);
-
-		@media (min-width: $sm) {
-			@include font(30px, null);
-		}
-	}
-	&__time-info {
-		display: inline-block;
-		padding-top: 10px;
-		@include font(12px, rgba(255, 255, 255, 0.7));
-	}
-}
-
-// vertical bigger card
-
-.lg-vr-card {
-	height: 240px;
-	float: left;
-	width: 100%;    
-	// &--m-top {
-	// 	margin-top: 4.5%;
-	// }
-	@media (min-width: $xs) and (max-width: 767px) {
-		height: auto;
-	}
-	@include breakpoint($sm) {
-		height: 274px;
-	}
-	
-	&__top {
-		height: 160px;
-		@media (min-width: $xs) and (max-width: 767px) {
-			height: auto;
-		}
-		@include breakpoint($sm) {
-			height: 189px;
-		}
-		
-	}
-	// &__content {
-	// 	padding: 10px 15px 6px 15px;
-	// 	// &:before {
-	// 	// 	background: #0062b4;
-	// 	// }
-	// }
-	&__bottom {
-		padding: 8px 15px 6px 15px;
-		height: 80px;
-		@media (min-width: $sm) {
-			height: 85px;
-			padding: 8px 30px 6px 15px;
-		}
-
-	}
-	&__heading {
-		@include font(15px, #333333);
-
-		@media (min-width: $sm) {
-			@include font(17px, null);
-		}
-	}
-	&__time-info {
-		display: inline-block;
-		padding-top: 5px;
-		@include font(11px, #333333);
-		@media (min-width: $sm) and (max-width: $lg) {
-			padding-top:0;
-		}
-	}
-}
-
-// lg-vr cards that are slides
-
-.lg-vr-slides {
-	height: 215px;
-	@include breakpoint($sm) {
-		height: 240px
-	}
-	@include breakpoint($lg) {
-		height: 250px
-	}
-	&__top {
-		height: 115px;
-		@include breakpoint($sm) {
-			height: 135px
-		}
-		@include breakpoint($lg) {
-			height: 140px;
-		}
-	}
-	&__bottom {
-		height: 100px;
-		padding: 8px 15px 6px 15px;
-		@include breakpoint($sm) {
-			padding: 8px 30px 6px 15px;
-			height: 105px
-		}
-		@include breakpoint($lg) {
-			height: 110px;
-		}
-	}
-}
-
-.lg-vr-card--text-white {
-	color: #fff;
-}
-.lg-vr-video {
-	&__top {
-		height: 125px;
-		@include breakpoint($sm) {
-			height: 155px
-		}
-		@include breakpoint($lg) {
-			height: 165px;
-		}
-		&:before {
-			content: "";
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			background: url('../img/icons/play.svg') no-repeat;
-			width: 43px;
-			height: 43px;
-		}
-	}
-	&__bottom {
-		height: 90px;
-		padding: 8px 15px 6px 15px;
-		@include breakpoint($sm) {
-			padding: 8px 30px 6px 15px;
-			height: 85px;
-		}
-		@include breakpoint($lg) {
-			height: 85px;
-		}
-	}
-}
-
-// background color classes
-.bg-gray {
-	background-color: $gray-bg;
-}
-.bg-white {
-	background-color: #fff;
-}
-.bg-special-features {
-	background-color: $special-f-dark;
-}
-.bg-top-stories {
-	background-color: $top-stories-dark;
-}
-
-.bg-city {
-	background-color: $city-dark;
-}
-.bg-sports {
-	background-color: $sports-dark;
-}
-.bg-light-gray {
-	background-color: $light-gray;
-}
-.bg-entertainment {
-	background-color: $entertainment-dark;
-}
-.bg-video {
-	background-color: $video-bg;
-}
-.bg-adver {
-	background-color: #e7e4e4;
-}
-.bg-business {
-	background-color: $business-dark;
-}
-.bg-she {
-	background-color: $she;
-}
-.bg-transparent {
-	background-color: transparent;
-}
-.watchlist-txt {
-	color: $video-playlist-txt;
-}
-.sports-updates-txt {
-	color: $black;
-}
-.bg-journo {
-	background-color: rgba(159, 127, 187, 0.1);
-}
-.bg-politics {
-	background-color: $politics-dark;
-}
-.bg-science {
-	background-color: $science-dark;
-}
-.bg-nopic-science {
-	background-color: $science-light;
-}
-.bg-opinion {
-	background-color: $opinion-dark;
-}
-.bg-nopic-special-features {
-	background-color: $special-f-light;
-}
-.bg-nopic-top-stories {
-	background-color: $top-stories-light;
-}
-.bg-green {
-	background-color: $green;
-}
-.bg-nopic-politics {
-	background-color: $politics-light;
-}
-.bg-nopic-sports {
-	background-color: $sports-light;
-}
-.bg-nopic-business {
-	background-color: $business-light;
-}
-.bg-nopic-opinion {
-	background-color: $opinion-light;
-}
-.bg-nopic-entertainment {
-	background-color: $entertainment-light;
-}
-// Small vertical
-
-.sm-vr-card {
-	height: auto;
-
-	@media (min-width: $sm) {
-		height: 250px;
-	}
-
-	&__content {
-		padding: 15px;
-		&:before {
-			background: #0062b4;
-		}
-	}
-	&__img {
-		height: 115px;
-		@media (min-width: $sm) {
-			height: 145px;
-		}
-	}
-	&__heading {
-		@include font(15px, #333333);
-
-		@media (min-width: $sm) {
-			@include font(17px, null);
-		}
-	}
-	&__time-info {
-		display: inline-block;
-		padding-top: 5px;
-		@include font(11px, #333333);
-	}
-}
-
-
-// ad square block
-.ad-card-square {
-	padding: 20px;
-	height: 250px;
-	&__title {
-		@include font(16px, #333333);
-		@include align(both);
-	}
-}
-
-// horizontal small card
-.sm-hr-card {
-	height: 127px;
-	// &-list {
-	// 	&__items {
-	// 		margin-top: 4.5%;
-	// 		@include breakpoint($sm) {
-	// 			margin-top: 20px;
-	// 		}
-	// 		&:first-of-type {
-	// 			@include breakpoint($sm) {
-	// 				margin-top:0
-	// 			}
-	// 		}
-	// 	}
-	// }
-
-	&__img {
-		height: 127px;
-		@include span(1/2);
-		@media (min-width: 430px) and (max-width: 767px) {
-			@include span(0.5/2);
-		}
-	}
-	&__content {
-		padding: 12px 20px;
-		height: 100%;
-		@include span(1/2);
-		@media (min-width: 430px) and (max-width: 767px) {
-			@include span(1.5/2);
-		}
-	}
-	&__heading {
-		@include font(15px, #333333);
-
-		@media (min-width: $sm) {
-			@include font(17px, null);
-		}
-	}
-	&__time-info {
-		display: inline-block;
-		padding-top: 5px;
-		@include font(11px, #333333);
-	}
-}
-
-
-// snippet-list
-
-.snippet-list-block {
-	height: 60px;
-	&__img {
-		@include span(0.5/2);
-		height: 60px;
-		@media (min-width: $md) and (max-width: 1199px) {
-			@include span(0.3/2);
-		}
-	}
-	&--t-img-width {
-		@media (min-width: 768px) and (max-width: 991px) {
-			width: 75px;
-		}
-	}
-	&__content {
-		padding: 0px 12px 9px 20px;
-		@include span(1.5/2);
-		height: 60px;
-		display: flex;
-		align-items: center;
-		@media (min-width: $md) and (max-width: 1199px) {
-			@include span(1.7/2);
-		}
-	}
-	&__heading {
-		@include font(14px, null);
-
-		@media (min-width: $sm) {
-			@include font(15px, null);
-		}
-	}
-	&__time-info {
-		display: inline-block;
-		padding-top: 5px;
-		@include font(11px, #333333);
-	}
-	&--speak-img-border {
-		border: 1px solid #e6e6e6;
-	}
-}
-
-.snippet-list-block-big {
-	height: 100px;
-	&__img {
-		@include span(0.7/2);
-		height: 100px;
-		@media (min-width: $sm) and (max-width: 991px) {
-			@include span(0.5/2);
-		}
-		@media (min-width: $md) and (max-width: 1199px) {
-			@include span(0.3/2);
-		}
-		@media (min-width: 1200px) {
-			@include span(0.5/2);
-		}
-	}
-	&--t-img-width {
-		@media (min-width: 768px) and (max-width: 991px) {
-			width: 90px;
-		}
-	}
-	&__content {
-		padding: 15px 12px 9px 20px;
-		@include span(1.3/2);
-		height: 100px;
-		@media (min-width: $md) and (max-width: 1199px) {
-			@include span(1.7/2);
-		}
-		@media (min-width: 1200px) {
-			@include span(1.1/2);
-		}
-	}
-	&__heading {
-		@include font(15px, null);
-
-		@media (min-width: $sm) {
-			@include font(17px, null);
-		}
-	}
-	&__time-info {
-		display: block;
-		padding-top: 5px;
-		@include font(11px, #333333);
-	}
-
-}
-
-.highlights-content {
-	position: relative;
-	padding-left: 0;
-	&:before {
-		position: absolute;
-		left: -10px;
-		top: 50%;
-		transform: translateY(-50%);
-		content: "";
-		background: $sports-dark;
-		height: 10px;
-		width: 3px;
-		@include breakpoint($sm) {
-			left: -20px;
-		}
-	}
-}
-
-
-//- Larger vertical Text
-
-.nopic-card {
-	// @include column(12/12);
-	&--m-top {
-		margin-top: 9.5%;
-	}
-	height: auto;
-	padding: 30px;
-
-	@media (min-width: $sm) {
-		height: 274px;
-		padding: 45px 45px 45px 36px;
-	}
-
-	&__heading {
-		@include font(20px, #ffffff);
-
-		@media (min-width: $sm) {
-			@include font(30px, null);
-		}
-	}
-	&__time-info {
-		display: inline-block;
-		padding-top: 5px;
-		@include font(12px, rgba(255, 255, 255, 0.7));
-	}
-}
-.fnt-nopic {
-	&--entertain-title {
-		color: $entertainment-dark;
-	}
-	&--entertain-info {
-		color: #000000;
-	}
-	&--business-title {
-		color: $business-dark;
-	}
-	&--business-info {
-		color: $business-dark;
-	}
-	&--election-title {
-		color: #ef6241;
-	}
-	&--election-info {
-		color: #ef6241;
-	}
-	&--she {
-		color: #ff6666;
-	}
-	&--urbandev-title {
-		color: #68a923;
-	}
-	&--urbandev-info {
-		color: #68a923;
-	}
-	&--urbanlife-title {
-		color: #fff;
-	}
-	&--urbanlife-info {
-		color: #fff;
-	}
-	&--sports {
-		color: $sports-dark
-	}
-}
-
-
-//- Small vertical sponsored card
-
-.sm-vrs-card {
-	height: 215px;
-
-	@media (min-width: $sm) {
-		height: 240px;
-	}
-	@media (min-width: $lg) {
-		height: 250px;
-	}
-	&__img {
-		height: 115px;
-
-		@media (min-width: $sm) {
-			height: 135px;
-		}
-		@media (min-width: $lg) {
-			height: 140px;
-		}
-
-		&:before {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			background-image: linear-gradient(to top, #ee4146 0%, rgba(255, 255, 255, 0) 100%);
-			opacity: 0.7;
-			width: 100%;
-			height: 100%;
-		}
-	}
-
-	&__content {
-		padding: 12px 20px;
-		height: 100px;
-		@media (min-width: $sm) {
-			height: 105px;
-		}
-		@media (min-width: $lg) {
-			height: 110px;
-		}
-		&--bright-red {
-			&:before {
-				background: #ee4146;
-			}
-		}
-	}
-	&__heading {
-		@include font(15px, #333333);
-		@media (min-width: $sm) {
-			@include font(17px, null);
-		}
-	}
-	&__info {
-		margin: 10px 0;
-    	display: inline-block;
-    	@include font(12px, rgba(51, 51, 51, 0.7));
-	}
-}
-
-//- Square img card
-.sq-img-card {
-	width: 100%;
-	height: 166px;
-	float: left;
-	@media (min-width: 430px) and (max-width: 767px)  {
-		height: 300px !important;
-	}
-	@media (min-width: 992px) and (max-width: 1199px)  {
-		height: 400px !important;
-	}
-	@media (min-width: $sm) {
-		height: 274px;
-	}
-
-	&__img {
-		&:before {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			background-image: linear-gradient(to top, #000000 0%, rgba(10, 9, 9, 0) 100%);
-			opacity: 0.7;
-			width: 100%;
-			height: 100%;
-		}
-	}
-	&__content {
-		position: absolute;
-		bottom: 20px;
-		left: 20px;
-		padding-right:10px;
-	}
-	&__heading {
-		@include font(22px, #ffffff);
-
-		@media (min-width: $sm) {
-			@include font(30px, null);
-		}
-	}
-	&__info {
-		@include font(14px, #b1b0b0);
-	}
-}
-
-// square image only
-.sq-img-only{
-	height: 260px;
-	float: left;
-	width: 100%;
-	background: #fff;
-	padding: 10px;
-	// margin-bottom: 30px;
-	@media (min-width: $sm) {
-		height: 274px;
-	}
-	&__img {
-		display: flex;
-		align-items: center;
-		& img {
-			object-fit: contain;
-			height: 260px !important;
-
-			// @media (min-width: $sm) {
-			// 	object-fit: none;
-			// 	height: auto !important;
-			// }
-		}
-	}
-}
-
-
-// square image without bg
-.sq-img-nobg{
-	height: 260px;
-	float: left;
-	width: 100%;
-	background: #fff;
-	// padding: 10px;
-	// margin-bottom: 30px;
-	@media (min-width: $sm) {
-		height: 274px;
-	}
-	&__img {
-		& img {
-			object-fit: contain;
-			height: 260px !important;
-
-			@media (min-width: $sm) {
-				object-fit: none;
-				height: 274px !important;
-			}
-		}
-	}
-}
-
-// square image without bg
-.sq-img-speak-out{
-	height: 260px;
-	float: left;
-	width: 100%;
-	background: #fff;
-	// padding: 10px;
-	// margin-bottom: 30px;
-	@media (min-width: $sm) {
-		height: 274px;
-	}
-	&__img {
-		border: 1px solid #e6e6e6;
-		& img {
-			object-fit: contain;
-			height: 260px !important;
-
-			@media (min-width: $sm) {
-				// object-fit: none;
-				height: 274px !important;
-			}
-		}
-	}
-}
-
-
-//- Square image card with description
-
-.photo-gallery {
-	height: 220px;
-
-	@media (min-width: $sm) {
-		height: 274px;
-	}
-
-	&__img {
-		&:before {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			background-image: linear-gradient(to top, #000000 0%, rgba(10, 9, 9, 0) 100%);
-			opacity: 0.7;
-			width: 100%;
-			height: 100%;
-		}
-	}
-
-	&__content {
-		position: absolute;
-		bottom: 20px;
-		left: 20px;
-		padding-right: 25px;
-		width: 95%;
-	}
-	&__info {
-		@include font(12px, #fefefe);
-		height: 60px;
-		width: 100%;
-		@media (min-width: $sm) {
-			@include font(15px, null);
-		}
-	}
-}
-.section-heading-wrapper {
-	@include column(1);
-	margin-bottom: 6px;
-	// background: #fff;
-	@include breakpoint($sm) {
-		
-		background: transparent;
-	}
-	&--tweet-block {
-		@include breakpoint($sm) {
-			margin-bottom: 0px;
-		}
-	}
-}
-.section-heading {
-	padding-top: 12px;
-	padding-bottom: 12px;
-	// background: #fff;
-	position: relative;
-	h2 {
-		@include font(12px, $black);
-		@include breakpoint($sm) {
-			font-size: 17px;
-		}
-	}
-	.album-caption {
-		@include font(15px, $black);
-		margin-top: 3px;
-		width: 100%;
-		@include breakpoint($sm) {
-			margin-bottom: 12px;
-			margin-top: 8px;
-		}
-		@include breakpoint($lg) {
-			width: 50%;
-		}
-	}
-	&:before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 16px;
-		height: 6px;
-		@include breakpoint($sm) {
-			width: 24px;
-			height: 7px;
-		}
-		
-	}
-	.video-heading {
-			color: #fff;
-		}
-	&--nostrip {
-		padding-top: 0;
-	}
-}
-.video-info {
-	@include font(30px, #fff);
-	margin-top: 15px;
-}
-.view-link {
-	display: none;
-	@include breakpoint($sm) {
-		display: block;
-		@include font(12px, $cta-color);
-		position: absolute;
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	&--white {
-		color: #ffffff;
-	}
-	& a {
-		position: relative;
-		&:after {
-			position: absolute;
-			bottom: -7px;
-			left: 0;
-			right: 0;
-			margin: auto;
-			width: 0%;
-			content: '.';
-			color: transparent;
-			background: #0162b4;
-			height: 1px;
-			transition: all .5s;
-		}
-		&:hover:after {
-			width: 100%;
-		}
-	}
-}
-.overlapped-container {
-	padding-bottom: 60px;
-	// @include breakpoint($sm) {
-	// 	padding-bottom: 150px;
-	// }
-	
-}
-.overlapping-container {
-	margin-top: -60px;
-	// @include breakpoint($sm) {
-	// 	margin-top: -100px;
-	// 	padding-bottom: 0;
-	// }
-}
-// .section-mgtop {
-// 	margin-top: 30px;
+// // Different background colors
+// .strong-blue {
+// 	background: #0062b4;
+// }
+// .drak-green {
+// 	background: #68a923;
+// }
+// .bright-red {
+// 	background: #ee4146;
+// }
+// .very-light-gray, #events-container, #fashion-container, #travel-container, #automobile-container, #opinion-container-2, #business-container-2, #science-container-2, #politics-container-2, #top-stories-container-2, , #opinion-container-5, #business-container-5, #science-container-5, #politics-container-5, #top-stories-container-5, , #opinion-container-8, #business-container-8, #science-container-8, #politics-container-8, #top-stories-container-8 {
+// 	background: #f6f6f6;
+// }
+// .dark-yellow {
+// 	background: #aba12b;
+// }
+// .white {
+// 	background: #ffffff;
+// }
+// .light-green {
+// 	background: #7dbf85;
+// }
+// .dark-video {
+// 	background: #07081d;
+// }
+// // top progress
+
+// .parent-relative {
+// 	position: relative;
+// }
+// .strip {
+// 	&:before {
+// 		content: "";
+// 		position: absolute;
+// 		top: 0;
+// 		width: 100%;
+// 		left: 0;
+// 		height: 3px;
+// 		// @include breakpoint($sm-max) {
+// 		// 	display: none;
+// 		// }
+// 	}
+// 	&--photo-gallery {
+// 		&:before {
+// 			background-color: $photo-gallery;
+// 		}
+// 	}
+// 	&--special-features {
+// 		&:before {
+// 			background-color: $special-f-dark;
+// 		}
+// 	}
+// 	&--entertainment {
+// 		&:before {
+// 			background-color: $entertainment-dark;
+// 		}
+// 	}
+// 	&--opinion {
+// 		&:before {
+// 			background-color: $opinion-dark;
+// 		}
+// 	}
+// 	&--business {
+// 		&:before {
+// 			background-color: $business-dark;
+// 		}
+// 	}
+// 	&--science {
+// 		&:before {
+// 			background-color: $science-dark;
+// 		}
+// 	}
+// 	&--politics {
+// 		&:before {
+// 			background-color: $politics-dark;
+// 		}
+// 	}
+// 	&--city {
+// 		&:before {
+// 			background-color: $city-dark;
+// 		}
+// 	}
+// 	&--top-stories {
+// 		&:before {
+// 			background-color: $top-stories-dark;
+// 		}
+// 	}
+// 	&--trending {
+// 		&:before {
+// 			background-color: $trending;
+// 		}
+// 	}
+// 	&--sports {
+// 		&:before {
+// 			background-color: $sports-dark
+// 		}
+// 	}
+// 	&--journo {
+// 		&:before {
+// 			background-color: $journo
+// 		}
+// 	}
+// 	&--election {
+// 		&:before {
+// 			background-color: #ef6241;
+// 		}
+// 	}
+// 	&--she {
+// 		&:before {
+// 			background-color: $she;
+// 		}
+// 	}
+// 	&--video {
+// 		&:before {
+// 			background-color: $video-bg;
+// 		}
+// 	}
+// 	&--exclusives {
+// 		&:before {
+// 			background-color: $exclusive;
+// 		}
+// 	}
+// 	&--top-stories {
+// 		&:before {
+// 			background: $top-stories-dark;
+// 		}
+// 	}
+// 	&--speak-out {
+// 		&:before {
+// 			background: $speak-out
+// 		}
+// 	}
+// 	&--magaine {
+// 		&:before {
+// 			background: $magazine
+// 		}
+// 	}
+// }
+// // mobile sticky background
+// .sticky-parent {
+// 	&--video {
+// 		&.fixed {
+// 			background-color: $video-bg !important;
+// 		}
+// 	}
 // }
 
-// twitter card
 
-.twitter-feed-cta {
-	&__img {
-		vertical-align: middle;
-		margin-right: 10px;
-	}
-}
+// // Large Horizonatal card
 
-.tweet-card {
-	border: 6px solid #f6f6f6;
-	height: 240px;
-	clear: both;
-	overflow: hidden;
-
-	@include breakpoint($sm) {
-		height: 274px;
-	}
-}
-
-
-// Election updates
-.updates-wrapper {
-	background-color: #ffffff;
-	padding: 20px;
-	height: 535px;
-	max-height: 535px;
-	overflow: auto;
-	&-list {
-		&__items {
-			display: inline-block;
-			padding: 10px 0;
-			@media (min-width: $sm) {
-				display: flex;
-			}
-			& span {
-				width: 100%;
-				margin-bottom: 20px;
-				display: inline-block;
-				// @include font(15px, #ef6241);
-				// text-transform: uppercase;
-
-				@media (min-width: $sm) {
-					width: 9%;
-					gin-right: 1%;
-				}
-				&.commentator-name {
-					@include font(15px, $sports-dark);
-					text-transform: uppercase;
-				}
-			}
-			& h3 {
-				color: #666;
-				margin-bottom: 10px;
-			}
-			& p {
-				padding-bottom: 10px;
-				display: inline-block;
-				@include font(15px, #666666);
-    			
-			}
-			& .blogdata {
-				margin-bottom: 10px;
-			}
-			& .data {
-				width: 100%;
-				border-bottom: 1px dashed rgba(161, 161, 161, 0.3);
-				padding-bottom: 10px;
-				@media (min-width: $sm) {
-					width: 90%;
-    			}
-			}
-		}
-	}
-	&--sports {
-		height: 274px;
-		max-height: 274px;
-		.updates-wrapper-list {
-			li .sports-u-time {
-				color: $black;
-			}
-			// p .commentator-name {
-			// 	color: $green-dark;
-			// }
-		}
-		
-	}
-}
-.live-updates-comment {
-	// margin-top: 8px;
-	@media (min-width: $sm) {
-		// margin-top: 8px;
-	}
-	&__election {
-		@media (max-width: 1199px) {
-			width: 100%;
-		}
-	}
-}
-.election-left {
-	&__cards {
-		// margin-bottom: 25px;
-		float: left;
-		width: 100%;
-
-		@media (min-width: $sm) and (max-width: 991px) {
-			@include column(6/12, $gutter:2.5, $cycle: 2);
-		}
-
-		@media (min-width: $md) and (max-width: 1199px){
-			@include column(4/12, $gutter:2.5, $cycle: 3);
-			@include column(6/12, $gutter:2.5, $cycle: 2);
-		}
-		
-		@include breakpoint($lg) {
-			margin-top: 20px;
-			margin-bottom: 0;
-			display: flex;
-			&:first-of-type {
-				margin-top: 0;
-			}
-		}
-		&:last-of-type {
-			.nopic-card {
-				@include breakpoint($lg-max) {
-					height: auto;
-				}
-			}
-			@include breakpoint($lg-max) {
-				width: 100%;
-				height: auto;
-			}
-		}
-	}
-}
-
-
-
-.sq-horoscope-bg {
-	height: 274px;
-	background-color: #fff !important;
-
-	&__img {
-		padding: 25px 70px 0 20px;
-	}
-
-	&__title {
-		@include font(20px, null);
-
-		@media (min-width: $sm) {
-			@include font(25px, null);
-		}
-		&--black {
-			color: #333;
-		}
-		&--white {
-			color: #fff;
-		}
-	}
-
-	&__button {
-		@include font(15px, #fff);
-	    padding: 6px 20px 8px 20px;
-	    margin-top: 25px;
-	    display: inline-block;
-	    transition: all ease-in-out 0.4s;
-	    &--black-bg {
-	    	background: #060606;
-	    }
-	    &:hover {
-			box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.3);
-			transform: translateY(-2px);
-		}
-	}
-}
-
-.sq-widget-bg {
-	height: 274px;
-	background-color: #fff !important;
-	border: 1px solid #035998;
-	background-size: 40% !important;
-
-	@media (min-width: 768px) and (max-width: 991px) {
-		background-size: 25% !important;
-	}
-	// @media (min-width: 992px) {
-	// 	background-size: 40% !important;
-	// }
-
-	&__img {
-		padding: 35px 70px 0px 25px;
-	}
-
-	&__title {
-		@include font(20px, #333);
-
-		@media (min-width: $sm) {
-			@include font(25px, null);
-		}
-	}
-
-	&__button {
-		@include font(15px, #fff);
-	    padding: 6px 20px 8px 20px;
-	    margin-top: 40px;
-	    display: inline-block;
-	    transition: all ease-in-out 0.4s;
-	    background: #035998;
-	    color: #fff;
-	    
-	    &:hover {
-			box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.3);
-			transform: translateY(-2px);
-		}
-	}
-}
-
-.sq-subscribe-bg {
-	height: 274px;
-	background-color: #fff;
-
-	&--250 {
-		height: 250px;
-	}
-
-	@media (max-width: 1199px) {
-		height: 195px;
-	}
-
-	&__img {
-		padding: 30px 70px 0 30px;
-	}
-
-	&__title {
-		@include font(20px, null);
-
-		@media (min-width: $sm) {
-			@include font(30px, null);
-		}
-		&--special-features {
-			color: #432957;
-		}
-		&--city {
-			color: #68a923;
-		}
-		&--politics {
-			color: #aba12b;
-		}
-		&--sports {
-			color: $sports-dark;
-		}
-		&--science {
-			color: #ee9e18;
-		}
-		&--business {
-			color: #128296;
-		}
-		&--entertainment {
-			color: #ee4146;
-		}
-		&--she {
-			color: $she;
-		}
-		&--author-story {
-			color: $black;
-		}
-		&--opinion {
-			color: $opinion-dark;
-		}
-		&--top-stories {
-			color: $top-stories-dark;
-		}
-		&--entertainment {
-			color: $entertainment-dark;
-		}
-		&--exclusives {
-			color: $exclusive;
-		}
-		// &--dark-features {
-		// 	color: $black;
-		// }
-	}
-
-	&__button {
-		@include font(15px, #fff);
-	    padding: 6px 20px 8px 20px;
-	    margin-top: 25px;
-	    display: inline-block;
-	    transition: all ease-in-out 0.4s;
-	    &--black-bg {
-	    	background: #060606;
-	    }
-	    &--special-features {
-	    	background: #432957;
-	    }
-	    &--city {
-			background: #68a923;
-		}
-		&--politics {
-			background: #aba12b;
-		}
-		&--sports {
-			background: #7dbf85;
-		}
-		&--science {
-			background: #ee9e18;
-		}
-		&--business {
-			background: #128296;
-		}
-		&--entertainment {
-			background: #ee4146;
-		}
-	    &--she {
-			background: $she;
-		}
-		&--author-story {
-			background: #333333;
-		}
-		&--exclusives {
-			background: $exclusive;
-		}
-		&--opinion {
-			background: $opinion-dark;
-		}
-		&--top-stories {
-			background: $top-stories-dark;
-		}
-		&--entertainment {
-			background: $entertainment-dark;
-		}
-		&--dark-features-bg {
-			background: $black;
-		}
-		&:hover {
-			box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.3);
-			transform: translateY(-2px);
-		}
-	}
-}
-
-// outbrains
-.outbrain-card {
-	height: 240px;
-
-	@media (min-width: $xs) and (max-width: 767px) {
-		height: auto;
-	}
-
-	&__top {
-		height: 150px;
-
-		@media (min-width: $xs) and (max-width: 767px) {
-			height: auto;
-		}
-
-		@media (min-width: $sm) {
-			height: 143px;
-		}
-	}
-	&__bottom {
-		height: 90px;
-		padding: 14px 10px 14px 10px;
-		@media (min-width: $sm) {
-			height: 97px;
-		}
-	}
-	&__heading {
-		@include font(15px, null);
-		@media (min-width: $sm) {
-			@include font(18px, null);
-		}
-	}
-	&__time-info {
-		@include font(14px, #666666);
-		margin-top: 10px;
-    	display: inline-block;
-    	@media (min-width: $sm) {
-			@include font(15px, null);
-		}
-	}
-}
-
-.js-rotate-arrow {
-    transform: rotateX(180deg);
-}
-.arrow-container {
-	transition: all ease 0.2s;
-	@media (min-width: 768px) {
-		display: none;
-	}
-}
-.score-card {
-	padding: 30px 25px 25px 25px;
-	background: #fff;
-	@include column(1);
-	height: 274px;
-	h4 {
-		@include font(15px, $black);
-	}
-	p {
-		@include font(12px, $black);
-		margin-top: 10px;
-	}
-	.team-wrapper {
-		margin-top: 20px;
-		margin-bottom: 10px;
-	}
-	.team {
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
-	.team-1 {
-		border-bottom: solid 2px $border-gray;
-	}
-	.team-name {
-		margin-left: 15px;
-	}
-	.team-score {
-		right: 0;
-	}
-}
-// requires parent to have parent-relative class
-.v-center {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-}
-.h-center {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-}
-.social-media-icons {
-	// remove this if you need to show in mobile
-	position: static;
-	@include breakpoint($sm) {
-		display: block;
-		position: absolute;
-		right: 0;
-	}
+// .lg-hr-card {
+// 	height: auto;
+// 	float: left;
+// 	width: 100%;
 	
-	li{
-		display: inline-block;
-		padding: 0 9px;
-	    position: relative;
 
-	    &:first-child {
-	    	padding: 0 9px 0 0;
-	    }
-	    &:last-child {
-	    	padding-right: 0;
-	    }
-	    &:after {
-	    	content: "";
-		    position: absolute;
-		    right: 0;
-		    top: 0;
-		    width: 1px;
-		    height: 100%;
-		    background: #e6e6e6;
-	    }
-	    &:last-child:after {
-	    	width: 0;
-	    	height: 0;
-	    }
-	}
-	&--fixed {
-		border: solid 1px $border-gray;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		// position: absolute;
-		li {
-			padding-top: 8px !important;
-			padding-bottom: 8px !important;
-			padding-left: 19px !important;
-			padding-right: 0px !important;
-			&:after {
-				height: 1px;
-				width: 30px;
-				left: 13px !important;
-			}
-			&:first-child:after {
-				height: 0;
-				width: 0;
-			}
-			&:last-child:after {
-				height: 1px !important;
-				width: 30px !important;
-			}
-		}
-	}
-	&--foot {
-		position: relative;
-		padding-bottom: 20px;
-	}
-	&--tarticle {
-		// display: none;
-		// @include breakpoint($sm) {
-		// 	display: block;
-		// }
-	}
-	&--vdetail {
-		padding-top: 10px;
-		clear: both;
-		@media (min-width: $sm) {
-			float: right;
-			padding-top: 0;
-		}
-	}
-} 
-.article-social-fixed {
-	display: none;
-	@media (min-width: 1300px) {
-		display: block;
-		position: fixed;
-		top: 50%;
-		transform: translateY(-50%);
-		left: 0;
-		width: 55px;
-		height: 162px;
-		z-index: 99999;
-	}
-	&.js-z-index {
-		z-index: 9999;
-	}
-}
-.gallery-listing  {
-	& li {
-		@include column(12/12, $cycle: 1);
-		@media (min-width: 768px) and (max-width: 1199px) {
-			@include column(6/12, $cycle: 2);
-		}
-		@media (min-width: 1200px) {
-			@include column(4/12, $cycle: 3);
-		}
-	}
-}
+// 	@media (min-width: $sm) {
+// 		height: 274px;
+// 	}
 
-// album page class
-.album-photos-banner {
-	float: left;
-	clear: none;
-	width: 100%;
-	height: 210px;
-	margin-bottom: 20px;
-	@include breakpoint($sm) {
-		height: 380px;
-	}
-	@include breakpoint($lg) {
-		margin-right: 20px;
-		width: 580px;
-		margin-bottom: 0;
-	}
-	a {
-		display: inline-block;
-		width: 100%;
-		height: 100%;
-	}
-}
-.album-photos-wrapper {
-	font-size: 0; // remove mysterious spacing on inline-block element
-	@media (min-width: 768px) and (max-width: 991px) {
-		text-align: center;
-	}
-	li {
-		width: 100%;
-		height: 210px;
-		display: inline-block;
-		margin-right: 20px;
-		margin-bottom: 20px;
-		// float:left;
-		@include breakpoint($sm) {
-			height: 180px;
-			width: 180px;
-		}
-		&:nth-child(3) {
-			@include breakpoint($lg) {
-				margin-right: 0;
-			}
-		}
-		&:nth-child(4n) {
-			@media (min-width: 992px) and (max-width: 1200px) {
-				margin-right: 0;
-			}
-		}
-		&:nth-child(6n) {
-			@include breakpoint($lg) {
-				margin-right: 0;
-			}
-		}
-	}
-	// li:first-of-type {
-	// 	width: 50%;
-	// 	height: 370px;
-	// }
-}
-.exclusive-banner-image {
-	height: 404px;
-}
-.exclusive-container {
-	padding-bottom: 160px;
-	@include breakpoint($sm) {
-		padding-bottom: 50px;
-	}
-}
-.exclusive-details-b {
-	width: 80%;
-	// text-align: center;
-	padding: 20px;
-	padding-bottom: 40px;
-	background: #fff;
-	position: absolute;
-	left: 50%;
-	// top: 50%;
-	transform: translateX(-50%);
-	bottom: 0;
-	box-shadow: 0px 1px 10px 1px rgba(183, 183, 183, 0.2);
-	@include breakpoint($sm) {
-		width: 280px;
-		// text-align: left;
-		transform: translateX(0%);
-		left: auto;
-		width: 335px;
-		right: 30px;
-		padding: 30px;
-		padding-bottom: 65px;
-	}
-	&__heading {
-		@include font(26px, $black);
-	}
-	&__text {
-		@include font(14px, #666);
-	}
-	&__tag {
-		display: inline-block;
-		background: $exclusive;
-		color: #fff;
-		padding: 7px 10px;
-		@include font(12px, #fff);
-		margin-bottom: 10px;
-		@include breakpoint($sm) {
-			margin-bottom: 25px;
-		}
-	}
-	&__author {
-		margin-top: 10px;
-		margin-bottom: 15px;
-		@include font(12px, #d3d3d3);
-		@include breakpoint($sm) {
-			margin-bottom: 30px;
-		}
-		span {
-			@include font(12px, #b0b0b0)
-		}
-	}
-}
+// 	&__img {
+// 		@include span(12/12);
+// 		height: 185px;
+// 		// background: url('../img/placeholder/lg-hr.png') no-repeat;
+// 		// background-position: center center;
+// 	 //    background-size: auto auto;
+// 	 //    overflow: hidden;
+
+// 		@media (min-width: $xs) and (max-width: 767px){
+// 			height: auto;
+// 		}
+
+// 		@media (min-width: $sm) {
+// 			@include span(7/12);
+// 			height: 274px;
+// 		}
+// 	}
+
+// 	&__content {
+// 		@include span(12/12);
+// 		padding: 15px;
+
+// 		@media (min-width: $sm) {
+// 			@include span(5/12);
+// 			padding: 40px 25px 40px 40px;
+// 			height: 100%;
+// 		}
+// 	}
+// 	&__heading {
+// 		@include font(20px, #ffffff);
+
+// 		@media (min-width: $sm) {
+// 			@include font(30px, null);
+// 		}
+// 	}
+// 	&__time-info {
+// 		display: inline-block;
+// 		padding-top: 10px;
+// 		@include font(12px, rgba(255, 255, 255, 0.7));
+// 	}
+// }
+
+// // vertical bigger card
+
+// .lg-vr-card {
+// 	height: 240px;
+// 	float: left;
+// 	width: 100%;    
+// 	// &--m-top {
+// 	// 	margin-top: 4.5%;
+// 	// }
+// 	@media (min-width: $xs) and (max-width: 767px) {
+// 		height: auto;
+// 	}
+// 	@include breakpoint($sm) {
+// 		height: 274px;
+// 	}
+	
+// 	&__top {
+// 		height: 160px;
+// 		@media (min-width: $xs) and (max-width: 767px) {
+// 			height: auto;
+// 		}
+// 		@include breakpoint($sm) {
+// 			height: 189px;
+// 		}
+		
+// 	}
+// 	// &__content {
+// 	// 	padding: 10px 15px 6px 15px;
+// 	// 	// &:before {
+// 	// 	// 	background: #0062b4;
+// 	// 	// }
+// 	// }
+// 	&__bottom {
+// 		padding: 8px 15px 6px 15px;
+// 		height: 80px;
+// 		@media (min-width: $sm) {
+// 			height: 85px;
+// 			padding: 8px 30px 6px 15px;
+// 		}
+
+// 	}
+// 	&__heading {
+// 		@include font(15px, #333333);
+
+// 		@media (min-width: $sm) {
+// 			@include font(17px, null);
+// 		}
+// 	}
+// 	&__time-info {
+// 		display: inline-block;
+// 		padding-top: 5px;
+// 		@include font(11px, #333333);
+// 		@media (min-width: $sm) and (max-width: $lg) {
+// 			padding-top:0;
+// 		}
+// 	}
+// }
+
+// // lg-vr cards that are slides
+
+// .lg-vr-slides {
+// 	height: 215px;
+// 	@include breakpoint($sm) {
+// 		height: 240px
+// 	}
+// 	@include breakpoint($lg) {
+// 		height: 250px
+// 	}
+// 	&__top {
+// 		height: 115px;
+// 		@include breakpoint($sm) {
+// 			height: 135px
+// 		}
+// 		@include breakpoint($lg) {
+// 			height: 140px;
+// 		}
+// 	}
+// 	&__bottom {
+// 		height: 100px;
+// 		padding: 8px 15px 6px 15px;
+// 		@include breakpoint($sm) {
+// 			padding: 8px 30px 6px 15px;
+// 			height: 105px
+// 		}
+// 		@include breakpoint($lg) {
+// 			height: 110px;
+// 		}
+// 	}
+// }
+
+// .lg-vr-card--text-white {
+// 	color: #fff;
+// }
+// .lg-vr-video {
+// 	&__top {
+// 		height: 125px;
+// 		@include breakpoint($sm) {
+// 			height: 155px
+// 		}
+// 		@include breakpoint($lg) {
+// 			height: 165px;
+// 		}
+// 		&:before {
+// 			content: "";
+// 			position: absolute;
+// 			left: 50%;
+// 			top: 50%;
+// 			transform: translate(-50%, -50%);
+// 			background: url('../img/icons/play.svg') no-repeat;
+// 			width: 43px;
+// 			height: 43px;
+// 		}
+// 	}
+// 	&__bottom {
+// 		height: 90px;
+// 		padding: 8px 15px 6px 15px;
+// 		@include breakpoint($sm) {
+// 			padding: 8px 30px 6px 15px;
+// 			height: 85px;
+// 		}
+// 		@include breakpoint($lg) {
+// 			height: 85px;
+// 		}
+// 	}
+// }
+
+// // background color classes
+// .bg-gray {
+// 	background-color: $gray-bg;
+// }
+// .bg-white {
+// 	background-color: #fff;
+// }
+// .bg-special-features {
+// 	background-color: $special-f-dark;
+// }
+// .bg-top-stories {
+// 	background-color: $top-stories-dark;
+// }
+
+// .bg-city {
+// 	background-color: $city-dark;
+// }
+// .bg-sports {
+// 	background-color: $sports-dark;
+// }
+// .bg-light-gray {
+// 	background-color: $light-gray;
+// }
+// .bg-entertainment {
+// 	background-color: $entertainment-dark;
+// }
+// .bg-video {
+// 	background-color: $video-bg;
+// }
+// .bg-adver {
+// 	background-color: #e7e4e4;
+// }
+// .bg-business {
+// 	background-color: $business-dark;
+// }
+// .bg-she {
+// 	background-color: $she;
+// }
+// .bg-transparent {
+// 	background-color: transparent;
+// }
+// .watchlist-txt {
+// 	color: $video-playlist-txt;
+// }
+// .sports-updates-txt {
+// 	color: $black;
+// }
+// .bg-journo {
+// 	background-color: rgba(159, 127, 187, 0.1);
+// }
+// .bg-politics {
+// 	background-color: $politics-dark;
+// }
+// .bg-science {
+// 	background-color: $science-dark;
+// }
+// .bg-nopic-science {
+// 	background-color: $science-light;
+// }
+// .bg-opinion {
+// 	background-color: $opinion-dark;
+// }
+// .bg-nopic-special-features {
+// 	background-color: $special-f-light;
+// }
+// .bg-nopic-top-stories {
+// 	background-color: $top-stories-light;
+// }
+// .bg-green {
+// 	background-color: $green;
+// }
+// .bg-nopic-politics {
+// 	background-color: $politics-light;
+// }
+// .bg-nopic-sports {
+// 	background-color: $sports-light;
+// }
+// .bg-nopic-business {
+// 	background-color: $business-light;
+// }
+// .bg-nopic-opinion {
+// 	background-color: $opinion-light;
+// }
+// .bg-nopic-entertainment {
+// 	background-color: $entertainment-light;
+// }
+// // Small vertical
+
+// .sm-vr-card {
+// 	height: auto;
+
+// 	@media (min-width: $sm) {
+// 		height: 250px;
+// 	}
+
+// 	&__content {
+// 		padding: 15px;
+// 		&:before {
+// 			background: #0062b4;
+// 		}
+// 	}
+// 	&__img {
+// 		height: 115px;
+// 		@media (min-width: $sm) {
+// 			height: 145px;
+// 		}
+// 	}
+// 	&__heading {
+// 		@include font(15px, #333333);
+
+// 		@media (min-width: $sm) {
+// 			@include font(17px, null);
+// 		}
+// 	}
+// 	&__time-info {
+// 		display: inline-block;
+// 		padding-top: 5px;
+// 		@include font(11px, #333333);
+// 	}
+// }
+
+
+// // ad square block
+// .ad-card-square {
+// 	padding: 20px;
+// 	height: 250px;
+// 	&__title {
+// 		@include font(16px, #333333);
+// 		@include align(both);
+// 	}
+// }
+
+// // horizontal small card
+// .sm-hr-card {
+// 	height: 127px;
+// 	// &-list {
+// 	// 	&__items {
+// 	// 		margin-top: 4.5%;
+// 	// 		@include breakpoint($sm) {
+// 	// 			margin-top: 20px;
+// 	// 		}
+// 	// 		&:first-of-type {
+// 	// 			@include breakpoint($sm) {
+// 	// 				margin-top:0
+// 	// 			}
+// 	// 		}
+// 	// 	}
+// 	// }
+
+// 	&__img {
+// 		height: 127px;
+// 		@include span(1/2);
+// 		@media (min-width: 430px) and (max-width: 767px) {
+// 			@include span(0.5/2);
+// 		}
+// 	}
+// 	&__content {
+// 		padding: 12px 20px;
+// 		height: 100%;
+// 		@include span(1/2);
+// 		@media (min-width: 430px) and (max-width: 767px) {
+// 			@include span(1.5/2);
+// 		}
+// 	}
+// 	&__heading {
+// 		@include font(15px, #333333);
+
+// 		@media (min-width: $sm) {
+// 			@include font(17px, null);
+// 		}
+// 	}
+// 	&__time-info {
+// 		display: inline-block;
+// 		padding-top: 5px;
+// 		@include font(11px, #333333);
+// 	}
+// }
+
+
+// // snippet-list
+
+// .snippet-list-block {
+// 	height: 60px;
+// 	&__img {
+// 		@include span(0.5/2);
+// 		height: 60px;
+// 		@media (min-width: $md) and (max-width: 1199px) {
+// 			@include span(0.3/2);
+// 		}
+// 	}
+// 	&--t-img-width {
+// 		@media (min-width: 768px) and (max-width: 991px) {
+// 			width: 75px;
+// 		}
+// 	}
+// 	&__content {
+// 		padding: 0px 12px 9px 20px;
+// 		@include span(1.5/2);
+// 		height: 60px;
+// 		display: flex;
+// 		align-items: center;
+// 		@media (min-width: $md) and (max-width: 1199px) {
+// 			@include span(1.7/2);
+// 		}
+// 	}
+// 	&__heading {
+// 		@include font(14px, null);
+
+// 		@media (min-width: $sm) {
+// 			@include font(15px, null);
+// 		}
+// 	}
+// 	&__time-info {
+// 		display: inline-block;
+// 		padding-top: 5px;
+// 		@include font(11px, #333333);
+// 	}
+// 	&--speak-img-border {
+// 		border: 1px solid #e6e6e6;
+// 	}
+// }
+
+// .snippet-list-block-big {
+// 	height: 100px;
+// 	&__img {
+// 		@include span(0.7/2);
+// 		height: 100px;
+// 		@media (min-width: $sm) and (max-width: 991px) {
+// 			@include span(0.5/2);
+// 		}
+// 		@media (min-width: $md) and (max-width: 1199px) {
+// 			@include span(0.3/2);
+// 		}
+// 		@media (min-width: 1200px) {
+// 			@include span(0.5/2);
+// 		}
+// 	}
+// 	&--t-img-width {
+// 		@media (min-width: 768px) and (max-width: 991px) {
+// 			width: 90px;
+// 		}
+// 	}
+// 	&__content {
+// 		padding: 15px 12px 9px 20px;
+// 		@include span(1.3/2);
+// 		height: 100px;
+// 		@media (min-width: $md) and (max-width: 1199px) {
+// 			@include span(1.7/2);
+// 		}
+// 		@media (min-width: 1200px) {
+// 			@include span(1.1/2);
+// 		}
+// 	}
+// 	&__heading {
+// 		@include font(15px, null);
+
+// 		@media (min-width: $sm) {
+// 			@include font(17px, null);
+// 		}
+// 	}
+// 	&__time-info {
+// 		display: block;
+// 		padding-top: 5px;
+// 		@include font(11px, #333333);
+// 	}
+
+// }
+
+// .highlights-content {
+// 	position: relative;
+// 	padding-left: 0;
+// 	&:before {
+// 		position: absolute;
+// 		left: -10px;
+// 		top: 50%;
+// 		transform: translateY(-50%);
+// 		content: "";
+// 		background: $sports-dark;
+// 		height: 10px;
+// 		width: 3px;
+// 		@include breakpoint($sm) {
+// 			left: -20px;
+// 		}
+// 	}
+// }
+
+
+// //- Larger vertical Text
+
+// .nopic-card {
+// 	// @include column(12/12);
+// 	&--m-top {
+// 		margin-top: 9.5%;
+// 	}
+// 	height: auto;
+// 	padding: 30px;
+
+// 	@media (min-width: $sm) {
+// 		height: 274px;
+// 		padding: 45px 45px 45px 36px;
+// 	}
+
+// 	&__heading {
+// 		@include font(20px, #ffffff);
+
+// 		@media (min-width: $sm) {
+// 			@include font(30px, null);
+// 		}
+// 	}
+// 	&__time-info {
+// 		display: inline-block;
+// 		padding-top: 5px;
+// 		@include font(12px, rgba(255, 255, 255, 0.7));
+// 	}
+// }
+// .fnt-nopic {
+// 	&--entertain-title {
+// 		color: $entertainment-dark;
+// 	}
+// 	&--entertain-info {
+// 		color: #000000;
+// 	}
+// 	&--business-title {
+// 		color: $business-dark;
+// 	}
+// 	&--business-info {
+// 		color: $business-dark;
+// 	}
+// 	&--election-title {
+// 		color: #ef6241;
+// 	}
+// 	&--election-info {
+// 		color: #ef6241;
+// 	}
+// 	&--she {
+// 		color: #ff6666;
+// 	}
+// 	&--urbandev-title {
+// 		color: #68a923;
+// 	}
+// 	&--urbandev-info {
+// 		color: #68a923;
+// 	}
+// 	&--urbanlife-title {
+// 		color: #fff;
+// 	}
+// 	&--urbanlife-info {
+// 		color: #fff;
+// 	}
+// 	&--sports {
+// 		color: $sports-dark
+// 	}
+// }
+
+
+// //- Small vertical sponsored card
+
+// .sm-vrs-card {
+// 	height: 215px;
+
+// 	@media (min-width: $sm) {
+// 		height: 240px;
+// 	}
+// 	@media (min-width: $lg) {
+// 		height: 250px;
+// 	}
+// 	&__img {
+// 		height: 115px;
+
+// 		@media (min-width: $sm) {
+// 			height: 135px;
+// 		}
+// 		@media (min-width: $lg) {
+// 			height: 140px;
+// 		}
+
+// 		&:before {
+// 			content: "";
+// 			position: absolute;
+// 			bottom: 0;
+// 			background-image: linear-gradient(to top, #ee4146 0%, rgba(255, 255, 255, 0) 100%);
+// 			opacity: 0.7;
+// 			width: 100%;
+// 			height: 100%;
+// 		}
+// 	}
+
+// 	&__content {
+// 		padding: 12px 20px;
+// 		height: 100px;
+// 		@media (min-width: $sm) {
+// 			height: 105px;
+// 		}
+// 		@media (min-width: $lg) {
+// 			height: 110px;
+// 		}
+// 		&--bright-red {
+// 			&:before {
+// 				background: #ee4146;
+// 			}
+// 		}
+// 	}
+// 	&__heading {
+// 		@include font(15px, #333333);
+// 		@media (min-width: $sm) {
+// 			@include font(17px, null);
+// 		}
+// 	}
+// 	&__info {
+// 		margin: 10px 0;
+//     	display: inline-block;
+//     	@include font(12px, rgba(51, 51, 51, 0.7));
+// 	}
+// }
+
+// //- Square img card
+// .sq-img-card {
+// 	width: 100%;
+// 	height: 166px;
+// 	float: left;
+// 	@media (min-width: 430px) and (max-width: 767px)  {
+// 		height: 300px !important;
+// 	}
+// 	@media (min-width: 992px) and (max-width: 1199px)  {
+// 		height: 400px !important;
+// 	}
+// 	@media (min-width: $sm) {
+// 		height: 274px;
+// 	}
+
+// 	&__img {
+// 		&:before {
+// 			content: "";
+// 			position: absolute;
+// 			bottom: 0;
+// 			background-image: linear-gradient(to top, #000000 0%, rgba(10, 9, 9, 0) 100%);
+// 			opacity: 0.7;
+// 			width: 100%;
+// 			height: 100%;
+// 		}
+// 	}
+// 	&__content {
+// 		position: absolute;
+// 		bottom: 20px;
+// 		left: 20px;
+// 		padding-right:10px;
+// 	}
+// 	&__heading {
+// 		@include font(22px, #ffffff);
+
+// 		@media (min-width: $sm) {
+// 			@include font(30px, null);
+// 		}
+// 	}
+// 	&__info {
+// 		@include font(14px, #b1b0b0);
+// 	}
+// }
+
+// // square image only
+// .sq-img-only{
+// 	height: 260px;
+// 	float: left;
+// 	width: 100%;
+// 	background: #fff;
+// 	padding: 10px;
+// 	// margin-bottom: 30px;
+// 	@media (min-width: $sm) {
+// 		height: 274px;
+// 	}
+// 	&__img {
+// 		display: flex;
+// 		align-items: center;
+// 		& img {
+// 			object-fit: contain;
+// 			height: 260px !important;
+
+// 			// @media (min-width: $sm) {
+// 			// 	object-fit: none;
+// 			// 	height: auto !important;
+// 			// }
+// 		}
+// 	}
+// }
+
+
+// // square image without bg
+// .sq-img-nobg{
+// 	height: 260px;
+// 	float: left;
+// 	width: 100%;
+// 	background: #fff;
+// 	// padding: 10px;
+// 	// margin-bottom: 30px;
+// 	@media (min-width: $sm) {
+// 		height: 274px;
+// 	}
+// 	&__img {
+// 		& img {
+// 			object-fit: contain;
+// 			height: 260px !important;
+
+// 			@media (min-width: $sm) {
+// 				object-fit: none;
+// 				height: 274px !important;
+// 			}
+// 		}
+// 	}
+// }
+
+// // square image without bg
+// .sq-img-speak-out{
+// 	height: 260px;
+// 	float: left;
+// 	width: 100%;
+// 	background: #fff;
+// 	// padding: 10px;
+// 	// margin-bottom: 30px;
+// 	@media (min-width: $sm) {
+// 		height: 274px;
+// 	}
+// 	&__img {
+// 		border: 1px solid #e6e6e6;
+// 		& img {
+// 			object-fit: contain;
+// 			height: 260px !important;
+
+// 			@media (min-width: $sm) {
+// 				// object-fit: none;
+// 				height: 274px !important;
+// 			}
+// 		}
+// 	}
+// }
+
+
+// //- Square image card with description
+
+// .photo-gallery {
+// 	height: 220px;
+
+// 	@media (min-width: $sm) {
+// 		height: 274px;
+// 	}
+
+// 	&__img {
+// 		&:before {
+// 			content: "";
+// 			position: absolute;
+// 			bottom: 0;
+// 			background-image: linear-gradient(to top, #000000 0%, rgba(10, 9, 9, 0) 100%);
+// 			opacity: 0.7;
+// 			width: 100%;
+// 			height: 100%;
+// 		}
+// 	}
+
+// 	&__content {
+// 		position: absolute;
+// 		bottom: 20px;
+// 		left: 20px;
+// 		padding-right: 25px;
+// 		width: 95%;
+// 	}
+// 	&__info {
+// 		@include font(12px, #fefefe);
+// 		height: 60px;
+// 		width: 100%;
+// 		@media (min-width: $sm) {
+// 			@include font(15px, null);
+// 		}
+// 	}
+// }
+// .section-heading-wrapper {
+// 	@include column(1);
+// 	margin-bottom: 6px;
+// 	// background: #fff;
+// 	@include breakpoint($sm) {
+		
+// 		background: transparent;
+// 	}
+// 	&--tweet-block {
+// 		@include breakpoint($sm) {
+// 			margin-bottom: 0px;
+// 		}
+// 	}
+// }
+// .section-heading {
+// 	padding-top: 12px;
+// 	padding-bottom: 12px;
+// 	// background: #fff;
+// 	position: relative;
+// 	h2 {
+// 		@include font(12px, $black);
+// 		@include breakpoint($sm) {
+// 			font-size: 17px;
+// 		}
+// 	}
+// 	.album-caption {
+// 		@include font(15px, $black);
+// 		margin-top: 3px;
+// 		width: 100%;
+// 		@include breakpoint($sm) {
+// 			margin-bottom: 12px;
+// 			margin-top: 8px;
+// 		}
+// 		@include breakpoint($lg) {
+// 			width: 50%;
+// 		}
+// 	}
+// 	&:before {
+// 		content: "";
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		width: 16px;
+// 		height: 6px;
+// 		@include breakpoint($sm) {
+// 			width: 24px;
+// 			height: 7px;
+// 		}
+		
+// 	}
+// 	.video-heading {
+// 			color: #fff;
+// 		}
+// 	&--nostrip {
+// 		padding-top: 0;
+// 	}
+// }
+// .video-info {
+// 	@include font(30px, #fff);
+// 	margin-top: 15px;
+// }
+// .view-link {
+// 	display: none;
+// 	@include breakpoint($sm) {
+// 		display: block;
+// 		@include font(12px, $cta-color);
+// 		position: absolute;
+// 		right: 0;
+// 		top: 50%;
+// 		transform: translateY(-50%);
+// 	}
+// 	&--white {
+// 		color: #ffffff;
+// 	}
+// 	& a {
+// 		position: relative;
+// 		&:after {
+// 			position: absolute;
+// 			bottom: -7px;
+// 			left: 0;
+// 			right: 0;
+// 			margin: auto;
+// 			width: 0%;
+// 			content: '.';
+// 			color: transparent;
+// 			background: #0162b4;
+// 			height: 1px;
+// 			transition: all .5s;
+// 		}
+// 		&:hover:after {
+// 			width: 100%;
+// 		}
+// 	}
+// }
+// .overlapped-container {
+// 	padding-bottom: 60px;
+// 	// @include breakpoint($sm) {
+// 	// 	padding-bottom: 150px;
+// 	// }
+	
+// }
+// .overlapping-container {
+// 	margin-top: -60px;
+// 	// @include breakpoint($sm) {
+// 	// 	margin-top: -100px;
+// 	// 	padding-bottom: 0;
+// 	// }
+// }
+// // .section-mgtop {
+// // 	margin-top: 30px;
+// // }
+
+// // twitter card
+
+// .twitter-feed-cta {
+// 	&__img {
+// 		vertical-align: middle;
+// 		margin-right: 10px;
+// 	}
+// }
+
+// .tweet-card {
+// 	border: 6px solid #f6f6f6;
+// 	height: 240px;
+// 	clear: both;
+// 	overflow: hidden;
+
+// 	@include breakpoint($sm) {
+// 		height: 274px;
+// 	}
+// }
+
+
+// // Election updates
+// .updates-wrapper {
+// 	background-color: #ffffff;
+// 	padding: 20px;
+// 	height: 535px;
+// 	max-height: 535px;
+// 	overflow: auto;
+// 	&-list {
+// 		&__items {
+// 			display: inline-block;
+// 			padding: 10px 0;
+// 			@media (min-width: $sm) {
+// 				display: flex;
+// 			}
+// 			& span {
+// 				width: 100%;
+// 				margin-bottom: 20px;
+// 				display: inline-block;
+// 				// @include font(15px, #ef6241);
+// 				// text-transform: uppercase;
+
+// 				@media (min-width: $sm) {
+// 					width: 9%;
+// 					gin-right: 1%;
+// 				}
+// 				&.commentator-name {
+// 					@include font(15px, $sports-dark);
+// 					text-transform: uppercase;
+// 				}
+// 			}
+// 			& h3 {
+// 				color: #666;
+// 				margin-bottom: 10px;
+// 			}
+// 			& p {
+// 				padding-bottom: 10px;
+// 				display: inline-block;
+// 				@include font(15px, #666666);
+    			
+// 			}
+// 			& .blogdata {
+// 				margin-bottom: 10px;
+// 			}
+// 			& .data {
+// 				width: 100%;
+// 				border-bottom: 1px dashed rgba(161, 161, 161, 0.3);
+// 				padding-bottom: 10px;
+// 				@media (min-width: $sm) {
+// 					width: 90%;
+//     			}
+// 			}
+// 		}
+// 	}
+// 	&--sports {
+// 		height: 274px;
+// 		max-height: 274px;
+// 		.updates-wrapper-list {
+// 			li .sports-u-time {
+// 				color: $black;
+// 			}
+// 			// p .commentator-name {
+// 			// 	color: $green-dark;
+// 			// }
+// 		}
+		
+// 	}
+// }
+// .live-updates-comment {
+// 	// margin-top: 8px;
+// 	@media (min-width: $sm) {
+// 		// margin-top: 8px;
+// 	}
+// 	&__election {
+// 		@media (max-width: 1199px) {
+// 			width: 100%;
+// 		}
+// 	}
+// }
+// .election-left {
+// 	&__cards {
+// 		// margin-bottom: 25px;
+// 		float: left;
+// 		width: 100%;
+
+// 		@media (min-width: $sm) and (max-width: 991px) {
+// 			@include column(6/12, $gutter:2.5, $cycle: 2);
+// 		}
+
+// 		@media (min-width: $md) and (max-width: 1199px){
+// 			@include column(4/12, $gutter:2.5, $cycle: 3);
+// 			@include column(6/12, $gutter:2.5, $cycle: 2);
+// 		}
+		
+// 		@include breakpoint($lg) {
+// 			margin-top: 20px;
+// 			margin-bottom: 0;
+// 			display: flex;
+// 			&:first-of-type {
+// 				margin-top: 0;
+// 			}
+// 		}
+// 		&:last-of-type {
+// 			.nopic-card {
+// 				@include breakpoint($lg-max) {
+// 					height: auto;
+// 				}
+// 			}
+// 			@include breakpoint($lg-max) {
+// 				width: 100%;
+// 				height: auto;
+// 			}
+// 		}
+// 	}
+// }
+
+
+
+// .sq-horoscope-bg {
+// 	height: 274px;
+// 	background-color: #fff !important;
+
+// 	&__img {
+// 		padding: 25px 70px 0 20px;
+// 	}
+
+// 	&__title {
+// 		@include font(20px, null);
+
+// 		@media (min-width: $sm) {
+// 			@include font(25px, null);
+// 		}
+// 		&--black {
+// 			color: #333;
+// 		}
+// 		&--white {
+// 			color: #fff;
+// 		}
+// 	}
+
+// 	&__button {
+// 		@include font(15px, #fff);
+// 	    padding: 6px 20px 8px 20px;
+// 	    margin-top: 25px;
+// 	    display: inline-block;
+// 	    transition: all ease-in-out 0.4s;
+// 	    &--black-bg {
+// 	    	background: #060606;
+// 	    }
+// 	    &:hover {
+// 			box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.3);
+// 			transform: translateY(-2px);
+// 		}
+// 	}
+// }
+
+// .sq-widget-bg {
+// 	height: 274px;
+// 	background-color: #fff !important;
+// 	border: 1px solid #035998;
+// 	background-size: 40% !important;
+
+// 	@media (min-width: 768px) and (max-width: 991px) {
+// 		background-size: 25% !important;
+// 	}
+// 	// @media (min-width: 992px) {
+// 	// 	background-size: 40% !important;
+// 	// }
+
+// 	&__img {
+// 		padding: 35px 70px 0px 25px;
+// 	}
+
+// 	&__title {
+// 		@include font(20px, #333);
+
+// 		@media (min-width: $sm) {
+// 			@include font(25px, null);
+// 		}
+// 	}
+
+// 	&__button {
+// 		@include font(15px, #fff);
+// 	    padding: 6px 20px 8px 20px;
+// 	    margin-top: 40px;
+// 	    display: inline-block;
+// 	    transition: all ease-in-out 0.4s;
+// 	    background: #035998;
+// 	    color: #fff;
+	    
+// 	    &:hover {
+// 			box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.3);
+// 			transform: translateY(-2px);
+// 		}
+// 	}
+// }
+
+// .sq-subscribe-bg {
+// 	height: 274px;
+// 	background-color: #fff;
+
+// 	&--250 {
+// 		height: 250px;
+// 	}
+
+// 	@media (max-width: 1199px) {
+// 		height: 195px;
+// 	}
+
+// 	&__img {
+// 		padding: 30px 70px 0 30px;
+// 	}
+
+// 	&__title {
+// 		@include font(20px, null);
+
+// 		@media (min-width: $sm) {
+// 			@include font(30px, null);
+// 		}
+// 		&--special-features {
+// 			color: #432957;
+// 		}
+// 		&--city {
+// 			color: #68a923;
+// 		}
+// 		&--politics {
+// 			color: #aba12b;
+// 		}
+// 		&--sports {
+// 			color: $sports-dark;
+// 		}
+// 		&--science {
+// 			color: #ee9e18;
+// 		}
+// 		&--business {
+// 			color: #128296;
+// 		}
+// 		&--entertainment {
+// 			color: #ee4146;
+// 		}
+// 		&--she {
+// 			color: $she;
+// 		}
+// 		&--author-story {
+// 			color: $black;
+// 		}
+// 		&--opinion {
+// 			color: $opinion-dark;
+// 		}
+// 		&--top-stories {
+// 			color: $top-stories-dark;
+// 		}
+// 		&--entertainment {
+// 			color: $entertainment-dark;
+// 		}
+// 		&--exclusives {
+// 			color: $exclusive;
+// 		}
+// 		// &--dark-features {
+// 		// 	color: $black;
+// 		// }
+// 	}
+
+// 	&__button {
+// 		@include font(15px, #fff);
+// 	    padding: 6px 20px 8px 20px;
+// 	    margin-top: 25px;
+// 	    display: inline-block;
+// 	    transition: all ease-in-out 0.4s;
+// 	    &--black-bg {
+// 	    	background: #060606;
+// 	    }
+// 	    &--special-features {
+// 	    	background: #432957;
+// 	    }
+// 	    &--city {
+// 			background: #68a923;
+// 		}
+// 		&--politics {
+// 			background: #aba12b;
+// 		}
+// 		&--sports {
+// 			background: #7dbf85;
+// 		}
+// 		&--science {
+// 			background: #ee9e18;
+// 		}
+// 		&--business {
+// 			background: #128296;
+// 		}
+// 		&--entertainment {
+// 			background: #ee4146;
+// 		}
+// 	    &--she {
+// 			background: $she;
+// 		}
+// 		&--author-story {
+// 			background: #333333;
+// 		}
+// 		&--exclusives {
+// 			background: $exclusive;
+// 		}
+// 		&--opinion {
+// 			background: $opinion-dark;
+// 		}
+// 		&--top-stories {
+// 			background: $top-stories-dark;
+// 		}
+// 		&--entertainment {
+// 			background: $entertainment-dark;
+// 		}
+// 		&--dark-features-bg {
+// 			background: $black;
+// 		}
+// 		&:hover {
+// 			box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.3);
+// 			transform: translateY(-2px);
+// 		}
+// 	}
+// }
+
+// // outbrains
+// .outbrain-card {
+// 	height: 240px;
+
+// 	@media (min-width: $xs) and (max-width: 767px) {
+// 		height: auto;
+// 	}
+
+// 	&__top {
+// 		height: 150px;
+
+// 		@media (min-width: $xs) and (max-width: 767px) {
+// 			height: auto;
+// 		}
+
+// 		@media (min-width: $sm) {
+// 			height: 143px;
+// 		}
+// 	}
+// 	&__bottom {
+// 		height: 90px;
+// 		padding: 14px 10px 14px 10px;
+// 		@media (min-width: $sm) {
+// 			height: 97px;
+// 		}
+// 	}
+// 	&__heading {
+// 		@include font(15px, null);
+// 		@media (min-width: $sm) {
+// 			@include font(18px, null);
+// 		}
+// 	}
+// 	&__time-info {
+// 		@include font(14px, #666666);
+// 		margin-top: 10px;
+//     	display: inline-block;
+//     	@media (min-width: $sm) {
+// 			@include font(15px, null);
+// 		}
+// 	}
+// }
+
+// .js-rotate-arrow {
+//     transform: rotateX(180deg);
+// }
+// .arrow-container {
+// 	transition: all ease 0.2s;
+// 	@media (min-width: 768px) {
+// 		display: none;
+// 	}
+// }
+// .score-card {
+// 	padding: 30px 25px 25px 25px;
+// 	background: #fff;
+// 	@include column(1);
+// 	height: 274px;
+// 	h4 {
+// 		@include font(15px, $black);
+// 	}
+// 	p {
+// 		@include font(12px, $black);
+// 		margin-top: 10px;
+// 	}
+// 	.team-wrapper {
+// 		margin-top: 20px;
+// 		margin-bottom: 10px;
+// 	}
+// 	.team {
+// 		padding-top: 10px;
+// 		padding-bottom: 10px;
+// 	}
+// 	.team-1 {
+// 		border-bottom: solid 2px $border-gray;
+// 	}
+// 	.team-name {
+// 		margin-left: 15px;
+// 	}
+// 	.team-score {
+// 		right: 0;
+// 	}
+// }
+// // requires parent to have parent-relative class
+// .v-center {
+// 	position: absolute;
+// 	top: 50%;
+// 	transform: translateY(-50%);
+// }
+// .h-center {
+// 	position: absolute;
+// 	left: 50%;
+// 	transform: translateX(-50%);
+// }
+// .social-media-icons {
+// 	// remove this if you need to show in mobile
+// 	position: static;
+// 	@include breakpoint($sm) {
+// 		display: block;
+// 		position: absolute;
+// 		right: 0;
+// 	}
+	
+// 	li{
+// 		display: inline-block;
+// 		padding: 0 9px;
+// 	    position: relative;
+
+// 	    &:first-child {
+// 	    	padding: 0 9px 0 0;
+// 	    }
+// 	    &:last-child {
+// 	    	padding-right: 0;
+// 	    }
+// 	    &:after {
+// 	    	content: "";
+// 		    position: absolute;
+// 		    right: 0;
+// 		    top: 0;
+// 		    width: 1px;
+// 		    height: 100%;
+// 		    background: #e6e6e6;
+// 	    }
+// 	    &:last-child:after {
+// 	    	width: 0;
+// 	    	height: 0;
+// 	    }
+// 	}
+// 	&--fixed {
+// 		border: solid 1px $border-gray;
+// 		padding-top: 10px;
+// 		padding-bottom: 10px;
+// 		// position: absolute;
+// 		li {
+// 			padding-top: 8px !important;
+// 			padding-bottom: 8px !important;
+// 			padding-left: 19px !important;
+// 			padding-right: 0px !important;
+// 			&:after {
+// 				height: 1px;
+// 				width: 30px;
+// 				left: 13px !important;
+// 			}
+// 			&:first-child:after {
+// 				height: 0;
+// 				width: 0;
+// 			}
+// 			&:last-child:after {
+// 				height: 1px !important;
+// 				width: 30px !important;
+// 			}
+// 		}
+// 	}
+// 	&--foot {
+// 		position: relative;
+// 		padding-bottom: 20px;
+// 	}
+// 	&--tarticle {
+// 		// display: none;
+// 		// @include breakpoint($sm) {
+// 		// 	display: block;
+// 		// }
+// 	}
+// 	&--vdetail {
+// 		padding-top: 10px;
+// 		clear: both;
+// 		@media (min-width: $sm) {
+// 			float: right;
+// 			padding-top: 0;
+// 		}
+// 	}
+// } 
+// .article-social-fixed {
+// 	display: none;
+// 	@media (min-width: 1300px) {
+// 		display: block;
+// 		position: fixed;
+// 		top: 50%;
+// 		transform: translateY(-50%);
+// 		left: 0;
+// 		width: 55px;
+// 		height: 162px;
+// 		z-index: 99999;
+// 	}
+// 	&.js-z-index {
+// 		z-index: 9999;
+// 	}
+// }
+// .gallery-listing  {
+// 	& li {
+// 		@include column(12/12, $cycle: 1);
+// 		@media (min-width: 768px) and (max-width: 1199px) {
+// 			@include column(6/12, $cycle: 2);
+// 		}
+// 		@media (min-width: 1200px) {
+// 			@include column(4/12, $cycle: 3);
+// 		}
+// 	}
+// }
+
+// // album page class
+// .album-photos-banner {
+// 	float: left;
+// 	clear: none;
+// 	width: 100%;
+// 	height: 210px;
+// 	margin-bottom: 20px;
+// 	@include breakpoint($sm) {
+// 		height: 380px;
+// 	}
+// 	@include breakpoint($lg) {
+// 		margin-right: 20px;
+// 		width: 580px;
+// 		margin-bottom: 0;
+// 	}
+// 	a {
+// 		display: inline-block;
+// 		width: 100%;
+// 		height: 100%;
+// 	}
+// }
+// .album-photos-wrapper {
+// 	font-size: 0; // remove mysterious spacing on inline-block element
+// 	@media (min-width: 768px) and (max-width: 991px) {
+// 		text-align: center;
+// 	}
+// 	li {
+// 		width: 100%;
+// 		height: 210px;
+// 		display: inline-block;
+// 		margin-right: 20px;
+// 		margin-bottom: 20px;
+// 		// float:left;
+// 		@include breakpoint($sm) {
+// 			height: 180px;
+// 			width: 180px;
+// 		}
+// 		&:nth-child(3) {
+// 			@include breakpoint($lg) {
+// 				margin-right: 0;
+// 			}
+// 		}
+// 		&:nth-child(4n) {
+// 			@media (min-width: 992px) and (max-width: 1200px) {
+// 				margin-right: 0;
+// 			}
+// 		}
+// 		&:nth-child(6n) {
+// 			@include breakpoint($lg) {
+// 				margin-right: 0;
+// 			}
+// 		}
+// 	}
+// 	// li:first-of-type {
+// 	// 	width: 50%;
+// 	// 	height: 370px;
+// 	// }
+// }
+// .exclusive-banner-image {
+// 	height: 404px;
+// }
+// .exclusive-container {
+// 	padding-bottom: 160px;
+// 	@include breakpoint($sm) {
+// 		padding-bottom: 50px;
+// 	}
+// }
+// .exclusive-details-b {
+// 	width: 80%;
+// 	// text-align: center;
+// 	padding: 20px;
+// 	padding-bottom: 40px;
+// 	background: #fff;
+// 	position: absolute;
+// 	left: 50%;
+// 	// top: 50%;
+// 	transform: translateX(-50%);
+// 	bottom: 0;
+// 	box-shadow: 0px 1px 10px 1px rgba(183, 183, 183, 0.2);
+// 	@include breakpoint($sm) {
+// 		width: 280px;
+// 		// text-align: left;
+// 		transform: translateX(0%);
+// 		left: auto;
+// 		width: 335px;
+// 		right: 30px;
+// 		padding: 30px;
+// 		padding-bottom: 65px;
+// 	}
+// 	&__heading {
+// 		@include font(26px, $black);
+// 	}
+// 	&__text {
+// 		@include font(14px, #666);
+// 	}
+// 	&__tag {
+// 		display: inline-block;
+// 		background: $exclusive;
+// 		color: #fff;
+// 		padding: 7px 10px;
+// 		@include font(12px, #fff);
+// 		margin-bottom: 10px;
+// 		@include breakpoint($sm) {
+// 			margin-bottom: 25px;
+// 		}
+// 	}
+// 	&__author {
+// 		margin-top: 10px;
+// 		margin-bottom: 15px;
+// 		@include font(12px, #d3d3d3);
+// 		@include breakpoint($sm) {
+// 			margin-bottom: 30px;
+// 		}
+// 		span {
+// 			@include font(12px, #b0b0b0)
+// 		}
+// 	}
+// }
 

@@ -171,7 +171,7 @@
 	// margin-left: auto;
 	// margin-right: auto !important;
 	height: 220px;
-	@extend .bg-adver;
+	// @extend .bg-adver;
 	margin-bottom: 20px;
 	@include breakpoint($sm) {
 		@include column(8/12);
