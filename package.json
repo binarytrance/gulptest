@@ -26,6 +26,7 @@
     "gulp-babel": "^7.0.1",
     "gulp-cache": "^1.0.2",
     "gulp-clean-css": "^3.9.3",
+    "gulp-colorguard": "^1.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-csslint": "^1.0.1",
     "gulp-imagemin": "^4.1.0",

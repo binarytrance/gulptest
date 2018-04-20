@@ -21,6 +21,7 @@ var uncss              = require('postcss-uncss');
 var csslint            = require('gulp-csslint');
 var sassLint 		   = require('gulp-sass-lint');
 var jshint             = require('gulp-jshint');
+var colorguard         = require('gulp-colorguard');
 // sudo npm install gulp-uglify browser-sync gulp-plumber gulp-autoprefixer gulp-sass gulp-pug gulp-imagemin gulp-cache gulp-clean-css gulp-sourcemaps gulp-concat beeper gulp-util gulp-rename gulp-notify --save-dev
 var jsVendorFiles      = ['js/vendor/*.js'];             // Holds the js vendor files to be concatenated
 var myJsFiles          = ['js/*.js'];    // Holds the js files to be concatenated
@@ -38,6 +39,7 @@ var onError            = function(err) { // Custom error msg with beep sound and
 
 gulp.task('styles', function() {
 	var plugins = [
+		
         uncss({
          ignore: [
              /.js/
@@ -55,6 +57,10 @@ gulp.task('styles', function() {
 		cascade: false}))
 	.pipe(cleanCSS())
 	.pipe(postcss(plugins))
+	.pipe(colorguard({
+			threshold: 5,
+			logOk: true
+		}))
 	.pipe(sourcemaps.write())
 	.pipe(rename({ suffix: '.min'}))
 	.pipe(gulp.dest('build/css'));
